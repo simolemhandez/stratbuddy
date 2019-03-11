@@ -1,0 +1,14 @@
+<h1> <%= link_to @question.case.name, case_path(@question.case) %> </h1>
+<h2> <%=  @question.content %></h2>
+<p>Timing: <%= @question.timing %> </p>
+<p>Skills tested: <%= @question.skills %> </p>
+
+<%= link_to "Answer", new_question_answer_path(@question), class: "btn btn-flat" %>
+
+
+<% if @question.answers.first == nil %>
+  <p> It's your turn! </p>
+  <% else %>
+    <p> <%= @question.answers.first %> </p>
+<% end  %>
+
