@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_151914) do
+ActiveRecord::Schema.define(version: 2019_03_11_164118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "content"
+    t.integer "votes"
+    t.string "correctness"
+    t.bigint "question_id"
+    t.bigint "attempt_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attempt_id"], name: "index_answers_on_attempt_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "attempts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "case_id"
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["case_id"], name: "index_attempts_on_case_id"
+    t.index ["user_id"], name: "index_attempts_on_user_id"
+  end
+
+  create_table "cases", force: :cascade do |t|
+    t.text "content"
+    t.string "name"
+    t.integer "day"
+    t.string "industry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.integer "timing"
+    t.text "correction"
+    t.integer "skills"
+    t.string "keywords", default: [], array: true
+    t.bigint "case_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["case_id"], name: "index_questions_on_case_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +66,18 @@ ActiveRecord::Schema.define(version: 2019_03_11_151914) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.date "interview_dates"
+    t.integer "score"
+    t.integer "progression_level"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "attempts"
+  add_foreign_key "answers", "questions"
+  add_foreign_key "attempts", "cases"
+  add_foreign_key "attempts", "users"
+  add_foreign_key "questions", "cases"
 end
