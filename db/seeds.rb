@@ -20,7 +20,8 @@ c = Case.create(
   What strategies should the MSO pursue to improve its revenue growth over the next 5 years?',
   name: 'Metropolitan Symphony',
   day: 1,
-  industry: 'Non-profit'
+  industry: 'Non-profit',
+  position: 1,
 )
 
 Question.create(
@@ -194,12 +195,13 @@ new marketing efforts, management could become distracted and fail to focus on t
   position: 6,
   )
 
-Case.create(
+cc = Case.create(
   content: 'Your client is Dealer Jack’s, a large US based grocery retailer with stores located on the East Coast. Dealer Jack’s stores provide a full grocery offering with produce, deli, and fresh bakery departments and a mix of national and private label brands. The company, affectionately referred to as “DJ’s” by its customers, experienced strong growth for the better part of the past two decades outpacing the industry until recently.
   Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
   name: 'Dealer Jack',
   day: 1,
-  industry: 'retail'
+  industry: 'retail',
+  position: 3,
   )
 
 Question.create(
@@ -215,7 +217,7 @@ Question.create(
 • Management wants to increase the profits by 10% within the next year',
   skills: 'initial clarifications',
   keywords: ['gross margin', 'revenue'],
-  case_id: 2,
+  case_id: cc.id,
   position: 1,
   )
 
@@ -230,6 +232,89 @@ Question.create(
 • Management wants to increase the profits by 10% within the next year',
   skills: 'initial clarifications',
   keywords: ['gross margin', 'revenue'],
-  case_id: 2,
+  case_id: cc.id,
+  position: 1,
+  )
+
+
+ccc = Case.create(
+  content: 'Your client is Dealer Jack’s, a large US based grocery retailer with stores located on the East Coast. Dealer Jack’s stores provide a full grocery offering with produce, deli, and fresh bakery departments and a mix of national and private label brands. The company, affectionately referred to as “DJ’s” by its customers, experienced strong growth for the better part of the past two decades outpacing the industry until recently.
+  Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
+  name: 'Dealer Jack',
+  day: 2,
+  industry: 'retail',
+  position: 2,
+  )
+
+Question.create(
+  content: 'Are there any additional data you would like to obtain?',
+  timing: 3,
+  correction: '• Dealer Jack’s management has examined same store sales for all \n
+  of its 300 locations, and profitability appears to be a pervasive issue across \n
+  all stores. They do not believe targeting and closing underperforming stores is an appropriate solution.
+• While the Dealer Jack’s brand is strong on the East Coast, management sees geographic expansion as too capital intensive in the short term.
+• All non-operating expenses/costs are appropriately benchmarked to the industry.
+• Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
+• DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
+• Management wants to increase the profits by 10% within the next year',
+  skills: 'initial clarifications',
+  keywords: ['gross margin', 'revenue'],
+  case_id: ccc.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'Are there any additional data you would like to obtain?',
+  timing: 3,
+  correction: '• Dealer Jack’s management has examined same store sales for all of its 300 locations, and profitability appears to be a pervasive issue across all stores. They do not believe targeting and closing underperforming stores is an appropriate solution.
+• While the Dealer Jack’s brand is strong on the East Coast, management sees geographic expansion as too capital intensive in the short term.
+• All non-operating expenses/costs are appropriately benchmarked to the industry.
+• Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
+• DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
+• Management wants to increase the profits by 10% within the next year',
+  skills: 'initial clarifications',
+  keywords: ['gross margin', 'revenue'],
+  case_id: ccc.id,
+  position: 1,
+  )
+
+d = Case.create(
+  content: 'Your client is Dealer Jack’s, a large US based grocery retailer with stores located on the East Coast. Dealer Jack’s stores provide a full grocery offering with produce, deli, and fresh bakery departments and a mix of national and private label brands. The company, affectionately referred to as “DJ’s” by its customers, experienced strong growth for the better part of the past two decades outpacing the industry until recently.
+  Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
+  name: 'Dealer Jack',
+  day: 2,
+  industry: 'retail',
+  position: 2,
+  )
+
+Question.create(
+  content: 'Are there any additional data you would like to obtain?',
+  timing: 3,
+  correction: '• Dealer Jack’s management has examined same store sales for all \n
+  of its 300 locations, and profitability appears to be a pervasive issue across \n
+  all stores. They do not believe targeting and closing underperforming stores is an appropriate solution.
+• While the Dealer Jack’s brand is strong on the East Coast, management sees geographic expansion as too capital intensive in the short term.
+• All non-operating expenses/costs are appropriately benchmarked to the industry.
+• Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
+• DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
+• Management wants to increase the profits by 10% within the next year',
+  skills: 'initial clarifications',
+  keywords: ['gross margin', 'revenue'],
+  case_id: d.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'Are there any additional data you would like to obtain?',
+  timing: 3,
+  correction: '• Dealer Jack’s management has examined same store sales for all of its 300 locations, and profitability appears to be a pervasive issue across all stores. They do not believe targeting and closing underperforming stores is an appropriate solution.
+• While the Dealer Jack’s brand is strong on the East Coast, management sees geographic expansion as too capital intensive in the short term.
+• All non-operating expenses/costs are appropriately benchmarked to the industry.
+• Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
+• DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
+• Management wants to increase the profits by 10% within the next year',
+  skills: 'initial clarifications',
+  keywords: ['gross margin', 'revenue'],
+  case_id: d.id,
   position: 1,
   )

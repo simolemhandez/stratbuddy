@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :answers, only: [ :new, :create ]
   end
   resources :answers, only: :show
-  get 'dashboard', to: 'profile#dashboard', as: :dashboard
+  get 'dashboard', to: 'profiles#dashboard'
+  get 'knowledge', to: 'profiles#knowledge'
 end

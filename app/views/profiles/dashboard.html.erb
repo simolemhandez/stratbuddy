@@ -1,0 +1,38 @@
+<div class="title-box">
+  <h1>My dashboard</h1>
+</div>
+
+
+<div class="container">
+  <section>
+    <h2>Your progress</h2>
+    <ol class="progress-bar">
+      <% @cases.each do |c| %>
+
+        <% if c.attempts.last.nil? %>
+          <li><span> <%= c.name %> </span></li>
+
+        <% elsif c.attempts.last.completed == true && @last_attempt.case.position == c.position %>
+          <li class="is-active"><span> <%= c.name %> </span></li>
+
+        <% elsif c.attempts.last.completed == true %>
+          <li class="is-complete"><span> <%= c.name %> </span></li>
+
+        <% else %>
+          <li><span> <%= c.name %> </span></li>
+
+        <% end %>
+
+
+      <% end %>
+    </ol>
+  </section>
+</div>
+
+<div class="container">
+  <h2>Your overall score</h2>
+  <div class="score-bar blue stripes">
+    <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+  </div>
+</div>
+
