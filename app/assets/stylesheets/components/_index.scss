@@ -8,6 +8,8 @@
 @import "timing";
 @import "flash";
 @import "scorecard";
+@import "progressbar";
+@import "scorebar";
 
 .container {
   margin-top: 30px;
@@ -34,3 +36,4 @@
 .question-correction {
   color: green;
 }
+

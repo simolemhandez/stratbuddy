@@ -1,6 +1,8 @@
 class QuestionsController < ApplicationController
   def index
     @cas = Case.find(params[:case_id])
+    @attempt = current_user.attempts.last
+    @attempt.update(completed: true)
     @questions = Question.all
   end
 
