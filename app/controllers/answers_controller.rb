@@ -27,23 +27,24 @@ class AnswersController < ApplicationController
       end
     end
     @user = current_user
-    @case_score = 0
+    @attempt = Attempt.where(user_id: current_user.id, case_id: @question.case.id).last
     if correct == 0
-      @answer.correctness = "Bad result. You should keep working on this area."
+      @answer.correctness = "Bad result. You should keep working on this area 🤔"
     elsif correct == @question.keywords.length
-      @answer.correctness = "Perfect. You are on the way for MBB"
+      @answer.correctness = "Perfect. You are on the way for MBB 🎉"
       @user.score += 3
-      @case_score += 3
+      @attempt.score += 3
     elsif correct < @question.keywords.length.fdiv(2)
-      @answer.correctness = "Not bad. You can still improve your skills"
+      @answer.correctness = "Not bad. You can still improve your skills 😓"
       @user.score += 1
-      @case_score += 1
+      @attempt.score += 1
     else
-      @answer.correctness = "Very good. Keep up the good work!"
+      @answer.correctness = "Very good. Keep up the good work! 😎"
       @user.score += 2
-      @case_score += 2
+      @attempt.score += 2
     end
     @user.save
+    @attempt.save
     @next_question = Question.where(position: @question.position + 1, case_id: @question.case.id).last
   end
 

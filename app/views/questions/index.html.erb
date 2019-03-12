@@ -1,14 +1,24 @@
-<h1> <%= link_to @questions.first.case.name, case_path(@questions.first.case) %> </h1>
-<p> <strong> Your overall score: <%=  current_user.score %> </strong></p>
-<p> <strong> Your score to this test: <%= @case_score %> / <%= @questions.length  %> </strong></p>
-<% raise %>
 
-<p> <strong> <%=  @questions.first.case.content %> </strong></p>
+<div class="title-box">
+  <h1> <%= link_to @questions.first.case.name, case_path(@questions.first.case) %> </h1>
+   <div class="score-card">
+    <i class="fas fa-trophy"></i>
+    <p>  Your overall score: <%=  current_user.score %>   </p>
+    <p>  Your score to this test: <%= @questions.first.case.attempts.last.score %> / <%= @questions.length.to_i * 3  %> </p>
+    </div>
+</div>
+
+<div class="container">
+<p> <strong> <em> <%=  @questions.first.case.content %> </em></strong></p>
 
 <% @questions.each do  |question| %>
   <p>
    <strong> <%= question.position %>. <%= question.content %></strong>
   </p>
-   <p div="question-answer"> <%= Answer.find(question.answer_ids.last).content %></p>
-   <p div="question-correction"> <%= question.correction %></p>
+    <% if question.answer_ids.last.nil? %>
+    <% elsif %>
+      <p class="question-answer"> <%= Answer.find(question.answer_ids.last).content %></p>
+    <% end %>
+   <p class="question-correction"> <%= question.correction %></p>
 <% end %>
+</div>

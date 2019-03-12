@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @case = Case.find(params[:case_id])
+    @cas = Case.find(params[:case_id])
     @questions = Question.all
   end
 
