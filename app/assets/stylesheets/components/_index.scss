@@ -5,3 +5,32 @@
 @import "cards";
 @import "banner";
 @import "button";
+@import "timing";
+@import "flash";
+@import "scorecard";
+
+.container {
+  margin-top: 30px;
+  width: 1500px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: justify;
+}
+
+.title-box {
+  margin-top: 30px;
+  width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-answer {
+  color: blue;
+}
+
+.question-correction {
+  color: green;
+}

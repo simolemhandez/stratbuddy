@@ -1,7 +1,18 @@
-<h1> <%= link_to @question.case.name, case_path(@question.case) %> </h1>
-<h2> <%=  @question.content %></h2>
-<p>Timing: <%= @question.timing %> </p>
+
+<div class="title-box ">
+  <h1> Case n° <%= @question.case.id  %>:  <%= link_to @question.case.name, case_path(@question.case) %> </h1>
+   <div class="timing">
+    <i class="far fa-clock time-symbol"></i>
+    <p> <%= @question.timing %> mins</p>
+  </div>
+</div>
+
+<div class="container">
+  <h2> <%=  @question.content %></h2>
+  <%= link_to "Answer", new_question_answer_path(@question), class: "btn btn-flat" %>
+</div>
+
+
+
+
 <p>Skills tested: <%= @question.skills %> </p>
-
-<%= link_to "Answer", new_question_answer_path(@question), class: "btn btn-flat" %>
-
