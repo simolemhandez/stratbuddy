@@ -5,10 +5,3 @@
 
 <%= link_to "Answer", new_question_answer_path(@question), class: "btn btn-flat" %>
 
-
-<% if @question.answers.first == nil %>
-  <p> It's your turn! </p>
-  <% else %>
-    <p> <%= @question.answers.first %> </p>
-<% end  %>
-

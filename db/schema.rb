@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_164118) do
+ActiveRecord::Schema.define(version: 2019_03_12_123441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_164118) do
     t.bigint "case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "position"
     t.index ["case_id"], name: "index_questions_on_case_id"
   end
 
@@ -69,7 +70,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_164118) do
     t.string "first_name"
     t.string "last_name"
     t.date "interview_dates"
-    t.integer "score"
+    t.integer "score", default: 0
     t.integer "progression_level"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

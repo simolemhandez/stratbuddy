@@ -6,3 +6,5 @@
 </div>
 
 <p><%= @case.content %> </p>
+
+<%= link_to "Start!", question_path(@case.questions.first, attempt: "new"), class: "btn btn-flat" %>

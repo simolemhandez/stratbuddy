@@ -1,0 +1,12 @@
+
+<h2> <strong> <%= @question.content %></strong> </h2>
+<p> <strong>Your answer: </strong> <%= @answer.content %></p>
+<p> <strong> Correction:</strong> <%= @question.correction %></p>
+<p> <%= @answer.correctness %></p>
+
+
+<% if @next_question.nil? %>
+  <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat" %>
+<% else %>
+  <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat" %>
+<% end %>
