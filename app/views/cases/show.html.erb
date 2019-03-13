@@ -1,18 +1,19 @@
+<div class="trianglify">
+  <div class="title-box">
+    <h1 class="title"> Case n°<%= @case.position %>: <%= @case.name  %> </h1>
 
-<div class="title-box">
-  <h1 class="title"> Day <%= @case.day %>. Case n°<%= @case.id %> : <%= @case.name  %> </h1>
-
-  <div class="timing">
-    <i class="far fa-clock time-symbol"></i>
-    <p> 3 mins</p>
+    <div class="timing">
+      <i class="far fa-clock time-symbol"></i>
+      <p> 3 mins</p>
+    </div>
   </div>
-</div>
 
 
-<div class="container">
-  <p> Take notes 🤓 </p>
-  <p> You will not have access to this data anymore 👋 </p>
-  <p> <strong>Industry:</strong>  <%= @case.industry  %></p>
-  <p> <strong> <em> <%= @case.content %> </em></strong> </p>
-  <%= link_to "Start!", question_path(@case.questions.first, attempt: "new"), class: "btn btn-flat" %>
+  <div class="container">
+    <p> Take notes 🤓 </p>
+    <p> You will not have access to this data anymore 👋 </p>
+    <p> <strong>Industry:</strong>  <%= @case.industry  %></p>
+    <p> <strong> <em> <%= @case.content %> </em></strong> </p>
+    <%= link_to "Start!", question_path(@case.questions.first, attempt: "new"), class: "btn btn-flat" %>
+  </div>
 </div>

@@ -10,6 +10,8 @@
 @import "scorecard";
 @import "progressbar";
 @import "scorebar";
+@import "form";
+@import "homecontent";
 
 .container {
   margin-top: 30px;
@@ -21,19 +23,35 @@
 }
 
 .title-box {
-  margin-top: 30px;
   width: 1200px;
   margin: auto;
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
 }
 
+
+.title {
+  color: white;
+}
+
 .question-answer {
-  color: blue;
+  color: #070d59;
 }
 
 .question-correction {
-  color: green;
+  color: #005542;
 }
+
+.orange-text {
+  color: #f7b633;
+  letter-spacing: 2px;
+}
+
+.trianglify {
+  background-image: linear-gradient(60deg, #070d59 0%, #5893d4 70%);
+  background-size: cover;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
 

@@ -1,8 +1,0 @@
-<div class="container">
-<h2> <%= @question.content  %></h2>
-  <p> Your turn! ✌️ </p>
-  <%= simple_form_for [@question, @answer] do |f| %>
-    <%= f.input :content %>
-    <%= f.submit "Send", :class => "btn btn-flat" %>
-  <% end %>
-</div>

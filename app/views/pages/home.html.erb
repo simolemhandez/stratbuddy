@@ -1,9 +1,71 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 
-<div class="banner">
-  <div class="banner-content text-center">
-    <h1>Ace the case!</h1>
-    <p>Make it to the best consulting firms</p>
-    <%= link_to "Start!", cases_path, class: "btn btn-lg btn-primary"  %>
+<div class="home-banner">
+  <div class="first-picture">
+    <%=  image_tag "computer.svg", width: 300 %>
   </div>
+  <div class="banner-content">
+    <h1>Ace the case!</h1>
+    <p>Make it to <span id="banner-typed-text"></span></p>
+    <%= link_to "Start!", cases_path, class: "btn  btn-flat"  %>
+  </div>
+   <div class="second-picture">
+    <%=  image_tag "tablet.svg", width: 300 %>
+  </div>
+
 </div>
+
+
+
+<div class="home-content">
+  <div class="home-description">
+    <p class="orange-text">LEARN</p>
+    <h2> Ace the case with us!</h2>
+    <p>With our offer, you can kickstart your preparation for top consulting firms through seasoned cases, with a learning journey conceived by an ex-McKinsey & Co.</p>
+  </div>
+
+  <div>
+
+    <div class="advantage-box">
+      <div class="advantage">
+        <%=  image_tag "interaction.svg", width: 50, class: "img-home" %>
+        <div>
+          <h3>
+            Interactive case-cracking
+          </h3>
+          <p>
+            Learning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skills
+          </p>
+        </div>
+      </div>
+
+      <div class="advantage">
+        <%=  image_tag "work.svg", width: 50, class: "img-home" %>
+        <div>
+          <h3>
+            Learning journey to develop top-notch consulting skills
+          </h3>
+          <p>
+            Learning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skills
+          </p>
+        </div>
+      </div>
+
+      <div class="advantage">
+        <%=  image_tag "analytics.svg", width: 50, class: "img-home" %>
+        <div>
+          <h3>
+            High-level correction and results benchmarking
+          </h3>
+          <p>
+            Learning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skillsLearning journey to develop top-notch consulting skills
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

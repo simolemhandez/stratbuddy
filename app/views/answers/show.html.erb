@@ -1,18 +1,22 @@
-<div class="title-box">
-  <h2> <strong> <%= @question.content %></strong> </h2>
-</div>
+<div class="trianglify">
+  <div class="title-box">
+    <h1 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h1>
 
-<div class="container">
-  <p class="question-answer"> <strong>Your answer: </strong> <%= @answer.content %></p>
-  <p class="question-correction"> <strong> Correction:</strong> <%= @question.correction %></p>
-</div>
+  </div>
 
-<div class="container">
-  <p> <strong> <%= @answer.correctness %> </strong> </p>
+  <div class="container">
+    <h2> Question n°<%= @question.position  %>: <%= @question.content %></h2>
+    <p class="question-answer"> <strong>Your answer: </strong> <%= @answer.content %></p>
+    <p class="question-correction"> <strong> Correction:</strong> <%= @question.correction %></p>
+  </div>
 
-  <% if @next_question.nil? %>
-    <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat" %>
-  <% else %>
-    <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat" %>
-  <% end %>
+  <div class="container">
+    <p> <strong> <%= @answer.correctness %> </strong> </p>
+
+    <% if @next_question.nil? %>
+      <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat" %>
+    <% else %>
+      <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat" %>
+    <% end %>
+  </div>
 </div>
