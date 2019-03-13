@@ -20,14 +20,14 @@
 }
 
 
-.banner {
-  height: 100vh;
+.home-banner {
+  height: 70vh;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("background.jpg");
+  background-image: linear-gradient(60deg, #070d59 0%, #5893d4 100%);
   background-size: cover;
   background-position: center;
+  position: relative;
   h1 {
     color: white;
     font-weight: bold;
@@ -44,3 +44,44 @@
     padding: 15px 50px;
   }
 }
+
+.banner-content {
+  margin-left: 200px;
+  margin-top: 100px;
+  width: 500px;
+}
+
+.first-picture {
+  margin-left: 100px;
+  margin-top: 160px;
+}
+
+.second-picture {
+  margin-top: 450px;
+  margin-left: 0px;
+}
+
+.third-picture {
+  margin-right: 100px;
+  margin-bottom: 430px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

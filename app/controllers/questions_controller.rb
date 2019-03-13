@@ -11,5 +11,6 @@ class QuestionsController < ApplicationController
     if params[:attempt] == "new"
       @attempt = Attempt.create(user_id: current_user.id, case_id: @question.case.id)
     end
+    @answer = Answer.new
   end
 end

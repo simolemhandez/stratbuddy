@@ -201,7 +201,7 @@ cc = Case.create(
   name: 'Dealer Jack',
   day: 1,
   industry: 'retail',
-  position: 3,
+  position: 2,
   )
 
 Question.create(
@@ -243,7 +243,7 @@ ccc = Case.create(
   name: 'Dealer Jack',
   day: 2,
   industry: 'retail',
-  position: 2,
+  position: 3,
   )
 
 Question.create(
@@ -284,7 +284,7 @@ d = Case.create(
   name: 'Dealer Jack',
   day: 2,
   industry: 'retail',
-  position: 2,
+  position: 4,
   )
 
 Question.create(

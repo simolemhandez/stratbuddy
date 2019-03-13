@@ -1,15 +1,83 @@
-<div class="title-box">
-  <h1 class="title">Your learning journey</h1>
-</div>
-<div class="container">
-  <% @cases.each do |c| %>
-    <h2> <strong> Day <%= c.day %></strong> </h2>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
-      <div class="card-product-infos">
-        <h2><%= link_to c.name, case_path(c) %> </h2>
-        <p> <strong>Industry:</strong>  <%= c.industry  %></p>
-      </div>
-    </div>
-  <% end %>
+<div class="trianglify">
+
+  <div class="title-box">
+    <h1 class="title">Your learning journey</h1>
+  </div>
+
+  <div class="container">
+
+    <% @cases.each do |c| %>
+
+
+
+      <% if @attempt.nil? %>
+        <% if c.position == 1 %>
+          <div class="card-title">
+            <h2> <strong> Case n°<%= c.position %></strong> </h2>
+            <div class="card-product">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+              <div class="card-product-infos">
+                <h2><%= link_to c.name, case_path(c) %> - Take this case now ! </h2>
+                <p> <strong>Industry:</strong>  <%= c.industry  %></p>
+              </div>
+            </div>
+          </div>
+          <% else %>
+            <div class="card-title">
+              <h2> <strong> Case n°<%= c.position %></strong> </h2>
+              <div class="card-product-grey">
+                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+                <div class="card-product-infos">
+                  <h2><%= c.name %> </h2>
+                  <p> <strong>Industry:</strong>  <%= c.industry  %></p>
+                </div>
+              </div>
+            </div>
+           <% end %>
+
+      <% else %>
+        <% if Case.find(@attempt.case_id).position == c.position - 1 %>
+          <div class="card-title">
+            <h2> <strong> Case n°<%= c.position %></strong> </h2>
+            <div class="card-product">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+              <div class="card-product-infos">
+                <h2><%= link_to c.name, case_path(c) %> - Take this case now ! </h2>
+                <p> <strong>Industry:</strong>  <%= c.industry  %></p>
+              </div>
+            </div>
+          </div>
+
+          <% elsif Case.find(@attempt.case_id).position > c.position - 1 %>
+            <div class="card-title">
+              <h2> <strong> Case n°<%= c.position %></strong> </h2>
+              <div class="card-product-grey">
+                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+                <div class="card-product-infos">
+                  <h2><%= link_to c.name, case_questions_path(c) %> </h2>
+                  <p> <strong>Industry:</strong>  <%= c.industry  %></p>
+                  <p> Completed : <i class="fas fa-check-circle"></i></p>
+                </div>
+                </div>
+              </div>
+
+            <% else %>
+              <div class="card-title">
+                <h2> <strong> Case n°<%= c.position %></strong> </h2>
+                <div class="card-product-grey">
+                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+                <div class="card-product-infos">
+                  <h2><%= c.name %> </h2>
+                  <p> <strong>Industry:</strong>  <%= c.industry  %></p>
+                  <p> <em> To be completed </em></i></p>
+                </div>
+                </div>
+              </div>
+
+
+      <% end %>
+    <% end %>
+
+    <% end %>
+  </div>
 </div>
