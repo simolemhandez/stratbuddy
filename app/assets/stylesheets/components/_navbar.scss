@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #053f5e;
   margin-bottom: 0px;
+  height: 80px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,7 +19,27 @@
   background: transparent;
   box-shadow: none;
   .navbar-wagon-link {
-    color: white;
-    font-weight: bold;
+    color: white ;
+    padding-right: 5rem ;
+
   }
+}
+
+.nav-linkk {
+  color: white ;
+  padding-right: 2rem ;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-linkk:hover {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white ;
+  padding-right: 2rem ;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
 }

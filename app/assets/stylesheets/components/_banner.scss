@@ -31,7 +31,10 @@
   h1 {
     color: white;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   p {
     color: white;
@@ -39,6 +42,7 @@
     font-size: 25px;
     font-weight: lighter;
     margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
   }
   .btn {
     padding: 15px 50px;
@@ -54,18 +58,24 @@
 .first-picture {
   margin-left: 100px;
   margin-top: 160px;
+  filter: drop-shadow(14px 14px 0px rgba(23,43,115, 0.15));
 }
 
 .second-picture {
   margin-top: 450px;
   margin-left: 0px;
+  filter: drop-shadow(14px 14px 0px rgba(23,43,115, 0.15));
 }
 
 .third-picture {
   margin-right: 100px;
   margin-bottom: 430px;
+  filter: drop-shadow(14px 14px 0px rgba(23,43,115, 0.15));
 }
 
+.logo-home {
+  margin-bottom: 20px;
+}
 
 
 
