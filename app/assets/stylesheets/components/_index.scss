@@ -10,6 +10,7 @@
 @import "scorecard";
 @import "progressbar";
 @import "scorebar";
+@import "form";
 
 .container {
   margin-top: 30px;
@@ -30,10 +31,10 @@
 }
 
 .question-answer {
-  color: blue;
+  color: #070d59;
 }
 
 .question-correction {
-  color: green;
+  color: #005542;
 }
 
