@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "agreement.svg" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,13 +12,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          <%= link_to "Dashboard", dashboard_path, class: "nav-linkk pushdown-first" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Ace the case!", cases_path, class: "nav-link" %>
+          <%= link_to "Ace the case!", cases_path, class: "nav-linkk pushdown-second" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Knowledge", "#", class: "nav-link" %>
+          <%= link_to "Knowledge", "#", class: "nav-linkk pushdown-third" %>
         </li>
         <li class="nav-item dropdown">
 
@@ -31,7 +31,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-linkk" %>
         </li>
       <% end %>
     </ul>

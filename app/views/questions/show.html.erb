@@ -3,16 +3,20 @@
     <h1 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h1>
      <div class="timing">
       <i class="far fa-clock time-symbol"></i>
-      <p> <%= @question.timing %> mins</p>
+      <p id="questiontiming" data-timer="<%= @question.timing %>", data-url="<%= cases_url %>"> <em><strong> <%= @question.timing  %> mins </strong> </em> </p>
+        <div id="startValuesAndTargetExample">
+            <div class="values"></div>
+        </div>
     </div>
   </div>
 
+
+
   <div class="container">
     <h2> Question n°<%=  @question.position %>: <%=  @question.content %></h2>
-    <p> Your turn! ✌️ </p>
     <%= simple_form_for [@question, @answer] do |f| %>
-      <%= f.input :content %>
-      <%= f.submit "Send", :class => "btn btn-flat" %>
+      <%= f.input :content, input_html: { class: "form-answer" }, placeholder: "Write as if you were in interviews, with well-structured, argument-based answers.", label: "Your turn! ✌️"%>
+      <%= f.submit "Send", :class => "btn btn-flat", :id => "btn-send-timer" %>
     <% end %>
   </div>
 

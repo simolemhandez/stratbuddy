@@ -12,14 +12,23 @@
 @import "scorebar";
 @import "form";
 @import "homecontent";
+@import "profile";
+@import "methodology";
+@import "footer";
 
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
 .container {
   margin-top: 30px;
   width: 1500px;
   padding: 30px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
   text-align: justify;
+  border-radius: 5px;
 }
 
 .title-box {
@@ -27,11 +36,6 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-}
-
-
-.title {
-  color: white;
 }
 
 .question-answer {
@@ -48,7 +52,8 @@
 }
 
 .trianglify {
-  background-image: linear-gradient(60deg, #070d59 0%, #5893d4 70%);
+  // background-image: linear-gradient(60deg, #070d59 0%, #5893d4 70%);
+  background-image: white;
   background-size: cover;
   margin-top: 0px;
   padding-top: 30px;

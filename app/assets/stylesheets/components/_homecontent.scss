@@ -1,17 +1,18 @@
 .img-home {
-  height: 20px;
+  height: 50px;
   color: orange;
 }
 .advantage-box {
   border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
   margin-left: 50px;
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-radius: 6px;
   margin-top: 30px;
   position: relative;
-  margin-right: 100px;
-  width: 600px;
+  margin-right: 150px;
+  width: 500px;
 }
 
 .goal-img {
@@ -22,19 +23,43 @@
 .advantage {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   margin: 20px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  padding-bottom: 25px;
   display: flex;
+  padding: 15px;
+}
+
+
+.advantage-last {
+  margin: 20px;
+  padding-bottom: 25px;
+  display: flex;
+  padding: 12px;
+}
+
+
+.advantage-last h3 {
+  margin-left: 30px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.advantage-last p {
+  margin-left: 30px;
+  font-size: 14px;
+  padding: 15px;
+  color: grey;
 }
 
 .advantage h3 {
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 30px;
+  padding: 15px;
+  font-size: 16px;
 }
 
 .advantage p {
-  margin-left: 20px;
-  font-size: 15px;
+  margin-left: 30px;
+  padding: 15px;
+  font-size: 14px;
   color: grey;
 }
 
@@ -43,7 +68,7 @@
   justify-content: space-between;
   padding: 30px;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 100px;
 }
 
 .home-description {
@@ -58,5 +83,10 @@
 .home-description h2 {
   margin-bottom: 40px;
   margin-top: 20px;
+}
+
+.fourth-picture {
+  margin-left: 100px;
+  filter: drop-shadow(14px 14px 0px rgba(23,43,115, 0.15));
 }
 
