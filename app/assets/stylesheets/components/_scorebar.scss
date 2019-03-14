@@ -1,8 +1,7 @@
 .score-bar {
     background-color: #1a1a1a;
-    height: 25px;
-    padding: 5px;
-    padding-top: 4px;
+    height: 10px;
+
     width: auto;
     margin: 50px 0;
     margin-top: 20px;
@@ -34,6 +33,7 @@
                         transparent 50%, rgba(23,43,115, 0.15) 50%, rgba(23,43,115, 0.15) 75%,
                         transparent 75%, transparent);
     animation: animate-stripes 3s linear infinite;
+    margin-bottom: 10px;
 }
 
 @keyframes animate-stripes {

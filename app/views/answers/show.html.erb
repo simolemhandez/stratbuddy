@@ -11,7 +11,7 @@
   </div>
 
   <div class="container">
-    <p> <strong> <%= @answer.correctness %> </strong> </p>
+    <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
 
     <% if @next_question.nil? %>
       <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat" %>

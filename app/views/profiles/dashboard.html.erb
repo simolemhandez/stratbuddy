@@ -1,4 +1,4 @@
-<div class="title-box">
+<div class="title-box-dashboard">
   <h1>My dashboard</h1>
 </div>
 
@@ -11,38 +11,78 @@
   <p> <em> <%= @user.email %> </em></p>
 </div>
 
+<div class="container-dashboard">
 
-<div class="container">
-  <h2>Your overall score</h2>
-    <p class="score-value"> <%= current_user.score.to_i %> / <%= Question.all.length %> </p>
-  <div class="score-bar blue stripes">
-    <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+  <div class="dashboard">
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.score.to_i %> points </h2>
+        <p> Out of <%= Question.all.length %> points </p>
+      </div>
+      <%=  image_tag "audio.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard">
+     <div class="dashboard-description">
+      <div class="dashboard-description-content">
+      <h2> <%= Attempt.all.where(completed: true).last.case.position %> cases done </h2>
+      <p> Out of <%= Case.all.length %> cases </p>
+      </div>
+      <%=  image_tag "screen.svg", height: 50%>
+    </div>
+    <section>
+      <ol class="progress-bar">
+        <% @cases.each do |c| %>
+
+          <% if c.attempts.last.nil? %>
+            <li><span> <%= c.name %> </span></li>
+
+          <% elsif c.attempts.last.completed == true && @last_attempt.case.position == c.position %>
+            <li class="is-active"><span> <%= c.name %> </span></li>
+
+          <% elsif c.attempts.last.completed == true %>
+            <li class="is-complete"><span> <%= c.name %> </span></li>
+
+          <% else %>
+            <li><span> <%= c.name %> </span></li>
+
+          <% end %>
+        <% end %>
+      </ol>
+    </section>
+  </div>
+
+   <div class="dashboard">
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.score.to_i %> points </h2>
+        <p> Out of <%= Question.all.length %> points </p>
+      </div>
+      <%=  image_tag "audio.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
   </div>
 </div>
 
-<div class="container">
-  <section>
-    <h2>Your progress</h2>
-    <ol class="progress-bar">
-      <% @cases.each do |c| %>
-
-        <% if c.attempts.last.nil? %>
-          <li><span> <%= c.name %> </span></li>
-
-        <% elsif c.attempts.last.completed == true && @last_attempt.case.position == c.position %>
-          <li class="is-active"><span> <%= c.name %> </span></li>
-
-        <% elsif c.attempts.last.completed == true %>
-          <li class="is-complete"><span> <%= c.name %> </span></li>
-
-        <% else %>
-          <li><span> <%= c.name %> </span></li>
-
-        <% end %>
-
-
-      <% end %>
-    </ol>
-  </section>
-</div>
 
