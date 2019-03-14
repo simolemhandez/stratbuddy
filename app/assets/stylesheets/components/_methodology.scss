@@ -1,0 +1,16 @@
+.methodology {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(23,43,115, 0.02);
+}
+
+.method { 
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 8px 8px 0px rgba(23,43,115, 0.15);
+  margin-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 6px;
+  margin-top: 30px;
+  width: 200px;
+}

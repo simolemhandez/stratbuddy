@@ -2,6 +2,23 @@
   <h1>My dashboard</h1>
 </div>
 
+<div class="profile">
+  <%= cl_image_tag @user.photo, width: 300, height: 300, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+</div>
+
+<div class="profile-data">
+  <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
+  <p> <em> <%= @user.email %> </em></p>
+</div>
+
+
+<div class="container">
+  <h2>Your overall score</h2>
+    <p class="score-value"> <%= current_user.score.to_i %> / <%= Question.all.length %> </p>
+  <div class="score-bar blue stripes">
+    <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+  </div>
+</div>
 
 <div class="container">
   <section>
@@ -27,12 +44,5 @@
       <% end %>
     </ol>
   </section>
-</div>
-
-<div class="container">
-  <h2>Your overall score</h2>
-  <div class="score-bar blue stripes">
-    <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
-  </div>
 </div>
 

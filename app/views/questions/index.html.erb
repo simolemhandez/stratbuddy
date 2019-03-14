@@ -6,8 +6,11 @@
     <h1> <%= link_to @questions.first.case.name, case_path(@questions.first.case) %> </h1>
      <div class="score-card">
       <i class="fas fa-trophy"></i>
-      <p>  Your overall score: <%=  current_user.score %>   </p>
+
       <p>  Your score to this test: <%= @questions.first.case.attempts.last.score %> / <%= @questions.length.to_i * 3  %> </p>
+         <div class="score-bar blue stripes score-card-questions">
+          <span style="width: <%= @questions.first.case.attempts.last.score.to_i.fdiv(@questions.length.to_i * 3) * 100 %>%"></span>
+        </div>
       </div>
   </div>
 
