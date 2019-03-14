@@ -28,7 +28,7 @@
       To get hired in top firms, no surprise : get a top preparation to case-cracking!
     </p>
     <div class="fourth-picture">
-      <%=  image_tag "sofa.svg", width: 300 %>
+      <%=  image_tag "sofa.svg", width: 380 %>
     </div>
   </div>
 
@@ -77,44 +77,63 @@
 
 </div>
 
-<div class="methodology">
-  <div class="method">
-    <div class="illustration-method">
-       <%=  image_tag "analytics.svg", width: 50, class: "img-home" %>
-    </div>
-    <div class="description-method">
-       <p>
-            Consultants are should back their analysis with <strong>data-driven analysis </strong>.
-        </p>
+<div class="methodology-box">
+    <div class="title"> <h1>Result-oriented learning journey</h1>
+
+
+  <section>
+    <ol class="progress-bar">
+      <% @cases.each do |c| %>
+          <li class="is-complete"><span> <%= c.name %> </span></li>
+      <% end %>
+    </ol>
+  </section>
+  </div>
+  <div class="methodology">
+
+
+
+    <div class="method">
+      <div class="illustration-method">
+         <%=  image_tag "audio.svg", height: 50, class: "illustration-picture" %>
+         <h2>Top-quality correction</h2>
+      </div>
+      <div class="description-method">
+         <p>
+              Consultants are should back their analysis with <strong>data-driven analysis </strong>.
+          </p>
+      </div>
+
     </div>
 
+    <div class="method">
+      <div class="illustration-method">
+          <%=  image_tag "megaphone.svg", height: 50, class: "illustration-picture" %>
+         <h2>Interactive case-craking</h2>
+      </div>
+      <div class="description-method">
+         <p>
+              Consultants are should back their analysis with <strong>data-driven analysis </strong>.
+          </p>
+      </div>
+
+    </div>
+
+    <div class="method">
+      <div class="illustration-method">
+         <%=  image_tag "screen.svg", height: 50, class: "illustration-picture" %>
+         <h2>Results benchmarking</h2>
+      </div>
+      <div class="description-method">
+         <p>
+              Consultants are should back their analysis with <strong>data-driven analysis </strong>.
+          </p>
+      </div>
+
+    </div>
   </div>
 
-  <div class="method">
-    <div class="illustration-method">
-       <%=  image_tag "analytics.svg", width: 50, class: "img-home" %>
-    </div>
-    <div class="description-method">
-       <p>
-            Consultants are should back their analysis with <strong>data-driven analysis </strong>.
-        </p>
-    </div>
-
-  </div>
-
-  <div class="method">
-    <div class="illustration-method">
-       <%=  image_tag "analytics.svg", width: 50, class: "img-home" %>
-    </div>
-    <div class="description-method">
-       <p>
-            Consultants are should back their analysis with <strong>data-driven analysis </strong>.
-        </p>
-    </div>
-
-  </div>
 </div>
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
@@ -127,4 +146,3 @@
     Get to the best consulting firms <i class="fas fa-heart"></i>
   </div>
 </div>
-

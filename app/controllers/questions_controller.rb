@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
     @attempt = current_user.attempts.last
     @attempt.update(completed: true)
     @questions = Question.all
+    @questionstothiscase = Question.where(case_id: @cas.id)
   end
 
   def show

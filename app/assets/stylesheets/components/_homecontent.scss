@@ -3,7 +3,7 @@
   color: orange;
 }
 .advantage-box {
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(9,15,91,0.2);
   box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
   margin-left: 50px;
   padding-right: 10px;
@@ -21,7 +21,7 @@
 }
 
 .advantage {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(9,15,91,0.2);
   margin: 20px;
   padding-bottom: 25px;
   display: flex;
@@ -86,7 +86,8 @@
 }
 
 .fourth-picture {
-  margin-left: 100px;
+  margin-left: 60px;
   filter: drop-shadow(14px 14px 0px rgba(23,43,115, 0.15));
+  margin-bottom: -90px;
 }
 

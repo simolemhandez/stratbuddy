@@ -16,9 +16,9 @@
 
 
   <div class="container">
-    <p> <strong> <em> <%=  @questions.first.case.content %> </em></strong></p>
+    <p> <strong> <em> <%=  @questionstothiscase.first.case.content %> </em></strong></p>
 
-    <% @questions.each do  |question| %>
+    <% @questionstothiscase.each do  |question| %>
       <p>
        <strong> <%= question.position %>. <%= question.content %></strong>
       </p>
