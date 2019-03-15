@@ -14,6 +14,10 @@
 
   <div class="container">
     <h2> Question n°<%=  @question.position %>: <%=  @question.content %></h2>
+    <% if @question.photo.nil? %>
+    <% else %>
+      <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
+    <% end %>
     <%= simple_form_for [@question, @answer] do |f| %>
       <%= f.input :content, input_html: { class: "form-answer" }, placeholder: "Write as if you were in interviews, with well-structured, argument-based answers.", label: "Your turn! ✌️"%>
       <%= f.submit "Send", :class => "btn btn-flat", :id => "btn-send-timer" %>

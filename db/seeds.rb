@@ -9,7 +9,7 @@ Answer.destroy_all
 Question.destroy_all
 Attempt.destroy_all
 Case.destroy_all
-User.all
+User.destroy_all
 
 c = Case.create(
   content: 'Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America. \n
@@ -35,6 +35,8 @@ When thinking about endowment levers, I would want to think about the size of th
   keywords: ['number of clients', 'number of customers', 'number of concert', 'number of donors', 'mix', 'invest'],
   case_id: c.id,
   position: 1,
+    photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552662446/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.03.14.png"
+
   )
 
 Question.create(
@@ -51,6 +53,7 @@ Target new customer segments. MSO may be ignoring or under-serving potentially v
   keywords: ['increase price', 'offering', 'promotion', 'mix', 'customer segment'],
   case_id: c.id,
   position: 2,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552662988/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.12.11.png"
   )
 
 Question.create(
@@ -80,6 +83,7 @@ or entertainment options.
   keywords: ['increase price', 'offering', 'promotion', 'mix', 'customer segment'],
   case_id: c.id,
   position: 3,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552663096/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.12.59.png"
   )
 
 Question.create(
@@ -107,6 +111,7 @@ Expected revenue per subscriber for Years 3+ = 0.4 * 0.5 * $2,900 = $580 Thus, e
   keywords: ['1040'],
   case_id: c.id,
   position: 4,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552663121/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.13.15.png"
   )
 
 Question.create(
@@ -220,6 +225,7 @@ Question.create(
   keywords: ['gross margin', 'revenue'],
   case_id: cc.id,
   position: 1,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552662446/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.03.14.png"
   )
 
 
