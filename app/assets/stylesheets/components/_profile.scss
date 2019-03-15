@@ -1,6 +1,6 @@
 .profile {
   margin-top: 30px;
-  width: 1200px;
+  width: 1000px;
   padding: 30px;
   text-align: justify;
   margin-right: auto;
@@ -19,4 +19,17 @@
 .profile-data {
   margin-top: 0px;
   text-align: center;
+}
+
+
+.container-profile {
+  margin-top: 30px;
+
+  padding: 0px;
+  background: rgba(0,0,0,0.01);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
+  text-align: justify;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }

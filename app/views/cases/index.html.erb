@@ -1,11 +1,13 @@
 <div class="trianglify">
 
   <div class="title-box">
-    <h1 class="title">Your learning journey</h1>
+    <h1 class="title-index">Your learning journey</h1>
   </div>
 
-  <div class="container">
-
+  <div class="container container-caseindex">
+    <%=  image_tag "tablet.svg", width: 150, class: "index-cases-picture-two" %>
+    <%=  image_tag "sofa.svg", width: 150, class: "index-cases-picture-one" %>
+    <%=  image_tag "screen.svg", width: 100, class: "index-cases-picture-three" %>
     <% @cases.each do |c| %>
 
       <% if @attempt.nil? %>
@@ -77,5 +79,18 @@
     <% end %>
 
     <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
   </div>
 </div>

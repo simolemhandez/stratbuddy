@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :answers, only: :show
   get 'dashboard', to: 'profiles#dashboard'
   get 'knowledge', to: 'profiles#knowledge'
+  get 'voting/:id', to: 'answers#voting', as: :voting
 end

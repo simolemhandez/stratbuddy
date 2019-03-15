@@ -17,11 +17,12 @@
 @import "footer";
 @import "dashboard";
 @import "answercards";
+@import "picturesposition";
 
 body {
   font-family: 'Montserrat', sans-serif;
-
 }
+
 .container {
   margin-top: 30px;
   width: 1500px;
@@ -36,9 +37,20 @@ body {
 
 .title-box {
   width: 1200px;
+  margin-left: 30px;
   margin: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.title {
+  margin-left: 30px;
+  margin-top: 100px;
+}
+
+.title-index {
+  margin-left: 30px;
+  margin-top: 100px;
 }
 
 .question-answer {
@@ -61,8 +73,7 @@ body {
 }
 
 .trianglify {
-  // background-image: linear-gradient(60deg, #070d59 0%, #5893d4 70%);
-  background-image: white;
+  background-color: rgba(23,43,115, 0.1);;
   background-size: cover;
   margin-top: 0px;
   padding-top: 30px;

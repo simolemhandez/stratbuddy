@@ -49,7 +49,12 @@ class AnswersController < ApplicationController
     @answers = Answer.where(question_id: @question.id)
   end
 
-
+  def voting
+    @answer = Answer.find(params[:id])
+    @answer.votes = @answer.votes + 1
+    @answer.save
+    redirect_to answer_path(@answer)
+  end
 
   private
 
