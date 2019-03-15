@@ -46,7 +46,10 @@ class AnswersController < ApplicationController
     @user.save
     @attempt.save
     @next_question = Question.where(position: @question.position + 1, case_id: @question.case.id).last
+    @answers = Answer.where(question_id: @question.id)
   end
+
+
 
   private
 

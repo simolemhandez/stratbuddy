@@ -1,4 +1,4 @@
-<div class="trianglify">
+
   <div class="title-box">
     <h1 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h1>
 
@@ -11,12 +11,50 @@
   </div>
 
   <div class="container">
+
     <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
 
-    <% if @next_question.nil? %>
-      <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat" %>
-    <% else %>
-      <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat" %>
+    <p> <strong> What are other best candidates 5 best answers? 🙌 </strong></p>
+
+    <% @answers.all.order('votes DESC').first(5).each do |answer| %>
+      <div class="notification">
+      <%= cl_image_tag answer.attempt.user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle" %>
+        <div class="notification-content">
+          <p class="answer-content"> <strong> <%= answer.attempt.user.first_name %>: </strong> <%=  answer.content %>  </p>
+        </div>
+        <div class="notification-actions">
+          <p><%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, "#" %></p>
+          <% if  answer.votes.nil? %>
+            <p> 0 votes </p>
+          <% else %>
+            <p><%= answer.votes %> votes </p>
+          <% end %>
+        </div>
+      </div>
     <% end %>
+
+
+    <% if @next_question.nil? %>
+      <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat btn-answer" %>
+    <% else %>
+      <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat btn-answer" %>
+    <% end %>
+
+  </div>
+
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
   </div>
 </div>
+

@@ -16,6 +16,7 @@
 @import "methodology";
 @import "footer";
 @import "dashboard";
+@import "answercards";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -30,6 +31,7 @@ body {
   box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
   text-align: justify;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 .title-box {
