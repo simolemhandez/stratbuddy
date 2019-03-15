@@ -23,12 +23,8 @@
           <p class="answer-content"> <strong> <%= answer.attempt.user.first_name %>: </strong> <%=  answer.content %>  </p>
         </div>
         <div class="notification-actions">
-          <p><%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, "#" %></p>
-          <% if  answer.votes.nil? %>
-            <p> 0 votes </p>
-          <% else %>
+          <p><%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, voting_path(answer) %></p>
             <p><%= answer.votes %> votes </p>
-          <% end %>
         </div>
       </div>
     <% end %>
