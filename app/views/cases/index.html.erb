@@ -5,9 +5,6 @@
   </div>
 
   <div class="container container-caseindex">
-    <%=  image_tag "tablet.svg", width: 150, class: "index-cases-picture-two" %>
-    <%=  image_tag "sofa.svg", width: 150, class: "index-cases-picture-one" %>
-    <%=  image_tag "screen.svg", width: 100, class: "index-cases-picture-three" %>
     <% @cases.each do |c| %>
 
       <% if @attempt.nil? %>

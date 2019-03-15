@@ -1,27 +1,31 @@
+
 <div class="trianglify">
   <div class="title-box">
     <div>
       <%= link_to '<i class="fas fa-chevron-circle-left"></i>'.html_safe, cases_path, class: "back"  %>
     </div>
-    <h1> <%= link_to @questions.first.case.name, case_path(@questions.first.case) %> </h1>
-     <div class="score-card">
-      <i class="fas fa-trophy"></i>
+    <h1> <%= @questionstothiscase.first.case.name %> </h1>
 
-      <p>  Your score to this test: <%= @questions.first.case.attempts.last.score %> / <%= @questions.length.to_i * 3  %> </p>
+     <div class="score-card">
+      <div class="score-card-content">
+        <i class="fas fa-trophy"></i>
+      <p>  Your score to this test: <%= @questionstothiscase.first.case.attempts.last.score %> / <%= @questionstothiscase.length.to_i * 3  %> </p>
          <div class="score-bar blue stripes score-card-questions">
-          <span style="width: <%= @questions.first.case.attempts.last.score.to_i.fdiv(@questions.length.to_i * 3) * 100 %>%"></span>
+          <span style="width: <%= @questionstothiscase.first.case.attempts.last.score.to_i.fdiv(@questionstothiscase.length.to_i * 3) * 100 %>%"></span>
+        </div>
         </div>
       </div>
   </div>
 
 
   <div class="container">
-    <p> <strong> <em> <%=  @questionstothiscase.first.case.content %> </em></strong></p>
+    <h2>Final correction</h2>
+    <H6> <strong> <em> <%=  @questionstothiscase.first.case.content %> </em></strong></h6>
 
     <% @questionstothiscase.each do  |question| %>
-      <p>
+      <h6>
        <strong> <%= question.position %>. <%= question.content %></strong>
-      </p>
+      </h6>
         <% if question.answer_ids.last.nil? %>
         <% elsif %>
           <p class="question-answer"> <%= Answer.find(question.answer_ids.last).content %></p>

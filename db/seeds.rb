@@ -9,6 +9,7 @@ Answer.destroy_all
 Question.destroy_all
 Attempt.destroy_all
 Case.destroy_all
+User.all
 
 c = Case.create(
   content: 'Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America. \n

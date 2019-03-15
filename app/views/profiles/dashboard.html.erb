@@ -31,7 +31,10 @@
   <div class="dashboard">
      <div class="dashboard-description">
       <div class="dashboard-description-content">
-      <h2> <%= Attempt.all.where(completed: true).last.case.position %> cases done </h2>
+      <% if  Attempt.all.where(completed: true).nil?%>
+      <% else %>
+        <h2> <%= Attempt.all.where(completed: true).last.case.position %> cases done </h2>
+      <% end %>
       <p> Out of <%= Case.all.length %> cases </p>
       </div>
       <%=  image_tag "screen.svg", height: 50%>
