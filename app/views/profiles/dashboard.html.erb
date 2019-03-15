@@ -31,9 +31,9 @@
   <div class="dashboard">
      <div class="dashboard-description">
       <div class="dashboard-description-content">
-      <% if  Attempt.all.where(completed: true).nil?%>
+      <% if  @last_attempt_completed.nil?%>
       <% else %>
-        <h2> <%= Attempt.all.where(completed: true).last.case.position %> cases done </h2>
+        <h2> <%= @last_attempt_completed.case.position %> cases done </h2>
       <% end %>
       <p> Out of <%= Case.all.length %> cases </p>
       </div>
