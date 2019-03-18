@@ -7,7 +7,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 4px 4px 0px rgba(23,43,115, 0.15);
-  margin-top: 70px;
+  margin-right: 30px;
 
 }
 
@@ -18,5 +18,32 @@
 
 #questiontiming {
   margin-bottom: 3px;
+}
+
+.timing i {
+  color: #f7b633;
+}
+
+
+.timing-question {
+  text-align: center;
+  width: 100px;
+  vertical-align: center;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px rgba(23,43,115, 0.15);
+  margin-right: 30px;
+}
+
+.timing-question .values {
+  font-size: 20px;
+  color: #f7b633;
+  font-weight: bolder;
+}
+
+.timing-question {
+  font-size: 10px;
+  color: grey;
 }
 

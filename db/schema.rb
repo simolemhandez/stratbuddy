@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_160018) do
+ActiveRecord::Schema.define(version: 2019_03_18_114919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.string "content"
+    t.text "content"
     t.integer "votes", default: 0
     t.string "correctness"
     t.bigint "question_id"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_160018) do
     t.string "content"
     t.integer "timing"
     t.text "correction"
-    t.integer "skills"
+    t.string "skills"
     t.string "keywords", default: [], array: true
     t.bigint "case_id"
     t.datetime "created_at", null: false
@@ -76,6 +76,19 @@ ActiveRecord::Schema.define(version: 2019_03_15_160018) do
     t.integer "score", default: 0
     t.integer "progression_level"
     t.string "photo"
+    t.integer "business_sense", default: 0
+    t.integer "logic", default: 0
+    t.integer "mathematics", default: 0
+    t.integer "consumer_goods", default: 0
+    t.integer "oil_and_gas", default: 0
+    t.integer "manufacturing", default: 0
+    t.integer "financial_services", default: 0
+    t.integer "private_equity", default: 0
+    t.integer "pharmaceuticals", default: 0
+    t.integer "airline", default: 0
+    t.integer "tmt", default: 0
+    t.integer "non_profit", default: 0
+    t.integer "public_sector", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

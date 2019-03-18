@@ -1,0 +1,179 @@
+<div class="title-box-dashboard">
+  <h1>My dashboard</h1>
+</div>
+
+<div class="container-profile">
+  <div class="profile">
+    <%= cl_image_tag @user.photo, width: 300, height: 300, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+  </div>
+
+  <div class="profile-data">
+    <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
+    <p> <em> <%= @user.email %> </em></p>
+  </div>
+</div>
+
+<h4 class="dashboard-title">Progression</h4 >
+<div class="container-tabs">
+  <ul class="list-inline tabs-underlined mytabs">
+    <li>
+      <%= link_to "Global", dashboard_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "By skills", skills_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "By industry", "#", class: "tab-underlined active" %>
+    </li>
+  </ul>
+</div>
+
+<div class="container-industries">
+  <div class="dashboard-industries">
+    <p class="skill-name">Consumer goods</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.consumer_goods.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Consumer goods").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "audio.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.consumer_goods.to_i.fdiv(Case.where(industry: "Consumer goods").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">Oil & gas</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.oil_and_gas.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Oil & gas").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "screen.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.oil_and_gas.to_i.fdiv(Case.where(industry: "Oil & gas").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">Manufacturing</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.manufacturing.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Manufacturing").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "sofa.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.manufacturing.to_i.fdiv(Case.where(industry: "Manufacturing").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-industries">
+  <div class="dashboard-industries">
+    <p class="skill-name">Financial services</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.financial_services.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Financial services").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "tablet.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.financial_services.to_i.fdiv(Case.where(industry: "Financial services").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">Private Equity</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.private_equity.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Private Equity").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "computer.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.private_equity.to_i.fdiv(Case.where(industry: "Private Equity").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">Pharmaceuticals</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.pharmaceuticals.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Pharmaceuticals").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "megaphone.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.pharmaceuticals.to_i.fdiv(Case.where(industry: "Pharmaceuticals").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-industries">
+  <div class="dashboard-industries">
+    <p class="skill-name">Airline</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.airline.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Airline").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "audio.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.airline.to_i.fdiv(Case.where(industry: "Airline").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">TM & T</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.tmt.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Technology, Media & Telecommunication").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "screen.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.tmt.to_i.fdiv(Case.where(industry: "Technology, Media & Telecommunication").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+  <div class="dashboard-industries">
+    <p class="skill-name">Public sector</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.public_sector.to_i %> points </h2>
+        <p> Out of <%= Case.where(industry: "Public sector").length * 3 %> points </p>
+      </div>
+      <%=  image_tag "computer.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.public_sector.to_i.fdiv(Case.where(industry: "Public sector").length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
+  </div>
+</div>
+
+

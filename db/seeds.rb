@@ -12,14 +12,15 @@ Case.destroy_all
 User.destroy_all
 
 c = Case.create(
-  content: 'Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America. \n
+  content: "Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America.<br><br>
+
 
   Despite its artistic reputation, the orchestra has experienced a number of financial difficulties during its 80-year history. The recent past has proven no different, as the MSO has seen a steady drop in revenues over the last 3 years. This revenue decline has led to budget deficits that the orchestra has had to finance through borrowing.
-  Like many non-profit organizations, the MSO’s revenues can be split into three main sources. The first is earned income, which primarily takes the form of ticket revenue from both single ticket sales and discounted multi-concert subscriptions. The second is annual donations by individuals, companies, government bodies, and charitable foundations. The final source is the symphony’s endowment, a pool of professionally managed donated funds of which the MSO receives a small fixed percentage or “draw” each year.
-   1
-  Six months ago, the MSO board welcomed a new President, Kevin Stevens, to lead the organization. Mr. Stevens has called on McKinsey to help his management team address the declining revenue problem. If revenues do not eventually improve, the MSO will likely exhaust its credit and have to drastically scale back in size – or cease performing altogether.
-  What strategies should the MSO pursue to improve its revenue growth over the next 5 years?',
-  name: 'Metropolitan Symphony',
+  Like many non-profit organizations, the MSO’s revenues can be split into three main sources. The first is earned income, which primarily takes the form of ticket revenue from both single ticket sales and discounted multi-concert subscriptions. The second is annual donations by individuals, companies, government bodies, and charitable foundations. The final source is the symphony’s endowment, a pool of professionally managed donated funds of which the MSO receives a small fixed percentage or “draw” each year. <br><br>
+
+  Six months ago, the MSO board welcomed a new President, Kevin Stevens, to lead the organization. Mr. Stevens has called on McKinsey to help his management team address the declining revenue problem. If revenues do not eventually improve, the MSO will likely exhaust its credit and have to drastically scale back in size – or cease performing altogether.<br><br>
+  <strong> What strategies should the MSO pursue to improve its revenue growth over the next 5 years? </strong>",
+  name: "Metropolitan Symphony",
   day: 1,
   industry: 'Non-profit',
   position: 1,
@@ -31,11 +32,11 @@ Question.create(
   correction: 'When thinking about earned income levers, I would want to consider ticket revenue (number of customers or concertgoers, tickets sold per concert, number of concerts per season, price paid per ticket), special events (contracted performances) and merchandise revenue (souvenirs, recordings) from the gift shop
 When thinking about annual giving, I would want to think about number of donors (directly correlated with number of customers), amount contributed per donor (change the mix of donors or convince existing donors to give more).
 When thinking about endowment levers, I would want to think about the size of the endowment base (donations to increase endowment base, returns from invested funds) and the annual endowment draw percentage.',
-  skills: 'revenue hypothesis',
+  skills: 'Logic and rigorous thinking',
   keywords: ['number of clients', 'number of customers', 'number of concert', 'number of donors', 'mix', 'invest'],
   case_id: c.id,
   position: 1,
-    photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552662446/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.03.14.png"
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552662446/Capture_d_e%CC%81cran_2019-03-15_a%CC%80_16.03.14.png"
 
   )
 
@@ -49,7 +50,7 @@ mainstream classical and popular music programming) or the enhancing the overall
 Improve promotion. There may be a need to change core messages, media choices, or frequency of promotion
 Improve sales strategy. Alternatives include adjusting sales channel mix (e.g., telemarketing, internet, direct mail); sales force composition, incentives, and/or the structure of the marketing organization
 Target new customer segments. MSO may be ignoring or under-serving potentially valuable customer segments.',
-  skills: 'revenue hypothesis',
+  skills: 'Logic and rigorous thinking',
   keywords: ['increase price', 'offering', 'promotion', 'mix', 'customer segment'],
   case_id: c.id,
   position: 2,
@@ -79,7 +80,7 @@ older, high-income individuals)
 o MSO product offering has become weaker relative to other performing arts
 or entertainment options.
   5',
-  skills: 'data analysis',
+  skills: 'Logic and rigorous thinking',
   keywords: ['increase price', 'offering', 'promotion', 'mix', 'customer segment'],
   case_id: c.id,
   position: 3,
@@ -107,7 +108,7 @@ Expected revenue per subscriber in Year 1 = $300
   6
 Expected revenue per subscriber in Year 2 = 0.4 * $400 = $160
 Expected revenue per subscriber for Years 3+ = 0.4 * 0.5 * $2,900 = $580 Thus, expected lifetime revenue per new subscriber = ($300 + $160 + $580) = $1040',
-  skills: 'calculation',
+  skills: 'Mathematics skills',
   keywords: ['1040'],
   case_id: c.id,
   position: 4,
@@ -124,7 +125,7 @@ $1300= $300+(X*$400)+(X*0.5*$290, X=54%(rounded)
 Current renewal rate = 40%
 Required improvement in renewal rate = 54 - 40% = 14%
 The first-year renewal rate must increase by approximately 14 percentage points.',
-  skills: 'calculation',
+  skills: 'Business sense & culture',
   keywords: ['14%'],
   case_id: c.id,
   position: 5,
@@ -153,7 +154,7 @@ Historical trend analyses
 being masked/offset by increases/decreases in other sources of giving
 • Look for recent losses of key donors; changes in donor retention or attrition
 rates',
-  skills: 'revenue hypothesis',
+  skills: 'Business sense & culture',
   keywords: ['benchmarking', 'historical trends analysis', 'market share'],
   case_id: c.id,
   position: 6,
@@ -195,7 +196,7 @@ irresponsibility, some potential donors (particularly foundations) may be skepti
 Diversion of organization’s attention and focus
 • Given the resource-consuming nature of an endowment campaign and/or
 new marketing efforts, management could become distracted and fail to focus on the day-to-day operations of the symphony.',
-  skills: 'conclusion',
+  skills: 'Logic and rigorous thinking',
   keywords: ['cannibalization', 'renewal rate'],
   case_id: c.id,
   position: 6,
@@ -206,7 +207,7 @@ cc = Case.create(
   Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
   name: 'Dealer Jack',
   day: 1,
-  industry: 'retail',
+  industry: 'Consumer goods',
   position: 2,
   )
 
@@ -221,7 +222,7 @@ Question.create(
 • Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
 • DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
 • Management wants to increase the profits by 10% within the next year',
-  skills: 'initial clarifications',
+  skills: 'Logic and rigorous thinking',
   keywords: ['gross margin', 'revenue'],
   case_id: cc.id,
   position: 1,
@@ -234,7 +235,7 @@ ccc = Case.create(
   Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
   name: 'Dealer Jack',
   day: 2,
-  industry: 'retail',
+  industry: 'Consumer goods',
   position: 3,
   )
 
@@ -249,7 +250,7 @@ Question.create(
 • Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
 • DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
 • Management wants to increase the profits by 10% within the next year',
-  skills: 'initial clarifications',
+  skills: 'Logic and rigorous thinking',
   keywords: ['gross margin', 'revenue'],
   case_id: ccc.id,
   position: 1,
@@ -260,7 +261,7 @@ d = Case.create(
   Over the past three years however, Dealer Jack’s annual profits have stagnated and even declined in the past year while the grocery industry has continued to grow with hard discounters such as Trader Joe’s leading the way. The CEO has been getting increasing pressure from the board to turn things around, and we have been hired to diagnose the cause of DJ’s profitability issues and find ways to improve it.',
   name: 'Dealer Jack',
   day: 2,
-  industry: 'retail',
+  industry: 'Consumer goods',
   position: 4,
   )
 
@@ -275,7 +276,7 @@ Question.create(
 • Private label brands are commonly referred to as store brands like 365 at Whole Foods or Kirkland’s at Costco. Hard discounters such as Trader Joe’s rely heavily on private label brands. National brands come from CPG firms such as General Mills or Kraft. CPG firms require a margin on their products that’s not applicable to private label brands.
 • DJ’s had 2016 revenue of $60 billion with 30 percent gross margin and 3 percent profit margin.
 • Management wants to increase the profits by 10% within the next year',
-  skills: 'initial clarifications',
+  skills: 'Logic and rigorous thinking',
   keywords: ['gross margin', 'revenue'],
   case_id: d.id,
   position: 1,

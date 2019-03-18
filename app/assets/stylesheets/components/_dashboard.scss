@@ -1,6 +1,6 @@
 .dashboard {
   margin-top: 30px;
-  width: 350px;
+  width: 550px;
   padding: 30px;
   background: white;
   border: 1px solid rgba(0,0,0,0.1);
@@ -10,6 +10,39 @@
   height: 200px;
 }
 
+.dashboard-industries {
+  margin-top: 10px;
+  width: 350px;
+  padding: 30px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 0px rgba(23,43,115, 0.15);
+  text-align: justify;
+  border-radius: 7px;
+  height: 200px;
+}
+
+.dashboard-skills {
+  margin-top: 30px;
+  width: 350px;
+  padding: 30px;
+  padding-top: 5px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
+  text-align: justify;
+  border-radius: 7px;
+  height: 200px;
+}
+
+.skill-name {
+  font-size: 15px;
+  margin-bottom: 3px;
+  font-weight: bolder;
+  color: #db9526;
+}
+
+
 .container-dashboard {
   display: flex;
   justify-content: space-around;
@@ -17,6 +50,17 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
+}
+
+
+.container-industries {
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .dashboard-description {
@@ -30,4 +74,9 @@
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
