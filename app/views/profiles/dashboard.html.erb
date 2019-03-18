@@ -11,9 +11,31 @@
     <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
     <p> <em> <%= @user.email %> </em></p>
   </div>
+
+  <div class="row companies-container">
+    <% @companies.each do |company| %>
+      <div class= "col-sm-3 col col-xs-12 text-center">
+        <% if company.followed_by?(@user) %>
+            <%= link_to unfollow_path(company) do %>
+              <div class="company-card company-active" style="background-image: url(<%=cl_image_path(company.logo) %>)">
+              <%#= cl_image_tag company.logo, width: 100, height: 100, crop: :fill %>
+              </div>
+            <% end %>
+
+        <% else %>
+          <%= link_to follow_path(company) do %>
+            <div class="company-card" style="background-image: url(<%=cl_image_path(company.logo) %>)">
+              <%#= cl_image_tag company.logo, width: 100, height: 100, crop: :fill  %>
+            </div>
+          <% end %>
+
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<h4 class="dashboard-title">Progression</h4 >
+<h4 class="dashboard-title">Progression</h4>
 <div class="container-tabs">
   <ul class="list-inline tabs-underlined mytabs">
     <li>

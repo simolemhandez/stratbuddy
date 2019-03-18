@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :attempts
   mount_uploader :photo, PhotoUploader
+  acts_as_follower
 end

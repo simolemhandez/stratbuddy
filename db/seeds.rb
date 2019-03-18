@@ -10,6 +10,7 @@ Question.destroy_all
 Attempt.destroy_all
 Case.destroy_all
 User.destroy_all
+Company.destroy_all
 
 c = Case.create(
   content: "Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America.<br><br>
@@ -22,7 +23,7 @@ c = Case.create(
   <strong> What strategies should the MSO pursue to improve its revenue growth over the next 5 years? </strong>",
   name: "Metropolitan Symphony",
   day: 1,
-  industry: 'Non-profit',
+  industry: 'Public sector',
   position: 1,
 )
 
@@ -281,3 +282,37 @@ Question.create(
   case_id: d.id,
   position: 1,
   )
+
+e = Company.create(
+  name: "McKinsey",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png")
+
+f = Company.create(
+  name: "BCG",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920259/BCG_MONOGRAM_RGB_GREEN_tcm9-210235.png")
+
+
+f = Company.create(
+  name: "Accenture",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920283/Logo-accenture2017.png")
+
+f = Company.create(
+  name: "Capgemini",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552921394/capgemini-reveals-new-brand-identity-new-messages-to-mark-anniversary.jpg")
+
+f = Company.create(
+  name: "Accuracy",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552921445/te%CC%81le%CC%81chargement.png")
+
+f = Company.create(
+  name: "Bain",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552921469/bain-logo.png")
+
+f = Company.create(
+  name: "Roland Berger",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552921494/Roland_Berger_Logo_2015.png")
+
+f = Company.create(
+  name: "Oliver Wyman",
+  logo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1552921572/logo-oliver-wyman.png")
+

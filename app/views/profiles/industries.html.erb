@@ -11,7 +11,30 @@
     <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
     <p> <em> <%= @user.email %> </em></p>
   </div>
+
+  <div class="row companies-container">
+    <% @companies.each do |company| %>
+      <div class= "col-sm-3 col col-xs-12 text-center">
+        <% if company.followed_by?(@user) %>
+            <%= link_to unfollow_path(company) do %>
+              <div class="company-card company-active" style="background-image: url(<%=cl_image_path(company.logo) %>)">
+              <%#= cl_image_tag company.logo, width: 100, height: 100, crop: :fill %>
+              </div>
+            <% end %>
+
+        <% else %>
+          <%= link_to follow_path(company) do %>
+            <div class="company-card" style="background-image: url(<%=cl_image_path(company.logo) %>)">
+              <%#= cl_image_tag company.logo, width: 100, height: 100, crop: :fill  %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
 </div>
+
 
 <h4 class="dashboard-title">Progression</h4 >
 <div class="container-tabs">
@@ -34,12 +57,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.consumer_goods.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Consumer goods").length * 3 %> points </p>
+        <% sum = 0 %>
+        <% Case.where(industry: "Consumer goods").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "audio.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.consumer_goods.to_i.fdiv(Case.where(industry: "Consumer goods").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.consumer_goods.to_i.fdiv( sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -48,12 +73,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.oil_and_gas.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Oil & gas").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Oil & gas").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "screen.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.oil_and_gas.to_i.fdiv(Case.where(industry: "Oil & gas").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.oil_and_gas.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -62,12 +89,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.manufacturing.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Manufacturing").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Manufacturing").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "sofa.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.manufacturing.to_i.fdiv(Case.where(industry: "Manufacturing").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.manufacturing.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -79,12 +108,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.financial_services.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Financial services").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Financial services").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "tablet.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.financial_services.to_i.fdiv(Case.where(industry: "Financial services").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.financial_services.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -93,12 +124,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.private_equity.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Private Equity").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Private Equity").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "computer.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.private_equity.to_i.fdiv(Case.where(industry: "Private Equity").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.private_equity.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -107,12 +140,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.pharmaceuticals.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Pharmaceuticals").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Pharmaceuticals").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "megaphone.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.pharmaceuticals.to_i.fdiv(Case.where(industry: "Pharmaceuticals").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.pharmaceuticals.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -124,12 +159,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.airline.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Airline").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Airline").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "audio.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.airline.to_i.fdiv(Case.where(industry: "Airline").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.airline.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -138,12 +175,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.tmt.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Technology, Media & Telecommunication").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Technology, Media & Telecommunication").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "screen.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.tmt.to_i.fdiv(Case.where(industry: "Technology, Media & Telecommunication").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.tmt.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
@@ -152,12 +191,14 @@
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.public_sector.to_i %> points </h2>
-        <p> Out of <%= Case.where(industry: "Public sector").length * 3 %> points </p>
+         <% sum = 0 %>
+        <% Case.where(industry: "Public sector").each { |c| sum += c.questions.length }  %>
+        <p> Out of <%= sum * 3 %> points </p>
       </div>
       <%=  image_tag "computer.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.public_sector.to_i.fdiv(Case.where(industry: "Public sector").length * 3) * 100 %>%"></span>
+      <span style="width: <%= current_user.public_sector.to_i.fdiv(sum * 3) * 100 %>%"></span>
     </div>
   </div>
 
