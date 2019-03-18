@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   end
   resources :answers, only: :show
   get 'dashboard', to: 'profiles#dashboard'
+  get 'skills', to: 'profiles#skills'
+  get 'industries', to: 'profiles#industries'
   get 'knowledge', to: 'profiles#knowledge'
   get 'voting/:id', to: 'answers#voting', as: :voting
 end

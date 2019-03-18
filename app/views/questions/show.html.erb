@@ -1,25 +1,23 @@
 <div class="trianglify">
   <div class="title-box ">
-    <h1 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h1>
-     <div class="timing">
-      <i class="far fa-clock time-symbol"></i>
-      <p id="questiontiming" data-timer="<%= @question.timing %>", data-url="<%= cases_url %>"> <em><strong> <%= @question.timing  %> mins </strong> </em> </p>
+    <h2 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h2>
+     <div class="timing-question">
         <div id="startValuesAndTargetExample">
             <div class="values"></div>
         </div>
-    </div>
+      <p id="questiontiming" data-timer="<%= @question.timing %>", data-url="<%= cases_url %>"> <em><strong> (<%= @question.timing  %> mins) </strong> </em> </p>
+      </div>
   </div>
 
 
-
   <div class="container">
-    <h2> Question n°<%=  @question.position %>: <%=  @question.content %></h2>
+    <h4> Question n°<%=  @question.position %>: <%=  @question.content %></h4>
     <% if @question.photo.nil? %>
     <% else %>
       <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
     <% end %>
     <%= simple_form_for [@question, @answer] do |f| %>
-      <%= f.input :content, input_html: { class: "form-answer" }, placeholder: "Write as if you were in interviews, with well-structured, argument-based answers.", label: "Your turn! ✌️"%>
+      <%= f.input :content, input_html: { type: "textarea" }, placeholder: "Write as if you were in interviews, with well-structured, argument-based answers.", label: "Your turn! ✌️"%>
       <%= f.submit "Send", :class => "btn btn-flat", :id => "btn-send-timer" %>
     <% end %>
   </div>

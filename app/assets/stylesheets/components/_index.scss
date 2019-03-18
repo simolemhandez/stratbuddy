@@ -18,6 +18,7 @@
 @import "dashboard";
 @import "answercards";
 @import "picturesposition";
+@import "tabs";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -33,6 +34,10 @@ body {
   text-align: justify;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+
+.container-short {
+  width: 800px !important;
 }
 
 .container-sign {
@@ -53,7 +58,10 @@ body {
 
 .title-index {
   margin-left: 30px;
+}
 
+.case-name {
+  text-align: center;
 }
 
 .question-answer {

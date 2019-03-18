@@ -4,7 +4,7 @@
 
 <div class="container-profile">
   <div class="profile">
-    <%= cl_image_tag @user.photo, width: 300, height: 300, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+    <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
   </div>
 
   <div class="profile-data">
@@ -13,22 +13,39 @@
   </div>
 </div>
 
+<h4 class="dashboard-title">Progression</h4 >
+<div class="container-tabs">
+  <ul class="list-inline tabs-underlined mytabs">
+    <li>
+      <%= link_to "Global", "#", class: "tab-underlined active" %>
+    </li>
+    <li>
+      <%= link_to "By skills", skills_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "By industry", industries_path, class: "tab-underlined" %>
+    </li>
+  </ul>
+</div>
+
 <div class="container-dashboard">
 
   <div class="dashboard">
+    <p class="skill-name">Score</p>
     <div class="dashboard-description">
       <div class="dashboard-description-content">
         <h2> <%= current_user.score.to_i %> points </h2>
-        <p> Out of <%= Question.all.length %> points </p>
+        <p> Out of <%= Question.all.length * 3 %> points </p>
       </div>
       <%=  image_tag "audio.svg", height: 50%>
     </div>
     <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
+      <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length * 3) * 100 %>%"></span>
     </div>
   </div>
 
   <div class="dashboard">
+    <p class="skill-name">Cases done</p>
      <div class="dashboard-description">
       <div class="dashboard-description-content">
       <% if  @last_attempt_completed.nil?%>
@@ -62,18 +79,7 @@
     </section>
   </div>
 
-   <div class="dashboard">
-    <div class="dashboard-description">
-      <div class="dashboard-description-content">
-        <h2> <%= current_user.score.to_i %> points </h2>
-        <p> Out of <%= Question.all.length %> points </p>
-      </div>
-      <%=  image_tag "audio.svg", height: 50%>
-    </div>
-    <div class="score-bar blue stripes">
-      <span style="width: <%= current_user.score.to_i.fdiv(Question.all.length) * 100 %>%"></span>
-    </div>
-  </div>
+
 
 </div>
 

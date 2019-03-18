@@ -1,0 +1,93 @@
+<div class="title-box-dashboard">
+  <h1>My dashboard</h1>
+</div>
+
+<div class="container-profile">
+  <div class="profile">
+    <%= cl_image_tag @user.photo, width: 300, height: 300, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+  </div>
+
+  <div class="profile-data">
+    <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
+    <p> <em> <%= @user.email %> </em></p>
+  </div>
+</div>
+
+<h4 class="dashboard-title">Progression</h4 >
+<div class="container-tabs">
+   <ul class="list-inline tabs-underlined mytabs">
+    <li>
+      <%= link_to "Global", dashboard_path, class: "tab-underlined" %>
+    </li>
+    <li>
+      <%= link_to "By skills", skills_path, class: "tab-underlined active" %>
+    </li>
+    <li>
+      <%= link_to "By industry", industries_path, class: "tab-underlined" %>
+    </li>
+  </ul>
+</div>
+
+<div class="container-dashboard">
+
+  <div class="dashboard-skills">
+    <p class="skill-name">Logic and rigorous thinking</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.logic.to_i %> points </h2>
+        <p> Out of <%= @questions_logic.length * 3 %> points </p>
+      </div>
+      <%=  image_tag "screen.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.logic.to_i.fdiv(@questions_logic.length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+    <div class="dashboard-skills">
+      <p class="skill-name">Business sense & culture</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.business_sense.to_i %> points </h2>
+        <p> Out of <%= @questions_business.length * 3%> points </p>
+      </div>
+      <%=  image_tag "sofa.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.business_sense.to_i.fdiv(@questions_business.length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+    <div class="dashboard-skills">
+      <p class="skill-name">Mathematics skills</p>
+    <div class="dashboard-description">
+      <div class="dashboard-description-content">
+        <h2> <%= current_user.mathematics.to_i %> points </h2>
+        <p> Out of <%= @questions_math.length * 3 %> points </p>
+      </div>
+      <%=  image_tag "audio.svg", height: 50%>
+    </div>
+    <div class="score-bar blue stripes">
+      <span style="width: <%= current_user.mathematics.to_i.fdiv(@questions_math.length * 3) * 100 %>%"></span>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
+  </div>
+</div>
