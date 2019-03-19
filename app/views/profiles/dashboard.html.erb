@@ -1,10 +1,10 @@
-<div class="title-box-dashboard">
-  <h1>My dashboard</h1>
-</div>
-
 <div class="container-profile">
   <div class="profile">
-    <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+    <% if @user.photo.url.nil? %>
+      <%=  image_tag "avatar.png", width: 200, height: 200, class: "avatar-profile align-avatar", style: "background: grey" %>
+    <% else %>
+      <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+    <% end %>
   </div>
 
   <div class="profile-data">
@@ -83,10 +83,10 @@
       <ol class="progress-bar">
         <% @cases.each do |c| %>
 
-          <% if c.attempts.last.nil? %>
+          <% if c.attempts.where(user_id: current_user.id).last.nil? %>
             <li><span> <%= c.name %> </span></li>
 
-          <% elsif c.attempts.last.completed == true && @last_attempt.case.position == c.position %>
+          <% elsif c.attempts.where(user_id: current_user.id).last.completed == true && @last_attempt.case.position == c.position %>
             <li class="is-active"><span> <%= c.name %> </span></li>
 
           <% elsif c.attempts.last.completed == true %>

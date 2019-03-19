@@ -1,10 +1,11 @@
-<div class="title-box-dashboard">
-  <h1>My dashboard</h1>
-</div>
 
 <div class="container-profile">
   <div class="profile">
-    <%= cl_image_tag @user.photo, width: 300, height: 300, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+    <% if @user.photo.url.nil? %>
+      <%=  image_tag "avatar.png", width: 200, height: 200, class: "avatar-profile align-avatar", style: "background: grey" %>
+    <% else %>
+      <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :thumb, gravity: :face, class: "avatar-profile align-avatar" %>
+    <% end %>
   </div>
 
   <div class="profile-data">

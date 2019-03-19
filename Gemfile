@@ -10,8 +10,6 @@ gem 'rails', '5.2.2'
 gem 'redis'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 
-
-
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
@@ -23,8 +21,7 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'money-rails'
 gem 'stripe'
-
-
+gem 'pundit'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

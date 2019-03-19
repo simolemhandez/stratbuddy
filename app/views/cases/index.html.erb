@@ -1,7 +1,7 @@
 <div class="trianglify">
 
   <div class="container container-short">
-        <h3 class="case-name"> Your learning journey </h3> <br>
+        <h3 class="learning-journey"> Your learning journey </h3> <br>
     <% @cases.each do |c| %>
 
       <% if @attempt.nil? %>
@@ -11,7 +11,7 @@
             <div class="card-product">
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
               <div class="card-product-infos">
-                <h4><%= link_to c.name, case_path(c) %> - Take this case now ! </h4>
+                <h4><%= link_to c.name, case_path(c), class: "case-name" %> - Take this case now ! </h4>
                 <p> <strong>Industry:</strong>  <%= c.industry  %></p>
               </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="card-product">
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
               <div class="card-product-infos">
-                <h4><%= link_to c.name, case_path(c) %> - Take this case now ! </h4>
+                <h4><%= link_to c.name, case_path(c), class: "case-name" %> - Take this case now ! </h4>
                 <p> <strong>Industry:</strong>  <%= c.industry  %></p>
               </div>
             </div>
@@ -48,7 +48,7 @@
               <div class="card-product-grey">
                 <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
                 <div class="card-product-infos">
-                  <h4><%= link_to c.name, case_questions_path(c) %> </h4>
+                  <h4><%= link_to c.name, case_questions_path(c), class: "case-name" %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                   <p> Completed : <i class="fas fa-check-circle"></i></p>
                 </div>
