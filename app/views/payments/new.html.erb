@@ -1,0 +1,52 @@
+<div class="trianglify-payment">
+  <div class="container container-pay">
+  <h3> Get your access </h3>
+  <br>
+  <ul>
+    <li>
+      Get access to a library of more than 15+ top cases and practice them in an interactive way.
+    </li>
+    <br>
+    <li>
+      Get top-correction by McKinsey consultants, benchmark your answer with other candidates' best answers !
+    </li>
+    <br>
+    <li>
+      In your personalized dashboard, analyze your progression, filtered by skills and by industries !
+    </li>
+    <br>
+  </ul>
+
+
+    <%= form_tag order_payments_path(@order) do %>
+      <article>
+        <label class="amount">
+          <span> Get your access for <%= humanized_money_with_symbol(@order.amount) %> ! </span>
+        </label>
+      </article>
+      <br>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="Your access"
+        data-email="<%= current_user.email %>"
+        data-description="Access"
+        data-amount="<%= @order.amount_cents %>"
+        data-currency="<%= @order.amount.currency %>"></script>
+
+    <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
+  </div>
+</div>
+

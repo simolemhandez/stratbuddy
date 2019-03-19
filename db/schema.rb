@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_152828) do
+ActiveRecord::Schema.define(version: 2019_03_19_141159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,16 @@ ActiveRecord::Schema.define(version: 2019_03_18_152828) do
     t.index ["follower_type", "follower_id"], name: "index_follows_on_follower_type_and_follower_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.json "payment"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "content"
     t.integer "timing"
@@ -110,6 +120,8 @@ ActiveRecord::Schema.define(version: 2019_03_18_152828) do
     t.integer "tmt", default: 0
     t.integer "non_profit", default: 0
     t.integer "public_sector", default: 0
+    t.boolean "suscribed", default: false
+    t.integer "price_cents", default: 6000, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -118,5 +130,6 @@ ActiveRecord::Schema.define(version: 2019_03_18_152828) do
   add_foreign_key "answers", "questions"
   add_foreign_key "attempts", "cases"
   add_foreign_key "attempts", "users"
+  add_foreign_key "orders", "users"
   add_foreign_key "questions", "cases"
 end

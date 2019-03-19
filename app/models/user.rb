@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :attempts
+  has_many :orders
   mount_uploader :photo, PhotoUploader
   acts_as_follower
+  monetize :price_cents
 end

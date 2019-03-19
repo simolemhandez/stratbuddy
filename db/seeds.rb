@@ -9,6 +9,7 @@ Answer.destroy_all
 Question.destroy_all
 Attempt.destroy_all
 Case.destroy_all
+Order.destroy_all
 User.destroy_all
 Company.destroy_all
 

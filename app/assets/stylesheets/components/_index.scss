@@ -20,6 +20,7 @@
 @import "picturesposition";
 @import "tabs";
 @import "companies";
+@import "payment";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -92,4 +93,12 @@ body {
   padding-top: 30px;
 }
 
+
+.trianglify-payment {
+  background-color: rgba(23,43,115, 0.1);
+  background-size: cover;
+  padding-bottom: 100px;
+  margin-top: 80px;
+  padding-top: 30px;
+}
 
