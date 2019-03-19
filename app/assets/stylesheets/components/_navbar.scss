@@ -1,13 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(5,8,52);
+  background: rgba(5,8,52,1);
   margin-bottom: 0px;
   height: 80px;
-
+  transition: all 0.6s ease-out;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+}
+
+.navbar-lewagon-home {
+  background: rgba(5,8,52,0);
 }
 
 .navbar-lewagon .navbar-brand img {

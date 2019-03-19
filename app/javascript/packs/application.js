@@ -15,3 +15,8 @@ import { timerbis } from '../components/timer';
 if (document.getElementById('questiontiming')) {
   timerbis();
 }
+
+import { navbarDynamic } from '../components/navbar';
+if (document.getElementById('home-banner-navbar')) {
+  navbarDynamic();
+}

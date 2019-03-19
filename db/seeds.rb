@@ -201,7 +201,7 @@ new marketing efforts, management could become distracted and fail to focus on t
   skills: 'Logic and rigorous thinking',
   keywords: ['cannibalization', 'renewal rate'],
   case_id: c.id,
-  position: 6,
+  position: 7,
   )
 
 cc = Case.create(
