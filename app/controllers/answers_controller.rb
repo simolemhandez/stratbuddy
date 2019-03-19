@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
   def new
     @question = Question.find(params[:question_id])
     @answer = Answer.new
+    authorize @answer
   end
 
   def create
@@ -15,6 +16,7 @@ class AnswersController < ApplicationController
     else
       render :new
     end
+    authorize @answer
   end
 
   def show
@@ -140,12 +142,14 @@ class AnswersController < ApplicationController
     @attempt.save
     @next_question = Question.where(position: @question.position + 1, case_id: @question.case.id).last
     @answers = Answer.where(question_id: @question.id)
+    authorize @answer
   end
 
   def voting
     @answer = Answer.find(params[:id])
     @answer.votes = @answer.votes + 1
     @answer.save
+    authorize @answer
     redirect_to answer_path(@answer)
   end
 

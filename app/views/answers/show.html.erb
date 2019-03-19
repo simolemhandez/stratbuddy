@@ -18,10 +18,13 @@
 
     <% @answers.all.order('votes DESC').first(5).each do |answer| %>
       <div class="notification">
-      <% if  answer.attempt.user.photo.nil? %>
-      <% else %>
-        <%= cl_image_tag answer.attempt.user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle" %>
-      <% end %>
+
+    <% if @user.photo.url.nil? %>
+      <%=  image_tag "avatar.png", width: 150, height: 150, class: "avatar dropdown-toggle", style: "background: white" %>
+    <% else %>
+      <%= cl_image_tag @user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle" %>
+    <% end %>
+
 
         <div class="notification-content">
           <p class="answer-content"> <strong> <%= answer.attempt.user.first_name %>: </strong> <%=  answer.content.gsub(/\n/,'<br>').html_safe %>  </p>
@@ -32,7 +35,7 @@
         </div>
       </div>
     <% end %>
-
+    <br>
 
     <% if @next_question.nil? %>
       <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat btn-answer" %>

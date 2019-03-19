@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
     @cas = Case.find(params[:case_id])
     @attempt = current_user.attempts.last
     @attempt.update(completed: true)
-    @questions = Question.all
+    @questions = policy_scope(Question)
     @questionstothiscase = Question.where(case_id: @cas.id)
   end
 
@@ -13,5 +13,6 @@ class QuestionsController < ApplicationController
       @attempt = Attempt.create(user_id: current_user.id, case_id: @question.case.id)
     end
     @answer = Answer.new
+    authorize @question
   end
 end
