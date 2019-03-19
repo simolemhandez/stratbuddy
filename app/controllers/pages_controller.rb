@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @cases = Case.all
+    @myclass = "navbar-lewagon-home"
   end
 end
