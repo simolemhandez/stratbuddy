@@ -1,0 +1,25 @@
+
+<div class="trianglify-payment">
+  <div class="container-pay container">
+    <% if @order.state == "paid" %>
+      <h3>Congratulations <%= current_user.first_name %> <%= current_user.last_name.upcase %> ! 🎉</h3>
+      <br>
+      <p> You have successfully suscribed to our service. Start acing the case, and make it to the best consulting firms 🚀 </p>
+      <br>
+      <%= link_to "Ace the case!", cases_path, class: "btn btn-flat" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Get to the best consulting firms <i class="fas fa-heart"></i>
+  </div>
+</div>

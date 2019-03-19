@@ -7,16 +7,28 @@
   <div class="banner-content">
     <%= image_tag "agreement.svg", width: 60, class: "logo-home" %>
     <h1>Casebreaker</h1>
-    <p>Make it to <span id="banner-typed-text"></span></p>
-    <%= link_to "Start!", cases_path, class: "btn  btn-flat"  %>
+    <p>Make it to <span id="banner-typed-text"></span> for 60€ only.</p>
+
+    <div class="payment">
+      <% if current_user.nil? %>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-flat" %>
+      <% elsif current_user.suscribed == true %>
+          <%= link_to "Ace the case!", cases_path, class: "btn btn-flat" %>
+      <% else %>
+          <%= form_tag orders_path do %>
+            <%= hidden_field_tag 'user_id', current_user.id %>
+            <%= submit_tag 'Get my access', class: 'btn btn-flat' %>
+          <% end %>
+      <% end %>
+    </div>
+
+
   </div>
    <div class="second-picture">
     <%=  image_tag "tablet.svg", width: 300 %>
   </div>
 
 </div>
-
-
 
 <div class="home-content">
   <div class="home-description">
@@ -79,7 +91,6 @@
 
 <div class="methodology-box">
     <div class="title"> <h1>Result-oriented learning journey</h1>
-
 
   <section>
     <p>Our case library</p>

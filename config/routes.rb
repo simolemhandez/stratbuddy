@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :answers, only: [ :new, :create ]
   end
   resources :answers, only: :show
+  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: [:new, :create]
+  end
   get 'dashboard', to: 'profiles#dashboard'
   get 'skills', to: 'profiles#skills'
   get 'industries', to: 'profiles#industries'

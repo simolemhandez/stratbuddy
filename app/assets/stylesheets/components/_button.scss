@@ -20,6 +20,31 @@
   transition: background 0.3s ease;
 }
 
+button.stripe-button-el {
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 30px !important;
+  background: linear-gradient(135deg, #f7b633 0%, #fff6be 117%) !important;
+  transition: background 0.3s ease !important;
+  background-image: none;
+
+}
+
+button.stripe-button-el>span {
+  background-color: transparent !important;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: none;
+
+}
+
+
+.stripe-button:hover {
+  opacity: 0.8 !important;
+  color: white !important;
+}
+
 .btn-flat:hover {
 
   opacity: 0.8;
