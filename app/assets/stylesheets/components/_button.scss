@@ -12,13 +12,6 @@
   opacity: 1;
 }
 
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #f7b633 0%, #fff6be 117%);
-  transition: background 0.3s ease;
-}
 
 button.stripe-button-el {
   color: white !important;
@@ -39,17 +32,33 @@ button.stripe-button-el>span {
 
 }
 
-
-.stripe-button:hover {
-  opacity: 0.8 !important;
-  color: white !important;
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f7b633 0%, #fff6be 117%);
+  transition: background 0.3s ease;
 }
+
 
 .btn-flat:hover {
 
   opacity: 0.8;
   color: white;
 }
+
+.btn-next {
+
+  background-image: image_url('next.svg');
+  width: 50px;
+  height: 50px;
+}
+
+.stripe-button:hover {
+  opacity: 0.8 !important;
+  color: white !important;
+}
+
 
 .btn-gradient {
   color: white;

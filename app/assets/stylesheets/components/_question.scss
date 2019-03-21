@@ -1,0 +1,36 @@
+.container-question {
+  position: relative;
+  }
+
+.question-number {
+  border-radius: 100%;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 0px rgba(23,43,115, 0.15);
+  background-color: rgba(5,8,52,1);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: -23px;
+
+}
+
+
+
+.question-content {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.question-text {
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+.your-turn {
+  height: 100px !important;
+}
+
+

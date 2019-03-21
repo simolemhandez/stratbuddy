@@ -1,16 +1,33 @@
-<div class="trianglify">
-  <div class="title-box">
-    <h2 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h2>
+<div class="trianglify-twisted">
+  <div class="first-box">
+    <div class="title-box">
+      <h2 class="title"> <%= @question.case.name.upcase %> </h2>
+    </div>
 
+
+
+  <div class="container-short container container-question">
+      <div class="question-content">
+        <div class="question-number">
+          <h1><%=  @question.position %></h1>
+        </div>
+        <div class="question-text">
+          <h4> <%=  @question.content %></h4>
+        </div>
+      </div>
+
+      <% if @question.photo.nil? %>
+      <% else %>
+        <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
+      <% end %>
   </div>
 
-  <div class="container">
-    <h4> Question n°<%= @question.position  %>: <%= @question.content %></h4>
+  <div class="container-short container container-question">
     <p class="question-answer"> <strong>Your answer: </strong> <%= @answer.content.gsub(/\n/,'<br>').html_safe %></p>
     <p class="question-correction"> <strong> Correction:</strong> <%= @question.correction %></p>
   </div>
 
-  <div class="container">
+  <div class="container-short container container-question">
 
     <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
 

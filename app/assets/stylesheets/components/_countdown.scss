@@ -1,0 +1,48 @@
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-right: 0px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.mysvg {
+  width: 100px;
+  height: 100px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+
+}
+
+#startValuesAndTargetExample {
+  position:absolute;
+
+  top: 0;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mysvg circle {
+  stroke-dasharray: 287px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: #070d59 ;
+  fill: none;
+  animation-name: countdown;
+  animation-timing-function: linear;
+  animation-play-state: infinite;
+  animation-direction: forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 287px;
+  }
+}

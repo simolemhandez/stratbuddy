@@ -1,5 +1,5 @@
 
-<div class="trianglify">
+<div class="trianglify-twisted">
   <div class="title-box">
     <div>
       <%= link_to '<i class="fas fa-chevron-circle-left"></i>'.html_safe, cases_path, class: "back"  %>
@@ -18,10 +18,12 @@
   </div>
 
 
-  <div class="container">
+  <div class="container-short container container-question">
     <h2>Final correction</h2>
     <H6> <strong> <em> <%=  @questionstothiscase.first.case.content %> </em></strong></h6>
+  </div>
 
+  <div class="container-short container container-question">
     <% @questionstothiscase.each do  |question| %>
       <h6>
        <strong> <%= question.position %>. <%= question.content %></strong>

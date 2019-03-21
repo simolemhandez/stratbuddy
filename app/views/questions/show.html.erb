@@ -1,29 +1,57 @@
-<div class="trianglify">
-  <div class="title-box ">
-    <h2 class="title"> Case n°<%= @question.case.position  %>:  <%= @question.case.name %> </h2>
-     <div class="timing-question">
-        <div id="startValuesAndTargetExample">
-            <div class="values"></div>
-        </div>
-      <p id="questiontiming" data-timer="<%= @question.timing %>", data-url="<%= cases_url %>"> <em><strong> (<%= @question.timing  %> mins) </strong> </em> </p>
+<div class="trianglify-twisted">
+  <div class="first-box">
+    <div class="title-box">
+      <h2 class="title"> <%= @question.case.name.upcase %> </h2>
+      <div id="countdown">
+        <svg class="mysvg">
+          <circle style="animation-duration: <%= @question.timing * 60 %>s" r="46" cx="50" cy="50"></circle>
+            <div id="startValuesAndTargetExample">
+                <div id="exact-timing" class="values"></div>
+            </div>
+        </svg>
       </div>
+    </div>
+        <p id="questiontiming" data-timer="<%= @question.timing %>", data-url="<%= cases_url %>"> <em><strong> <% @question.timing  %> </strong> </em> </p>
+
+    <div class="container-short container container-question">
+      <div class="question-content">
+        <div class="question-number">
+          <h1><%=  @question.position %></h1>
+        </div>
+        <div class="question-text">
+          <h4> <%=  @question.content %></h4>
+        </div>
+      </div>
+
+      <% if @question.photo.nil? %>
+      <% else %>
+        <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
+      <% end %>
+    </div>
+
+    <div class="container-short container container-question">
+      <%= simple_form_for [@question, @answer] do |f| %>
+        <%= f.input :content, input_html: { type: "textarea" }, :class => "your-turn", placeholder: "Ace here!", label: "Your turn! ✌️"%>
+        <div class="position-button-next">
+          <%= f.submit "", :class => "btn btn-next", :id => "btn-send-timer" do %>
+            <i class="fas fa-chevron-circle-right"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    </div>
+
+
   </div>
 
 
-  <div class="container">
-    <h4> Question n°<%=  @question.position %>: <%=  @question.content %></h4>
-    <% if @question.photo.nil? %>
-    <% else %>
-      <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
-    <% end %>
-    <%= simple_form_for [@question, @answer] do |f| %>
-      <%= f.input :content, input_html: { type: "textarea" }, placeholder: "Write as if you were in interviews, with well-structured, argument-based answers.", label: "Your turn! ✌️"%>
-      <%= f.submit "Send", :class => "btn btn-flat", :id => "btn-send-timer" %>
-    <% end %>
-  </div>
-
-  </div>
 </div>
+
+
+
+
+
 
 
 

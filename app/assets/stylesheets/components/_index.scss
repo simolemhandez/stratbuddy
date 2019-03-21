@@ -21,6 +21,8 @@
 @import "tabs";
 @import "companies";
 @import "payment";
+@import "question";
+@import "countdown";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -46,16 +48,22 @@ body {
   margin-top: 115px;
 }
 
+.container-question {
+  margin-left: auto;
+}
+
 .title-box {
-  width: 1200px;
-  margin-left: 30px;
+  width: 800px !important;
+  margin-left: 0px;
+  margin-bottom: 30px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .title {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .title-index {
@@ -86,6 +94,14 @@ body {
 }
 
 .trianglify {
+  background-color: rgba(23,43,115, 0.1);;
+  background-size: cover;
+  padding-bottom: 40px;
+  margin-top: 80px;
+  padding-top: 30px;
+}
+
+.trianglify-twisted {
   background-color: rgba(23,43,115, 0.1);;
   background-size: cover;
   padding-bottom: 40px;

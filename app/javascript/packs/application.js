@@ -6,10 +6,10 @@ if (document.getElementById('banner-typed-text')) {
   loadDynamicBannerText();
 }
 
-import { mytimer } from '../components/mytimer';
-if (document.getElementById('questiontiming')) {
-  mytimer();
-}
+// import { mytimer } from '../components/mytimer';
+// if (document.getElementById('questiontiming')) {
+//   mytimer();
+// }
 
 import { timerbis } from '../components/timer';
 if (document.getElementById('questiontiming')) {
@@ -20,3 +20,5 @@ import { navbarDynamic } from '../components/navbar';
 if (document.getElementById('home-banner-navbar')) {
   navbarDynamic();
 }
+
+
