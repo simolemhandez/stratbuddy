@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     redirect_to(root_path)
   end
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   def configure_permitted_parameters
   devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :photo])
 
