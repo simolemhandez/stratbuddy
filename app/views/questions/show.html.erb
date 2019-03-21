@@ -22,12 +22,8 @@
 
     </div>
     <div class="row">
-      <div class="col col-md-1">
-        <div class="question-number">
-          <h1> <%=  @question.position %></h1>
-        </div>
-      </div>
-      <div class="col col-md-11">
+
+      <div class="col col-md-12">
         <div class="container-question-blue">
           <div class="question-text">
             <h5> <%=  @question.content %></h5>
@@ -36,7 +32,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col col-md-11 offset-md-1">
+      <div class="col col-md-12">
           <% if @question.photo.nil? %>
           <% else %>
             <div class="container-question container-picture" style="background-image: url(<%=cl_image_path(@question.photo)%>)">
@@ -46,10 +42,10 @@
       </div>
 
     <div class="row">
-      <div class="col col-md-7 offset-md-1">
+      <div class="col col-md-8">
         <div class="container-question">
           <%= simple_form_for [@question, @answer] do |f| %>
-            <%= f.input :content, input_html: { type: "textarea", class: "your-turn" }, placeholder: "Ace here!", label: "Your turn! ✌️"%>
+            <%= f.input :content, input_html: { type: "textarea", class: "your-turn" }, placeholder: "Ace here!", label: "Your answer: "%>
         </div>
       </div>
       <div class="col col-md-4">

@@ -42,12 +42,7 @@
 
     </div>
     <div class="row">
-      <div class="col col-md-1">
-        <div class="question-number">
-          <h1> <%=  @question.position %></h1>
-        </div>
-      </div>
-      <div class="col col-md-11">
+      <div class="col col-md-12">
         <div class="container-question-blue">
           <div class="question-text">
             <h5> <%=  @question.content %></h5>
@@ -57,7 +52,7 @@
     </div>
 
     <div class="row">
-      <div class="col col-md-5 offset-md-1">
+      <div class="col col-md-6">
         <div class="container-question">
             <h6>Your answer</h6>
             <p class="question-answer"> <%= @answer.content.gsub(/\n/,'<br>').html_safe %></p>
@@ -74,7 +69,7 @@
 
 
     <div class="row">
-      <div class="col col-md-11 offset-md-1">
+      <div class="col col-md-12">
           <div class="container-question">
               <h6 class="best-answers">  What are other best candidates 5 best answers? 🙌 </h6>
 
