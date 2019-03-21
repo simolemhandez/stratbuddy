@@ -1,10 +1,13 @@
 #countdown {
   position: relative;
-  margin: auto;
   margin-right: 0px;
   height: 100px;
   width: 100px;
   text-align: center;
+  box-shadow: 8px 8px 0px rgba(23,43,115, 0.15);
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .mysvg {
@@ -29,9 +32,9 @@
   stroke-dasharray: 287px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
-  stroke-width: 2px;
+  stroke-width: 6px;
   stroke: #070d59 ;
-  fill: none;
+  fill: white;
   animation-name: countdown;
   animation-timing-function: linear;
   animation-play-state: infinite;

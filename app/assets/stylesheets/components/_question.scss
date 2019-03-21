@@ -1,6 +1,9 @@
-.container-question {
-  position: relative;
-  }
+
+.flexing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .question-number {
   border-radius: 100%;
@@ -11,17 +14,7 @@
   height: 50px;
   text-align: center;
   color: white;
-  position: absolute;
-  left: -23px;
-
-}
-
-
-
-.question-content {
-  display: flex;
-  justify-content: space-around;
-
+  margin: 0px;
 }
 
 .question-text {
@@ -33,4 +26,79 @@
   height: 100px !important;
 }
 
+.little-flexbox {
+text-align: center;
+position: relative;
+}
 
+.countdown {
+  position: absolute;
+  top: 20px;
+}
+
+.picto-question{
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+}
+
+.next-question {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.flexbox-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.correctness {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.question-correction {
+  margin-top : 5px;
+  padding-top: 10px;
+  border-top : 2px solid black;
+}
+
+.question-answer {
+  margin-top : 5px;
+  padding-top: 10px;
+  border-top : 2px solid black;
+}
+
+.best-answers {
+  padding-bottom: 10px;
+  border-bottom : 2px solid black;
+  margin-bottom: 20px;
+}
+
+.container-picture {
+  background-color: white;
+  height: 300px;
+  background-size: contain ;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+.button-index {
+  margin-top: 20px;
+}
+
+.your-turn {
+  height: 300px !important;
+}
+
+.label-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.position-of-button {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,81 +1,150 @@
 <div class="trianglify-twisted">
   <div class="first-box">
-    <div class="title-box">
-      <h2 class="title"> <%= @question.case.name.upcase %> </h2>
+    <div class="row">
+      <div class="col col-md-12">
+        <h2 class="title-question"> <%= @question.case.name.upcase %> </h2>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col col-md-12">
+
+        <div class="progress md-progress" style="height: 20px">
+          <div class="progress-bar progress-bar-bis" role="progressbar" style="width: <%= @question.position.to_i.fdiv(@question.case.questions.last.position.to_i) * 100 %>%" aria-valuenow="<%= @question.position.to_i.fdiv(@question.case.questions.last.position.to_i) * 100%>" aria-valuemin="0" aria-valuemax="100">
+          </div>
+
+      </div>
+
+      <p class="text-right"> <em> <%= @question.case.questions.last.position.to_i %> questions</em></p>
+
+      </div>
+    </div>
+    <div>
+
+    <div class="row">
+      <div class="col col-md-4 offset-md-4">
+        <div class="container-question container-correct">
+          <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
+        </div>
+      </div>
+      <div class="col col-md-4 position-of-button">
+          <% if @next_question.nil? %>
+
+          <%= link_to "", case_questions_path(@question.case), class: "btn btn-next" %>
+        <% else %>
+          <h4 class="label-button">NEXT QUESTION</h4 class="label-button">
+          <%= link_to "", question_path(@next_question), class: "btn btn-next" %>
+        <% end %>
+      </div>
     </div>
 
 
 
-  <div class="container-short container container-question">
-      <div class="question-content">
+    </div>
+    <div class="row">
+      <div class="col col-md-1">
         <div class="question-number">
-          <h1><%=  @question.position %></h1>
+          <h1> <%=  @question.position %></h1>
         </div>
-        <div class="question-text">
-          <h4> <%=  @question.content %></h4>
+      </div>
+      <div class="col col-md-11">
+        <div class="container-question-blue">
+          <div class="question-text">
+            <h5> <%=  @question.content %></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-5 offset-md-1">
+        <div class="container-question">
+            <h6>Your answer</h6>
+            <p class="question-answer"> <%= @answer.content.gsub(/\n/,'<br>').html_safe %></p>
+        </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="container-question">
+            <h6>Correction</h6>
+                <p class="question-correction"> <strong> Correction:</strong> <%= @question.correction %></p>
+          </div>
         </div>
       </div>
 
-      <% if @question.photo.nil? %>
-      <% else %>
-        <%= cl_image_tag @question.photo, height: 300, width: 400, crop: :fill, class: "img-question" %>
-      <% end %>
-  </div>
-
-  <div class="container-short container container-question">
-    <p class="question-answer"> <strong>Your answer: </strong> <%= @answer.content.gsub(/\n/,'<br>').html_safe %></p>
-    <p class="question-correction"> <strong> Correction:</strong> <%= @question.correction %></p>
-  </div>
-
-  <div class="container-short container container-question">
-
-    <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
-
-    <p> <strong> What are other best candidates 5 best answers? 🙌 </strong></p>
-
-    <% @answers.all.order('votes DESC').first(5).each do |answer| %>
-      <div class="notification">
-
-    <% if @user.photo.url.nil? %>
-      <%=  image_tag "avatar.png", width: 150, height: 150, class: "avatar dropdown-toggle", style: "background: white" %>
-    <% else %>
-      <%= cl_image_tag @user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle" %>
-    <% end %>
 
 
-        <div class="notification-content">
-          <p class="answer-content"> <strong> <%= answer.attempt.user.first_name %>: </strong> <%=  answer.content.gsub(/\n/,'<br>').html_safe %>  </p>
+    <div class="row">
+      <div class="col col-md-11 offset-md-1">
+          <div class="container-question">
+              <h6 class="best-answers">  What are other best candidates 5 best answers? 🙌 </h6>
+
+                <% @answers.all.order('votes DESC').first(5).each do |answer| %>
+                  <div class="notification">
+
+                <% if @user.photo.url.nil? %>
+                  <%=  image_tag "avatar.png", width: 150, height: 150, class: "avatar dropdown-toggle", style: "background: white" %>
+                <% else %>
+                  <%= cl_image_tag @user.photo, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar dropdown-toggle" %>
+                <% end %>
+
+
+              <div class="notification-content">
+                <p class="answer-content"> <strong> <%= answer.attempt.user.first_name %>: </strong> <%=  answer.content.gsub(/\n/,'<br>').html_safe %>  </p>
+              </div>
+              <div class="notification-actions">
+                <p><%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, voting_path(answer) %></p>
+                  <p><%= answer.votes %> votes </p>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <div class="notification-actions">
-          <p><%= link_to '<i class="far fa-thumbs-up"></i>'.html_safe, voting_path(answer) %></p>
-            <p><%= answer.votes %> votes </p>
-        </div>
-      </div>
-    <% end %>
-    <br>
+    </div>
+   </div>
 
-    <% if @next_question.nil? %>
-      <%= link_to "View my score", case_questions_path(@question.case), class: "btn btn-flat btn-answer" %>
-    <% else %>
-      <%= link_to "Next question", question_path(@next_question), class: "btn btn-flat btn-answer" %>
-    <% end %>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
 
   </div>
 
 
-
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Get to the best consulting firms <i class="fas fa-heart"></i>
   </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
 </div>
+</div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Get to the best consulting firms <i class="fas fa-heart"></i>
+    </div>
+  </div>
+

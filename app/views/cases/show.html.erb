@@ -1,13 +1,38 @@
-<div class="trianglify">
+<div class="trianglify-twisted">
+  <div class="first-box">
+    <div class="row">
+      <div class="col col-md-10">
+        <h2 class="title-question"> <%= @case.name.upcase %> </h2>
+      </div>
+    </div>
 
-  <div class="container container-short">
-    <h3 class="case-name"> <%= @case.name  %> </h3> <br>
-    <p> <em> Take notes 🤓 You will not have access to this data anymore 👋 </p></em>
-    <p> <strong>Industry:</strong>  <%= @case.industry  %></p>
-    <p> <strong> <em> <%= @case.content.html_safe %> </em></strong> </p>
-    <%= link_to "Start!", question_path(@case.questions.first, attempt: "new"), class: "btn btn-flat" %>
+
+
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="container-index-blue">
+          <h5> Read carefully the instructions ! </h5>
+        </div>
+      </div>
+    </div>
+
+   <div class="row">
+      <div class="col col-md-8">
+        <div class="container-question">
+          <em> <%= @case.content.html_safe %> </em>
+       </div>
+    </div>
+    <div class="col col-md-4 position-of-button">
+        <h4 class="label-button">START</h4 class="label-button">
+        <%= link_to "", question_path(@case.questions.first, attempt: "new"), class: "btn btn-next" %>
+    </div>
   </div>
+
 </div>
+</div>
+
+
 
 
 <div class="footer">

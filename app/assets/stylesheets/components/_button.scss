@@ -47,11 +47,35 @@ button.stripe-button-el>span {
   color: white;
 }
 
-.btn-next {
+.flat-question {
+  color: white;
+  padding: 8px 24px;
+  width: 100% !important;
+  margin: auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 0px rgba(23,43,115, 0.15);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #f7b633 0%, #fff6be 117%);
+  transition: background 0.3s ease;
+}
 
+
+.flat-question:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+
+.btn-next {
   background-image: image_url('next.svg');
   width: 50px;
   height: 50px;
+  display: inline-block;
 }
 
 .stripe-button:hover {
@@ -76,7 +100,14 @@ button.stripe-button-el>span {
 }
 
 .back {
-  font-size: 30px;
-  color: black;
-  margin-left: 30px;
+  color: #f7b633;
+  text-align: right;
+  font-size: 50px;
+}
+
+.back:hover {
+  color: #f7b633;
+  text-align: right;
+  font-size: 50px;
+  opacity: 0.7;
 }
