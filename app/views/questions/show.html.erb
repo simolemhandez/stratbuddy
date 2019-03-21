@@ -26,7 +26,7 @@
       <div class="col col-md-12">
         <div class="container-question-blue">
           <div class="question-text">
-            <h5> <%=  @question.content %></h5>
+            <h5> <%=  @question.content.gsub(/\n/,'<br>').html_safe %></h5>
           </div>
         </div>
       </div>

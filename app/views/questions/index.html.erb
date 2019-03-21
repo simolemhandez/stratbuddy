@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col col-md-12">
         <div class="container-index-blue">
-          <H6> <strong> <em> <%=  @questionstothiscase.first.case.content %> </em></strong></h6>
+          <H6> <strong> <em> <%=  @questionstothiscase.first.case.content.html_safe %> </em></strong></h6>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
         <div class="col col-md-11">
           <div class="container-index-blue">
             <h6>
-             <strong><%= question.content %></strong>
+             <strong><%= question.content.gsub(/\n/,'<br>').html_safe %></strong>
             </h6>
           </div>
         </div>
@@ -53,10 +53,10 @@
             <% if question.answer_ids.last.nil? %>
             <% elsif %>
               <h6>My answer:</h6>
-              <p class="question-answer"> <%= Answer.find(question.answer_ids.last).content %></p>
+              <p class="question-answer"> <%= Answer.find(question.answer_ids.last).content.html_safe %></p>
             <% end %>
               <h6>Correction: </h6>
-              <p class="question-correction"> <%= question.correction %></p>
+              <p class="question-correction"> <%= question.correction.gsub(/\n/,'<br>').html_safe %></p>
           </div>
         </div>
       </div>
