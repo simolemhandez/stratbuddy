@@ -7,9 +7,10 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 8px 8px 0px rgba(23,43,115, 0.15);
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 .card-product img {
@@ -40,9 +41,10 @@
   overflow: hidden;
   height: 120px;
   background: rgba(200,200,200,0.4);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 8px 8px 0px rgba(23,43,115, 0.15);
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 .card-product-grey img {
