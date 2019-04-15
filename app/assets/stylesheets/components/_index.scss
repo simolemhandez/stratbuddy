@@ -23,6 +23,9 @@
 @import "payment";
 @import "question";
 @import "countdown";
+@import "avis";
+@import "product";
+@import "cardsmethod";
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -35,8 +38,8 @@ body {
   background: white;
   border: 1px solid rgba(0,0,0,0.1);
   box-shadow: 14px 14px 0px rgba(23,43,115, 0.15);
-  text-align: justify;
   border-radius: 5px;
+  text-align: justify;
   margin-bottom: 30px;
 }
 

@@ -1,0 +1,40 @@
+.avis {
+  width: 300px;
+}
+
+
+
+.avis-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avis-card {
+  margin-top: 5px;
+  padding:1px;
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 0px rgba(23,43,115, 0.15);
+  text-align: justify;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1.0;
+  border: 2px solid  white;
+  height: 70px;
+  width: 100px;
+  background-size: contain ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.avatar-avis{
+  width: 150px;
+  height: 150px;
+  box-shadow: 3px 3px 0px rgba(23,43,115, 0.15);
+  border-radius: 50%;
+  border: 3px solid  white;
+}

@@ -93,57 +93,125 @@
 
 </div>
 
+<div class="product methodology-box">
+
+      <div class="title">
+      <h1>Our offer starting at 200€</h1>
+    </div>
+
+  <div class="payment">
+      <% if current_user.nil? %>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-flat" %>
+      <% elsif current_user.suscribed == true %>
+          <%= link_to "Ace the case!", cases_path, class: "btn btn-flat" %>
+      <% else %>
+          <%= form_tag orders_path do %>
+            <%= hidden_field_tag 'user_id', current_user.id %>
+            <%= submit_tag 'Get my access', class: 'btn btn-flat' %>
+          <% end %>
+      <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col col-md-4">
+      <div class="card-method">
+        <div class="card-trip-infos">
+          <div>
+            <h2>Top quality cases</h2>
+          </div>
+          <h2 class="card-trip-pricing"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+        </div>
+         <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1553181980/caption.png", width: 400, height: 400, crop: :crop %>
+      </div>
+    </div>
+    <div class="col col-md-4">
+      <div class="card-method">
+        <div class="card-trip-infos">
+          <div>
+            <h2>Interactive case-cracking</h2>
+          </div>
+          <h2 class="card-trip-pricing"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+        </div>
+         <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1553181979/caption2.png", width: 400, height: 400, crop: :crop %>
+      </div>
+    </div>
+    <div class="col col-md-4">
+      <div class="card-method">
+        <div class="card-trip-infos">
+          <div>
+            <h2>Professional corrections</h2>
+          </div>
+          <h2 class="card-trip-pricing"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h2>
+        </div>
+         <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1553181979/Capture_d_e%CC%81cran_2019-03-21_a%CC%80_16.05.54.png", width: 400, height: 400, crop: :crop %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="methodology-box">
 
 
 
-    <div class="title"> <h1>Result-oriented learning journey for 60€</h1>
-
-  <section>
-    <p>Our case library</p>
-    <ol class="progress-bar">
-      <% @cases.each do |c| %>
-          <li class="is-complete"><span> <%= c.name %> </span></li>
-      <% end %>
-    </ol>
-  </section>
-  </div>
+    <div class="title">
+      <h1>Our alumni love us <i class="fas fa-heart"></i></h1>
+    </div>
 
   <div class="methodology">
 
+        <div class="avis">
+          <div class="illustration-method">
+             <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/c_thumb,g_face/v1554820806/pmvzu27jmas0lzjxb1y5.jpg", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1555307967/hec-paris-750x330_1.jpg") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> « Top-quality case library »  </em></p>
+          </div>
+        </div>
 
+        <div class="avis">
+          <div class="illustration-method">
+              <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/c_thumb,g_face/v1554820806/pmvzu27jmas0lzjxb1y5.jpg", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1555307967/hec-paris-750x330_1.jpg") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> <strong> « Top-quality case library » </strong></em></p>
+          </div>
+        </div>
 
-    <div class="method">
-      <div class="illustration-method">
-         <%=  image_tag "audio.svg", height: 70, class: "illustration-picture" %>
-      </div>
-      <div class="description-method">
-         <p>Top-quality case library</p>
-      </div>
-    </div>
+        <div class="avis">
+          <div class="illustration-method">
+              <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/c_thumb,g_face/v1554820806/pmvzu27jmas0lzjxb1y5.jpg", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1555307967/hec-paris-750x330_1.jpg") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> « Top-quality case library »  </em></p>
+          </div>
+        </div>
 
-    <div class="method">
-      <div class="illustration-method">
-          <%=  image_tag "megaphone.svg", height: 50, class: "illustration-picture" %>
-      </div>
-      <div class="description-method">
-         <p>Interactive case-craking</p>
-      </div>
-
-    </div>
-
-    <div class="method">
-      <div class="illustration-method">
-         <%=  image_tag "screen.svg", height: 50, class: "illustration-picture" %>
-      </div>
-      <div class="description-method">
-         <p>Correction and results benchmarking</p>
-      </div>
-
-    </div>
   </div>
 
+
+
 </div>
+
+
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
