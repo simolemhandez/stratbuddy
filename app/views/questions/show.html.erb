@@ -1,8 +1,16 @@
 <div class="trianglify-twisted">
   <div class="first-box">
     <div class="row">
-      <div class="col col-md-12">
+      <div class="col col-md-10">
         <h2 class="title-question"> <%= @question.case.name.upcase %> </h2>
+      </div>
+      <div class="col col-md-2">
+        <div class="time-indication">
+          <div class="timing-by-case">
+            <i class="far fa-clock"></i>
+            <p> <%= @question.timing %> mins </p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">

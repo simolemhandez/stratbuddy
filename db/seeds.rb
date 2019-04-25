@@ -199,7 +199,7 @@ Question.create(
   keywords: ['US', 'Europe', '4,59', '5,45', '5,22'],
   case_id: cc.id,
   position: 2,
-  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1555322230/Capture_d_e%CC%81cran_2019-04-15_a%CC%80_11.56.03.png",
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556186127/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_11.53.07.png",
   )
 
 Question.create(
@@ -223,7 +223,7 @@ Using the same methodology, we find 27 250 fot the U.S. and 20 880 for Europe',
   keywords: ['4590', '27250', '20880'],
   case_id: cc.id,
   position: 3,
-  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1555322230/Capture_d_e%CC%81cran_2019-04-15_a%CC%80_11.56.03.png",
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556186127/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_11.53.07.png",
   )
 
 # CASE 3 ---------------------------------------------------------

@@ -4,6 +4,18 @@
       <div class="col col-md-10">
         <h2 class="title-question"> <%= @case.name.upcase %> </h2>
       </div>
+      <div class="col col-md-2">
+        <div class="time-indication">
+          <% total_time = 0 %>
+          <% @case.questions.each do |q| %>
+            <% total_time += q.timing.to_i %>
+          <% end %>
+          <div class="timing-by-case">
+            <i class="far fa-clock"></i>
+            <p> <%= total_time %> mins </p>
+          </div>
+        </div>
+      </div>
     </div>
 
 
