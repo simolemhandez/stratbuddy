@@ -3,7 +3,7 @@
   <div class="first-box">
     <div class="row">
       <div class="col col-md-11 title-question">
-        <h1> <%= @questionstothiscase.first.case.name.upcase %> </h1>
+        <h1> <%= @questionstothiscase.first.case.name.upcase %> - <em> Your score </em></h1>
       </div>
 
       <div class="col col-md-1">
@@ -31,11 +31,11 @@
 
 
 
-    <% @questionstothiscase.each do  |question| %>
+    <% @questionstothiscase.reverse.each do  |question| %>
       <div class="row">
         <div class="col col-md-1">
           <div class="question-number">
-            <h1> <%=  question.position %></h1>
+            <h1> <%= question.position %></h1>
           </div>
         </div>
         <div class="col col-md-11">

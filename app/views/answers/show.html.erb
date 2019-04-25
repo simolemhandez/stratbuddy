@@ -52,20 +52,28 @@
     </div>
 
     <div class="row">
-      <div class="col col-md-6">
+      <div class="col col-md-12">
         <div class="container-question">
             <h6>Your answer</h6>
             <p class="question-answer"> <%= @answer.content.gsub(/\n/,'<br>').html_safe %></p>
         </div>
+      </div>
+<!--       <div class="col col-md-8">
+        <div class="container-question">
+          <h6>Correction</h6>
+              <p class="question-correction"> <%= @question.correction.gsub(/\n/,'<br>').html_safe %></p>
         </div>
-        <div class="col col-md-6">
-          <div class="container-question">
-            <h6>Correction</h6>
-                <p class="question-correction"> <%= @question.correction.gsub(/\n/,'<br>').html_safe %></p>
-          </div>
+      </div> -->
+    </div>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="container-question">
+          <h6>Correction</h6>
+              <p class="question-correction"> <%= @question.correction.gsub(/\n/,'<br>').html_safe %></p>
         </div>
       </div>
-
+    </div>
 
 
     <div class="row">
@@ -102,33 +110,38 @@
 
 
 
+
+
+
+
+
+
+
+
+    <div class="row next-quest-last">
+      <div class="col col-md-4 offset-md-4">
+        <div class="container-question container-correct">
+          <p class="correctness"> <strong> <%= @answer.correctness %> </strong> </p>
+        </div>
+      </div>
+      <div class="col col-md-4 position-of-button">
+          <% if @next_question.nil? %>
+
+          <%= link_to "", case_questions_path(@question.case), class: "btn btn-next" %>
+        <% else %>
+          <h4 class="label-button">NEXT QUESTION</h4 class="label-button">
+          <%= link_to "", question_path(@next_question), class: "btn btn-next" %>
+        <% end %>
+      </div>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
-
-
-
-
-
-
-  </div>
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
 
   <div class="footer">
     <div class="footer-links">

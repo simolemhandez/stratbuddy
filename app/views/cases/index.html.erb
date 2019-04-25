@@ -16,7 +16,7 @@
           <div class="card-title">
             <h4> <strong> Case n°<%= c.position %></strong> </h4>
             <div class="card-product">
-              <%=  image_tag "tablet.svg", width: 100 %>
+              <%=  image_tag "tablet.svg", width: 50 %>
               <div class="card-product-infos">
                 <h4><%= link_to c.name, case_path(c), class: "case-name" %> - Take this case now ! </h4>
                 <p> <strong>Industry:</strong>  <%= c.industry  %></p>
@@ -27,7 +27,7 @@
             <div class="card-title">
               <h4> <strong> Case n°<%= c.position %></strong> </h4>
               <div class="card-product-grey">
-                <%=  image_tag "sofa.svg", width: 100 %>
+                <%=  image_tag "sofa.svg", width: 50 %>
                 <div class="card-product-infos">
                   <h4><%= c.name %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>

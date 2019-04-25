@@ -6,9 +6,9 @@
 }
 
 .card-method > img {
-  height: 200px;
+  height: 300px;
   width: 100%;
-  object-fit: cover;
+
 }
 
 .card-method h2 {
@@ -26,10 +26,11 @@
 
 .card-method .card-trip-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // position: relative;
+  text-align: center;
 }
 
 .card-trip-infos .card-trip-user {
