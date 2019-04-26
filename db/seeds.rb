@@ -20,14 +20,14 @@ cccc = Case.create(
   name: 'Regional Jet',
   day: 1,
   industry: 'Airline',
-  position: 1
+  position: 1,
+  difficulty: "<i class='fas fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>"
   )
 
 Question.create(
   content: 'What advantages and disadvantages would you expect Russian and Chinese jet manufacturers to have compared to their competitors?',
   timing: 4,
-  correction: '
-  👉 This is a question of creativity where you should show your business acumen and understanding of world geopolitics. <br>
+  correction: '👉 This is a question of creativity where you should show your business acumen and understanding of world geopolitics. <br>
 
   <strong> Concerning the advantages: <br></strong>
   • State backing
@@ -39,8 +39,7 @@ Question.create(
   • Trouble with certification in developed countries
   • Lack of R&D strength <br>
 
-  👉 Here, the list is not exhaustive.
-',
+  👉 Here, the list is not exhaustive.',
   skills: 'Business sense & culture',
   keywords: ['R&D', 'state', 'cost', 'certification', 'reputation'],
   case_id: cccc.id,
@@ -50,16 +49,14 @@ Question.create(
 Question.create(
   content: 'What is the CAGR for demand in the overall market between 2013 and 2016?',
   timing: 8,
-  correction: '
-CAGR is ((EndingValue/Beginning Value)^(1/# of years)) - 1 <br>
+  correction: 'CAGR is ((EndingValue/Beginning Value)^(1/# of years)) - 1 <br>
 👉  CAGR is frequently computed in strategy consulting to understand average growth rate.
 
 Calculation <br>
 • 260/185 = 1.405
 • 1.405 ^ (1/3) = 1.12
 • 1.12–1 = 0.12
-• CAGR is approximately 12%
-',
+• CAGR is approximately 12%',
   skills: 'Mathematics skills',
   keywords: ['12%'],
   case_id: cccc.id,
@@ -70,11 +67,9 @@ Calculation <br>
 Question.create(
   content: 'Capacity, in term of number of jets, of players : 100 jets per year for Bombardier, 90 jets per year for Embraer, 60 jets per year for R and 100 jets per year for C.<br>
 
-  What is the expected cost per plane for each manufacturer in 2014?
-  ',
+  What is the expected cost per plane for each manufacturer in 2014?',
   timing: 8,
-  correction: '
-  We will start by calculating total costs for each manufacturer in 2014, taking into account fixed costs are not dependent on demand level and variable costs are.<br>
+  correction: 'We will start by calculating total costs for each manufacturer in 2014, taking into account fixed costs are not dependent on demand level and variable costs are.<br>
 
   • Labor and parts are variable costs and should be allocated as a % of full capacity
   In 2014, total labor costs for Bombardier are : Demand / Capacity * Cost = 105 / 100 * 1.0 = 1.05 $Bn
@@ -100,15 +95,13 @@ Question.create(
 
 
 Question.create(
-  content: '
-  In 2017, we have:
+  content: 'In 2017, we have:
   Cost per plane for Bombardier : 0.05 $Bn = 50 $M
   Cost per plane for Embraer : 0.045 $Bn = 45 $M
   Cost per plane for R : 0.053 $Bn = 53 $M
   Cost per plane for C : 0.0475 $Bn = 47.5 $M <br>
 
-  What can you interpret from the current and future cost per plane of the Chinese and Russian competitors?
-  ',
+  What can you interpret from the current and future cost per plane of the Chinese and Russian competitors?',
   timing: 8,
   correction: '
   • Currently, the new entrants cannot compete on a cost per plane basis due to a lock of demand necessary to sufficiently amortize fixed costs
@@ -128,7 +121,8 @@ cc = Case.create(
   name: 'EnergyCo',
   day: 1,
   industry: 'Oil & gas',
-  position: 2
+  position: 2,
+  difficulty: "<i class='fas fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>"
   )
 
 Question.create(
@@ -175,8 +169,7 @@ Third, deal informations : <br>
 Question.create(
   content: 'Can you walk me through the following three charts? What market is more attractive for our upcoming product, 100 KW Turbine?',
   timing: 7,
-  correction: '
-<strong>Analysis from exhibit 1 suggest: <br></strong>
+  correction: '<strong>Analysis from exhibit 1 suggest: <br></strong>
 • Output and costs are important to Asia<br>
 • Aesthetics and output are important to the U.S.<br>
 • Size and output are important to Europe<br>
@@ -193,8 +186,7 @@ Question.create(
 • Next year incremental demand in Europe : 6,0 * 0,87 = 5,22<br>
 • U.S. and Europe are the biggest markets currently<br>
 • U.S. market becomes biggest next year due to growth rates<br>
-<br><br> 👉 Here, You have to be very rigorous on the way you analyze each chart, and make sure you take the most out of the data given by the interviewer.
-',
+<br><br> 👉 Here, You have to be very rigorous on the way you analyze each chart, and make sure you take the most out of the data given by the interviewer.',
   skills: 'Mathematics skills',
   keywords: ['US', 'Europe', '4,59', '5,45', '5,22'],
   case_id: cc.id,
@@ -205,8 +197,7 @@ Question.create(
 Question.create(
   content: 'How many units would you predict our company will sell in each of the three markets?',
   timing: 3,
-  correction: '
-  We will multiply the number of turbines needed in each market next year by the projected market share in each market.<br>
+  correction: 'We will multiply the number of turbines needed in each market next year by the projected market share in each market.<br>
 👉 Always explain the approach you will take. Reasoning is often more important than figures !<br>
 
 If we do not have market share information, we can deduce it from a combination of Exhibits 1 and 2. <br><br>
@@ -233,14 +224,14 @@ ccc = Case.create(
   name: 'Drug Profitability',
   day: 1,
   industry: 'Pharmaceuticals',
-  position: 3
+  position: 3,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>"
   )
 
 Question.create(
   content: 'Do you have any clarifying questions? List here all clarifying questions you think about.',
   timing: 7,
-  correction: '
-  Three types of clarifying questions: <br>
+  correction: 'Three types of clarifying questions: <br>
 👉 Always propose a framework. <br>
 
 
@@ -294,8 +285,7 @@ For instance, here, I want to know if my company will be profitable: <br>
 Question.create(
   content: 'Can you please do for us a market sizing.',
   timing: 7,
-  correction: '
-• U.S. population ~320M, while females make up roughly 50% or 160M of this population <br>
+  correction: '• U.S. population ~320M, while females make up roughly 50% or 160M of this population <br>
 • Not all women will have the same interest for our product. With a life expectancy of 80 years, let’s say that
 women aged 40-80 are largely at risk of balding<br>
 • 60% of women between 40 and 60 (24M) and 0% of women between 60 and 80 years of age are
@@ -324,8 +314,7 @@ The total is 6M market <br><br>
 • Given that the market share will shrink to 20% after patent expiry, our client will earn roughly $1.2B/year atthe
 current price post-expiry<br><br>
 • Since testing is a sunk cost,total yearly cost is about $4.3B. Given these assumptions, the drug is only profitable
-pre-patent expiry (assuming constant market sizing and costs)
-',
+pre-patent expiry (assuming constant market sizing and costs)',
   skills: 'Mathematics skills',
   keywords: ['320', 'assumption', 'insurance', 'healthcare', 'market size', 'market share', 'pre-patent'],
   case_id: ccc.id,
@@ -335,8 +324,7 @@ pre-patent expiry (assuming constant market sizing and costs)
 Question.create(
   content: 'What are your recommendations? the potential risks associated? the next steps?',
   timing: 6,
-  correction: '
-<strong> Recommendations: <br></strong>
+  correction: '<strong> Recommendations: <br></strong>
 • Given our assumptions, client should pursue drug production for next five years if the market size allows it to be profitable
 • Drug will become less profitable after patent expiry and decision on whether drug production should continue will be determined by the market size and profitability estimation<br>
 👉 When you give recommendations, be straight to the point.
@@ -349,8 +337,7 @@ Question.create(
 
 <strong> Next steps: <br></strong>
 • The client can continue production after patent expiry if they can lower price to gain market share profitably
-• Maybe worth while to look at international markets where testing in the U.S. would be readily accepted, or other U.S. market segments (e.g., men, hair regrowth)
-',
+• Maybe worth while to look at international markets where testing in the U.S. would be readily accepted, or other U.S. market segments (e.g., men, hair regrowth)',
   skills: 'Business sense & culture',
   keywords: ['patent', 'compet', 'marketing', 'sunk'],
   case_id: ccc.id,
@@ -358,14 +345,12 @@ Question.create(
   )
 
 Question.create(
-  content: '
-Based on the results from clinical trials, the client received approval for the product in two different formulations:<br>
+  content: 'Based on the results from clinical trials, the client received approval for the product in two different formulations:<br>
 • Formulation 1 : Once-daily application / Less effective / Lowerprice
 • Formulation 2 : Twice-daily application / Most effective / Higher price <br>
 The client conducted market research among customers of different ages. Using the results of this research, formulate a market entry strategy and recommend which formulation the client should launch. Include risks analysis and next steps. ',
   timing: 8,
-  correction: '
-  <strong> Exhibit analysis: <br></strong>
+  correction: '<strong> Exhibit analysis: <br></strong>
 • The older demographic form a larger potential market for formulation 1
 • The older demographic has a smaller lifetime value for formulation 1
 • Conversely, younger consumers may use the product over a longer period of time resulting in greater lifetime value for formulation 2
@@ -383,8 +368,7 @@ The client conducted market research among customers of different ages. Using th
 <strong> Next steps: <br></strong>
 • For launch, need to look into if the product should be launched in certain geographies or markets first (‘soft launch’)
 • Start working on marketing plans and training the sales-force
-• Post-launch, once the brand has a solid base, the client may want to consider launching the second formulation as a premium alternative, offered at a mark-upra
-',
+• Post-launch, once the brand has a solid base, the client may want to consider launching the second formulation as a premium alternative, offered at a mark-up',
   skills: 'Business sense & culture',
   keywords: ['patent', 'compet', 'marketing', 'sunk'],
   case_id: ccc.id,
@@ -396,21 +380,19 @@ The client conducted market research among customers of different ages. Using th
 # CASE 4 ---------------------------------------------------------
 
 ccccc = Case.create(
-  content: "
-  Our client is an online dating startup named Wanna-Date, which specializes in matching graduate students with other graduate students. Grad-U-Date has finished building their website and are now looking for your assistance in deciding on a strategy to monetize their website.
-  What is Wanna-Date’s best method of monetization? How profitable will the company be?
-",
+  content: "Our client is an online dating startup named Wanna-Date, which specializes in matching graduate students with other graduate students. Grad-U-Date has finished building their website and are now looking for your assistance in deciding on a strategy to monetize their website.
+  What is Wanna-Date’s best method of monetization? How profitable will the company be?",
   name: "Wanna-Date",
   day: 1,
   industry: 'Technology, Media & Telecommunication',
   position: 4,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>"
 )
 
 Question.create(
   content: 'Are there any additional information you would like to obtain? List here all clarifying questions you think about.',
   timing: 6,
-  correction: '
-  We would like to obtain additional information overt three main areas
+  correction: 'We would like to obtain additional information overt three main areas
   <strong>  1. Market </strong>
   What is our market geography?
   What is our market size? Or do we have any information concerning our market?
@@ -436,8 +418,7 @@ Question.create(
   • The website has already been built, and is considered a sunk cost<br>
 
   <strong> 3. Company </strong>
-  • We only know that only one revenue model can be used
-',
+  • We only know that only one revenue model can be used',
   skills: 'Logic and rigorous thinking',
   keywords: ['market', 'product', 'company'],
   case_id: ccccc.id,
@@ -447,15 +428,13 @@ Question.create(
 Question.create(
   content: 'What types of monetization models could Wanna-Date use? ',
   timing: 4,
-  correction: '
-• Monthly Fee
+  correction: '• Monthly Fee
 • Advertising
 • Pay for Premium Account
 • Profile Consulting Services
 • Pay per Message
 
-  👉 This is a creativity question. You should give at least three solutions.
-',
+  👉 This is a creativity question. You should give at least three solutions.',
   skills: 'Business sense & culture',
   keywords: ['fee', 'advertise', 'premium', 'per message'],
   case_id: ccccc.id,
@@ -465,13 +444,11 @@ Question.create(
 Question.create(
   content: 'Wanna-Date is considering limiting the site to only MBA students what issues might there be with an MBA only dating website? ',
   timing: 4,
-  correction: '
-• There are more men than women at most MBA programs, there will be a significant gender skew
+  correction: '• There are more men than women at most MBA programs, there will be a significant gender skew
 • It would unnecessarily limit the size of the market
 • Most MBA students tend to be older than other students, so many are already married or in a committed relationship
 
-  👉 This is also a creativity question. You should give at least three issues.
-',
+  👉 This is also a creativity question. You should give at least three issues.',
   skills: 'Business sense & culture',
   keywords: ['men', 'women', 'size', 'old'],
   case_id: ccccc.id,
@@ -481,8 +458,7 @@ Question.create(
 Question.create(
   content: 'What is the potential market size for Wanna-Date (not limited to MBA) ? ',
   timing: 4,
-  correction: '
-For each segment, we will compute the total number of student for a given year by multiplying the number of years for the degree by the number of student by year.
+  correction: 'For each segment, we will compute the total number of student for a given year by multiplying the number of years for the degree by the number of student by year.
 • Medical = 450 x 4 = 1,800
 • MBA=300x2=600
 • Law=200x3=600
@@ -490,8 +466,7 @@ For each segment, we will compute the total number of student for a given year b
 • Grad Students per University =1,800+600+600+3,000 =6,000
 • Market Size = 6,000 * 1,000 = 6,000,000
 
-  👉 The key is not to find the solutions, but to explain well, orally, how you are reasoning.
-',
+  👉 The key is not to find the solutions, but to explain well, orally, how you are reasoning.',
   skills: 'Mathematics skills',
   keywords: ['6000000'],
   case_id: ccccc.id,
@@ -502,8 +477,7 @@ For each segment, we will compute the total number of student for a given year b
 Question.create(
   content: 'Calculate the profit of each revenue model. Fixed costs are $10,000,000 a year and variable operating cost is $1 per member per year. Which revenue model would you recommend? ',
   timing: 8,
-  correction: '
-<strong>Monthly Fee:</strong>
+  correction: '<strong>Monthly Fee:</strong>
 Customers = 6,000,000 x 5% = 300,000 users
 Revenue = 300,000 x $10 x 12 = $36 M
 Profit = $36,000,000 - $10,000,000 – 300,000 x $1 = $25.7 M <br>
@@ -519,8 +493,7 @@ Revenue = 2,400,000 x ((1000/1950) x $0.75 + (950/1950) x $1.25) x 12 ~ $28.6 M
 Profit = $28,600,000 - $10,000,000 – 2,400,000 x $1 = $16.2 M <br>
 
 The solution with the highest potential profit is Monthly Fee. I recommend to go for it.
-👉 The key is not to find the solutions, but to explain well, orally, how you are reasoning.
-',
+👉 The key is not to find the solutions, but to explain well, orally, how you are reasoning.',
   skills: 'Mathematics skills',
   keywords: ['25', '23', '16', 'monthly fee'],
   case_id: ccccc.id,
@@ -531,8 +504,7 @@ The solution with the highest potential profit is Monthly Fee. I recommend to go
 Question.create(
   content: 'What can you conclude from this graph?',
   timing: 5,
-  correction: '
-  👉 This is an open question. Do not have only a descriptive approach, you should provide the interviewer with insights. This is the time to show your analytics mindset!
+  correction: '👉 This is an open question. Do not have only a descriptive approach, you should provide the interviewer with insights. This is the time to show your analytics mindset!
 
 First, the percentage of users paying monthly fees dropped quickly in 2013. This can be due to several reasons:
 • Increased competition in online dating market
@@ -544,8 +516,7 @@ This also leads me to reconsider my recommendation:
 • The portion of customers willing to pay a fee and the average fee paid have been rapidly decreasing since 2008
 • It is unlikely that current profitability will be maintained in the future <br>
 
-👉 In strategy consulting, additional data should comfort you in your recommendation. But if it is not the case, do not hesitate to change your recommendation and make your client know why. The key is not the recommendation itself, but the reasoning behind.
-',
+👉 In strategy consulting, additional data should comfort you in your recommendation. But if it is not the case, do not hesitate to change your recommendation and make your client know why. The key is not the recommendation itself, but the reasoning behind.',
   skills: 'Logic and rigorous thinking',
   keywords: ['25', '23', '16'],
   case_id: ccccc.id,
@@ -557,8 +528,7 @@ This also leads me to reconsider my recommendation:
 Question.create(
   content: 'Conclude please.',
   timing: 5,
-  correction: '
-  👉 For your conclusions, you can adopt the framework :
+  correction: '👉 For your conclusions, you can adopt the framework :
   <strong>1. Recommendations
   2. Risks
   3. Next steps</strong> <br>
@@ -579,8 +549,7 @@ Question.create(
 • Offer additional services: profile consulting services and date deals
 • Add micro-transactions such as increasing the traffic to your profile
 • Incorporate social media
-• Can premium account and ads work together ...?
-',
+• Can premium account and ads work together ...?',
   skills: 'Logic and rigorous thinking',
   keywords: ['25', '23', '16'],
   case_id: ccccc.id,
@@ -591,22 +560,20 @@ Question.create(
 # CASE 5 ---------------------------------------------------------
 
 a = Case.create(
-  content: "
-  Your client is a private equity firm that has recently purchased a plastic materials manufacturer that makes products such as plastic soda bottles.
-  The client is looking to cash out of their investment within 5 years and wants you to help improve the profitability of the manufacturer.
-",
+  content: "Your client is a private equity firm that has recently purchased a plastic materials manufacturer that makes products such as plastic soda bottles.
+  The client is looking to cash out of their investment within 5 years and wants you to help improve the profitability of the manufacturer.",
   name: "Acquiring Soda Firm",
   day: 1,
-  industry: 'Private Equity',
+  industry: 'Manufacturing',
   position: 5,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
 
 Question.create(
   content: 'Are there any additional information you would like to obtain? List here all clarifying questions you think about.',
   timing: 6,
-  correction: '
-  We would like to obtain additional information overt three main areas
+  correction: 'We would like to obtain additional information overt three main areas
   <strong>  1. Market </strong>
   What is our market size? growth? market share? <br>
 
@@ -644,8 +611,7 @@ years<br>
   • Non-Bottling generates $20M in revenues
   • Bottles costs: COGS (plastic) – 2 cents per bottle ; Machinery – 1 cent per bottle ; Labor - 0.5 cent per bottle
   • Non-bottling has total variable costs of $18M
-  • SG&A across the entire firm is $20M
-',
+  • SG&A across the entire firm is $20M',
   skills: 'Logic and rigorous thinking',
   keywords: ['market', 'product', 'company'],
   case_id: a.id,
@@ -655,9 +621,8 @@ years<br>
 Question.create(
   content: 'How do the two products our company manufactures compare?',
   timing: 6,
-  correction: '
-  We will start first by comparing the total variable costs for the bottling and non-bottling products, then the profits and last the profit margins.
-  👉 Always explain clearly your amproach. <br>
+  correction: 'We will start first by comparing the total variable costs for the bottling and non-bottling products, then the profits and last the profit margins.
+  👉 Always explain clearly your amproach, especially for math questions. <br>
 
   <strong> 1. Total variable costs </strong> <br>
 
@@ -680,8 +645,7 @@ Question.create(
   <strong> 3. Profit margin </strong> <br>
 
   The profit margin is 30% for bottling and 10% for non-bottling.
-  The bottling is segment is not only more interesting in term of revenue but also in term of margin.
-  ',
+  The bottling is segment is not only more interesting in term of revenue but also in term of margin.',
   skills: 'Mathematics skills',
   keywords: ['30%', '10%', '3.5', '22.5'],
   case_id: a.id,
@@ -691,8 +655,7 @@ Question.create(
 Question.create(
   content: 'Should the firm convert the non-bottling production to bottling in its Canada plant? (The cost of conversion is $3M)',
   timing: 6,
-  correction: '
-  To decide if the firm should convert its plant, we should compute the margin it would generate after conversion and comparing it to current margin. <br>
+  correction: 'To decide if the firm should convert its plant, we should compute the margin it would generate after conversion and comparing it to current margin. <br>
   👉 As always, we specify our reasoning.
 
   Based on previous question, the current profit in Canada is 2 $M with a 10% profit margin.
@@ -704,8 +667,7 @@ Question.create(
 
   The conversion could potentially add $5.5M in annual profit, if the firm can sell the entire capacity. Breakeven is in the 1st year.
   👉 Important here to conclude with a clear recommendation. Consultants are C-level advisors and must be straight to the point.
-  👉 Here, we have to decide by comparing the profit generate by both options annually, and then taking into account switching investment.
-  ',
+  👉 Here, we have to decide by comparing the profit generate by both options annually, and then taking into account switching investment.',
   skills: 'Logic and rigorous thinking',
   keywords: ['7.5', '5.5', 'breakeven'],
   case_id: a.id,
@@ -715,8 +677,7 @@ Question.create(
 Question.create(
   content: 'What are some non-financial risks to consider before converting non-bottling production to bottling in its Canada plant?',
   timing: 6,
-  correction: '
-  👉 As always, we use a clear, structured framework.
+  correction: '👉 As always, we use a clear, structured framework.
 
   <strong>• Implementation timeframe:</strong>
   • How much time will it take?
@@ -730,8 +691,7 @@ Question.create(
   • Will there be any additional costs to consider besides the one time conversion cost?
   • Will there be any changes in variable costs like Labor?
   • Can we re-negotiate supplier contracts to reduce COGS given higher volumes?<br>
-  • Will the client need to hire new workers in the Canada factory or train current workers?<br>
-  ',
+  • Will the client need to hire new workers in the Canada factory or train current workers?<br>',
   skills: 'Business sense & culture',
   keywords: ['time', 'clients', 'distribution'],
   case_id: a.id,
@@ -741,8 +701,7 @@ Question.create(
 Question.create(
   content: 'How much additional market share should the firm gain in the next 2 years to accompagny the growth of its sales? ',
   timing: 6,
-  correction: '
-  👉 As always, we remind our approach and the data from previous questions we will be using here.
+  correction: '👉 As always, we remind our approach and the data from previous questions we will be using here.
   We will start by calculating current market size. We will then compute market size in 2years and our sales in 2years and deduce our market share.
 
   From previous questions, we can deduce bottling market size.
@@ -755,9 +714,7 @@ Question.create(
 
   Then, in 2 years, our market share should be 33% (1.98 / 6.05).
 
-  Our conclusion is that gaining ~3% market share in 2 years seams feasible. The firm looks able to accompagny the growth of its sales.
-
-  ',
+  Our conclusion is that gaining ~3% market share in 2 years seams feasible. The firm looks able to accompagny the growth of its sales.',
   skills: 'Mathematics skills',
   keywords: ['3%', '33%'],
   case_id: a.id,
@@ -767,8 +724,7 @@ Question.create(
 Question.create(
   content: 'Conclude please.',
   timing: 5,
-  correction: '
-  👉 For your conclusions, you can adopt the framework :
+  correction: '👉 For your conclusions, you can adopt the framework :
   <strong>1. Recommendations
   2. Risks
   3. Next steps</strong> <br>
@@ -789,8 +745,7 @@ Question.create(
 should fit within the PE firm’s goal of exiting within 5 years
 • Renting out additional capacity from other plants may be a feasible option which ties up less capital and allows
 an easier reversal of the strategy if market trends sour
-• Increase prices due to higher quality products may be possible. Should go for a demand elasticity to price analysis as increase in price will make our company lose market share.
-',
+• Increase prices due to higher quality products may be possible. Should go for a demand elasticity to price analysis as increase in price will make our company lose market share.',
   skills: 'Logic and rigorous thinking',
   keywords: ['25', '23', '16'],
   case_id: a.id,
@@ -798,6 +753,167 @@ an easier reversal of the strategy if market trends sour
   )
 # CASE 6 ---------------------------------------------------------
 
+abc = Case.create(
+  content: "Let’s assume our client is Great Burger (GB) a fast food chain that competes head–to-head with McDonald’s, Wendy’s, Burger King, KFC, etc. <br>
+
+  GB is the fourth largest fast food chain worldwide, measured by the number of stores in operation. As most of its competitors do,GB offers food and “combos” for the three largest meal occasions: breakfast, lunch and dinner. <br>
+
+    Even though GB owns some of its stores, it operates under the franchising business model with 85% of its stores owned by franchisees (individuals own & manage stores and pay a franchise fee to GB, but major business decisions e.g. menu, look of store, are controlled by GB). <br>
+
+  As part of its growth strategy GB has analyzed some potential acquisition targets including Heavenly Donuts (HD), a growing doughnut producer with both a US and international store presence. HD operates under the franchising business model too, though a little bit differently than GB. While GB franchises restaurants, HD franchises areas or regions in which the franchisee is required to open a certain number of stores. <br>
+
+  GB’s CEO has hired McKinsey to advise him on whether they should acquire HD or not.",
+  name: "Great Burger",
+  day: 1,
+  industry: 'Private Equity',
+  position: 6,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
+)
+
+Question.create(
+  content: 'What areas would you want to explore to determine whether GB should acquire HD?',
+  timing: 8,
+  correction: '👉 This is the moment to propose a framework. Use typical M&A framework below whenever you are exposed to M&A situation, but pay attention to adapt it!
+  👉 The framework is not meant only to have show you are structured. It reflects your reasoning, and the way you are testing hypothesis one after another.
+  👉 These hypothesis are meant to validate (or not) the acquisition. Basically, an acquisition make sense in an 1. an attractive market 2. of an attractive company 3. that makes a good fit with the mother company.  <br>
+
+  <strong> 1. Market </strong> :
+  👉 The hypothesis to test is : "The target is on an attractive market in term of size, growth and competition."
+  • Who are the clients of the target? Is there a segmentation? What are their consumption habits?
+  • What is the market size? market trends? market growth for doghnuts?
+  • What is the competition? How are they performing in term of number of stores? sales?
+  • How is the M&A landscape in this area? Are other players consolidating? Are there entry barriers? <br>
+
+  <strong> 2. Financials of the target </strong>
+    👉 The hypothesis to test is : "The target has a good financial health."
+  • HD’s past and projected future sales growth (break down into growth in number of stores, and growth in same store sales)
+  • What is the market share?
+  • Profitability/ profit margin
+  • Capital required to fund growth (capital investment to open new stores, working capital) <br>
+
+
+  <strong> 3. Due diligences & synergies </strong>
+  👉 The hypothesis to test is : "The target is a good fit for our organization."
+  • Is there a good cultural fit? Management team could work together?
+  • Brand quality similar? Would they enhance or detract from each other if marketed side by side?
+  • Are franchise structure different? How would these different structures affect the operations after the deal?
+  • Are there synergies of revenue? (in term of product, market, clients)
+  • Are there synergies of costs? (in term of procurement, distribution, logistics) <br>
+
+  <strong> 4. Decision </strong>
+  • What is the price required for the target? What is the valuation method?
+  • How would we finance this operation?
+  • How will this operation affect the mother company financial ratios (margin, debt, etc)
+  • How will this operation affect our shareholders (earning per share, leverage, rating, etc) <br>',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['market', 'segmentation', 'syngergie', 'M&A', 'store', 'fit', 'ratio', 'leverage', 'debt', 'franchise'],
+  case_id: abc.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'The team started thinking about potential synergies that could be achieved by acquiring HD. Here are some key facts on GB and HD. What potential synergies can you think of between GB and HD?',
+  timing: 8,
+  correction: '👉 This is also a typical question for M&A cases. Two main types of synergies : costs and revenue. Here also, show your creativity and adapt the framework to the specific case.
+
+  <strong> 1. Synergies of cost </strong> :
+  • Biggest opportunity likely in corporate SG&A by integrating corporate management
+  • Maybe some opportunity to lower food costs with larger purchasing volume on similar food items (e.g., beverages, deep frying oil), however overlaps may be low as ingredients are very different
+  • There is also good room for synergies in terms of logistics (stores should be located more or less in the same areas, and then delivering stores from GB and HD could be done by the same fleet of vehicle)
+  • Integrating their delivery service, and being eventually able to better negotiate with firms like Deliveroo, Uber Eats, etc.
+  • GB appears to have an advantage in property and equipment costs which might be leverage-able to HD (e.g., superior skills in lease negotiation) <br>
+
+  <strong> 2. Synergies of revenue </strong>
+  • Sell doughnuts in GB stores, or some selected GB products in HD stores
+  • GB has much greater international presence thus likely has knowledge/skills to enable HD to expand outside of North America
+  • GB may have superior skills inidentifying attractive locations for stores as its sales/store are higher than industry average, where as HD’s is lower than industry average – might be able to leverage this when opening new HD stores to increase HD average sales/store
+  • Expand HD faster then it could do on own – GB asa larger company with lower debt may have better access to capital<br>',
+  skills: 'Business sense & culture',
+  keywords: ['cost', 'revenue', 'SG&A', 'M&A'],
+  case_id: abc.id,
+  position: 2,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
+  )
+
+Question.create(
+  content: 'The team thinks that with synergies, it should be possible to double HD’s US market share in the next 5 years, and that GB’s access to capital will allow it to expand number HD of stores by 2.5 times. <br>
+
+  What sales/store will HD require in 5 years in order for GB to achieve these goals? <br>
+
+  You should assume:
+• Doughnut consumption/capita in the US is $10/year today, and is projected to grow to $20/year in 5years
+• For ease of calculation, assume US population is 300M',
+  timing: 5,
+  correction: 'HD sales today are $700M.
+  US market for doghnuts is = consumption per capita * population = 3 $Bn
+  The HD sales market share today is 23% <br>
+
+  Projected market size in 5Y = 6 $Bn
+  Then, if HD double its market share to 46% (rounded to 50% for simplicity), its sales should be = 3 $Bn <br>
+
+  In 5Y, HD number of stores will be = Current number of stores * 2.5 (as stated in the question) = 2500 (rounded for simplicity)
+
+  Then, the sales by store should be 1.2 $M in 5y to achieve the goal. This seems reasonable given it implies less than double same store sales growth and per capita consumption is predicted to double.',
+  skills: 'Mathematics skills',
+  keywords: ['1.2'],
+  case_id: abc.id,
+  position: 3,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
+  )
+
+Question.create(
+  content: 'One of the synergies that the team thinks might have a big potential is the idea of increasing the businesses’ overall profitability by selling doughnuts in GB stores.
+  How would you assess the profitability impact of this synergy?',
+  timing: 5,
+  correction: '4 main elements to explore to answer this question.
+  • Calculate incremental revenues by selling doughnuts in GB stores (calculate how many doughnuts sold per store, times price per doughnut, times number of GB stores)
+  • Calculate incremental costs by selling doughnuts in GB stores (costs of production, incremental number of employees, employee training, software changes, incremental marketing and advertising, incremental cost of distribution if we can not produce doughnuts in house, etc.)
+  • Calculate incremental investments. Do we need more space in each store if we think we are going to attract new customers? Do we need to invest in store layout to have in house doughnut production? Do we have to invest in machinery?
+  • Calculate cannibalization : what would be the rate of cannibalization with GB offerings? Doughnut cannibalization will be higher with breakfast products than lunch and dinner products, etc. <br>
+
+  NB : If asked, one way to calculate this cannibalization is to look at historic cannibalization rates with new product/offering launchings within GB stores
+  NB : Might also cannibalize other HD stores if they are nearby GB stores – could estimate this impact by seeing historical change in HD’s sales when competitor doughnut store opens near by <br>
+
+  The team has calculated that the incremental profit per GB store from selling HD doughnuts would be $15K.',
+  skills: 'Business sense & culture',
+  keywords: ['incremental', 'cannibalization', 'revenue', 'cost', 'investment'],
+  case_id: abc.id,
+  position: 4,
+  )
+
+Question.create(
+  content: 'You run into the CEO of GB in the hall. He asks you to summarize McKinsey’s perspective so far on whether GB should acquire HD.',
+  timing: 6,
+  correction: '<strong>1. Recommendation </strong>
+   • Early findings lead us to believe acquiring HD would create significant value for GB, and that GB should acquire HD </strong>
+  • We believe it is possible to add $15k in profit/GB store by selling HD in GB stores. This could mean $50 million in incremental profit for North American stores (where immediate synergies are most likely given HD has little brand presence in rest of world)
+  • We also believe there are other potential revenue and cost synergies that the team still needs to quantify
+
+  <strong>2. Risks </strong>
+  • We will also give you recommendations on what it will take to integrate the two companies in order to capture the potential revenue and cost savings, and also to manage the different franchise structures and potentially different cultures of GB and HD
+
+  <strong>3. Next steps </strong>
+  • Once the team has quantified the incremental revenues, cost savings, and investments, we will make a recommendation on the price you should be willing to pay',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['15', 'synergie', 'cannibalization', 'risk', 'next'],
+  case_id: abc.id,
+  position: 5,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556266241/Capture_d_e%CC%81cran_2019-04-26_a%CC%80_10.09.03.png"
+  )
+
+# CASE 7 ---------------------------------------------------------
+c = Case.create(
+  content: "The client is the North American CEO of a global personal and home care products company. He has hired Capgemini Consulting to turn around the North American business from loss to profitability within two years. We’ve scheduled the final presentation with the board this afternoon, but the project team is stranded at an airport unable to make the presentation. You are asked to step in and make the presentation instead.",
+  name: "Metropolitan Symphony",
+  day: 1,
+  industry: 'Public sector',
+  position: 7,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
+)
+
+
+
+# CASE 8 ---------------------------------------------------------
 c = Case.create(
   content: "Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America.<br><br>
 
@@ -811,7 +927,8 @@ c = Case.create(
   name: "Metropolitan Symphony",
   day: 1,
   industry: 'Public sector',
-  position: 6,
+  position: 7,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
 Question.create(
@@ -893,7 +1010,7 @@ you with the following data:<br>
 Renewal rate after Year 1 = 40%<br>
 Renewal rate after Year 2 = 50%<br>
 Renewal rates for Years 3+ are factored into the revenue numbers above and can therefore be ignored (or we can just assume they are near 100%).<br>',
-  timing: 5,
+  timing: 6,
   correction: '
 I would calculate the expected revenue per subscriber each year and then calculate the total lifetime revenue per subscriber<br>
 Expected revenue per subscriber in Year 1 = $300<br>

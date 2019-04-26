@@ -2,7 +2,7 @@
   <div class="first-box">
     <div class="row">
       <div class="col col-md-10">
-        <h2 class="title-question"> <%= @case.name.upcase %> </h2>
+        <h2 class="title-question"> <%= @case.name.upcase %> <%= @case.difficulty.html_safe %> </h2>
       </div>
       <div class="col col-md-2">
         <div class="time-indication">
@@ -37,7 +37,7 @@
     </div>
     <div class="col col-md-4 position-of-button">
         <h4 class="label-button">START</h4 class="label-button">
-        <%= link_to "", question_path(@case.questions.first, attempt: "new"), class: "btn btn-next" %>
+        <%= link_to "", question_path(@case.questions.reverse.first, attempt: "new"), class: "btn btn-next" %>
     </div>
   </div>
 

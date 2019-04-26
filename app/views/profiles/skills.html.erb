@@ -8,9 +8,14 @@
     <% end %>
   </div>
 
+
   <div class="profile-data">
     <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
     <p> <em> <%= @user.email %> </em></p>
+  </div>
+
+  <!-- <div class="row companies-container set-your-obj">
+    <h5> Set your objectives </h5>
   </div>
 
   <div class="row companies-container">
@@ -32,24 +37,53 @@
         <% end %>
       </div>
     <% end %>
+  </div> -->
+
+</div>
+
+<% number_last_casedone = @last_attempt_completed.case.position %>
+  <% number_questions = 0 %>
+  <% for i in 1..number_last_casedone  %>
+    <% current_case = Case.where(position: i) %>
+    <% number_questions += Question.where(case_id: current_case.ids[0]).length.to_i %>
+  <% end %>
+<div class="score-comment">
+  <h4>Progression</h4>
+</div>
+<div class="container-score-comment">
+  <div>
+    <% if @last_attempt_completed.nil? %>
+      <h4 class="dashboard-title"> No case done. Start acing the case!</h4>
+
+    <% elsif current_user.score.to_i.fdiv(number_questions * 3) < 0.33 %>
+      <h4 class="dashboard-title"> Out of  <%= number_questions * 3 %> possible so far, you obtained <%= current_user.score %> / <%= number_questions * 3 %> </h4>
+      <p class="dashboard-subtitle"> Keep practicing, practice makes perfect! </p>
+
+    <% elsif current_user.score.to_i.fdiv(number_questions * 3) > 0.66 %>
+      <h4 class="dashboard-title"> Your current score is <%= current_user.score %> / <%= number_questions * 3 %>. Excellent, keep up the good work!  </h4>
+      <p class="dashboard-subtitle"> Keep practicing, practice makes perfect! </p>
+    <% else %>
+      <h4 class="dashboard-title"> Your current score is <%= current_user.score %> / <%= number_questions * 3 %>. Not bad, more practice is needed!  </h4>
+      <p class="dashboard-subtitle"> Keep practicing, practice makes perfect! </p>
+    <% end %>
   </div>
-
+  <div class="container-tabs">
+     <ul class="list-inline tabs-underlined mytabs">
+      <li>
+        <%= link_to "Global", dashboard_path, class: "tab-underlined" %>
+      </li>
+      <li>
+        <%= link_to "By skills", skills_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "By industry", industries_path, class: "tab-underlined" %>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<h4 class="dashboard-title">Progression</h4 >
-<div class="container-tabs">
-   <ul class="list-inline tabs-underlined mytabs">
-    <li>
-      <%= link_to "Global", dashboard_path, class: "tab-underlined" %>
-    </li>
-    <li>
-      <%= link_to "By skills", skills_path, class: "tab-underlined active" %>
-    </li>
-    <li>
-      <%= link_to "By industry", industries_path, class: "tab-underlined" %>
-    </li>
-  </ul>
-</div>
+
+
 
 <div class="container-dashboard">
 

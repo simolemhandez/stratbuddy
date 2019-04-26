@@ -59,10 +59,33 @@
   border-radius: 5px;
 }
 
+.disclaimer {
+  font-size: 17px;
+  color: grey;
+  font-weight: lighter;
+}
+
+.difficulty {
+  font-size: 15px;
+  color: rgb(5,8,52);
+}
+
+.blue-card {
+  background: rgba(83,138,204,0.1);
+}
+
 .card-product-grey img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+}
+
+.fa-check-circle {
+  color: rgba(23,43,115,0.4);
+}
+
+.fa-check-circle-top {
+  font-size: 14px;
 }
 
 .card-product-grey h2 {

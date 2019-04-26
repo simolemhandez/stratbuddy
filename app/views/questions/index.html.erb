@@ -3,7 +3,7 @@
   <div class="first-box">
     <div class="row">
       <div class="col col-md-11 title-question">
-        <h1> <%= @questionstothiscase.first.case.name.upcase %> - <em> Your score </em></h1>
+        <h1> <%= @questionstothiscase.first.case.name.upcase %> <%= @questionstothiscase.first.case.difficulty.html_safe  %> - <em> Your score </em></h1>
       </div>
 
       <div class="col col-md-1">

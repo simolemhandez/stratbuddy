@@ -2,13 +2,14 @@
   <div class="first-box">
     <div class="row">
       <div class="col col-md-10">
-        <h2 class="title-question"> <%= @question.case.name.upcase %> </h2>
+        <h2 class="title-question"> <%= @question.case.name.upcase %> <%= @question.case.difficulty.html_safe  %> </h2>
       </div>
       <div class="col col-md-2">
         <div class="time-indication">
           <div class="timing-by-case">
             <i class="far fa-clock"></i>
             <p> <%= @question.timing %> mins </p>
+
           </div>
         </div>
       </div>

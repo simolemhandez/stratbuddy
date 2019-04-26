@@ -26,9 +26,30 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col col-md-12">
+        <% if @attempt.nil? %>
+          <div class="progress md-progress" style="height: 20px">
+              <div class="progress-bar progress-bar-bis" role="progressbar" style="width: <%= 0 %>%" aria-valuenow="<%= 0%>" aria-valuemin="0" aria-valuemax="100">
+              </div>
+          </div>
+          <p class="text-right"> <em> 0 out of <%= @cases.last.position %> cases </em></p>
+        <% else %>
+          <div class="progress md-progress" style="height: 20px">
+              <div class="progress-bar progress-bar-bis" role="progressbar" style="width: <%= Case.find(@attempt.case_id).position.to_i.fdiv(@cases.last.position.to_i) * 100 %>%" aria-valuenow="<%= Case.find(@attempt.case_id).position.to_i.fdiv(@cases.last.position.to_i) * 100%>" aria-valuemin="0" aria-valuemax="100">
+              </div>
+          </div>
+          <p class="text-right"> <em> <%= Case.find(@attempt.case_id).position.to_i %> out of <%= @cases.last.position.to_i %> cases</em></p>
+
+        <% end %>
+      </div>
+    </div>
+
   <div class="row">
+
     <div class="col col-md-12">
       <div class="container-question">
+        <h4 class="disclaimer" >The cases are unlocked progressively, following your learning journey. Once done, you can only access directly the correction of the case, and cannot retake it.</h4>
     <% @cases.each do |c| %>
 
       <% if @attempt.nil? %>
@@ -38,8 +59,8 @@
             <div class="card-product">
               <%=  image_tag "tablet.svg", width: 50 %>
                 <div class="card-product-infos">
-
-                    <h4><%= link_to c.name, case_path(c), class: "case-name" %> - Take this case now ! </h4>
+                    <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                    <h4><%= link_to c.name, case_path(c), class: "case-name" %> - <%= link_to "", case_path(c), class: "btn btn-next-small" %> </h4>
                     <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                 </div>
                 <div class="time-indication">
@@ -61,6 +82,7 @@
               <div class="card-product-grey">
                 <%=  image_tag "sofa.svg", width: 50 %>
                 <div class="card-product-infos">
+                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
                   <h4><%= c.name %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                 </div>
@@ -85,7 +107,8 @@
             <div class="card-product">
               <%=  image_tag "computer.svg", width: 100 %>
               <div class="card-product-infos">
-                <h4><%= link_to c.name, case_path(c), class: "case-name" %> - Take this case now ! </h4>
+                <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                <h4><%= link_to c.name, case_path(c), class: "case-name" %> <%= link_to "", case_path(c), class: "btn btn-next-small" %> </h4>
                 <p> <strong>Industry:</strong>  <%= c.industry  %></p>
               </div>
               <div class="time-indication">
@@ -103,13 +126,14 @@
 
           <% elsif Case.find(@attempt.case_id).position > c.position - 1 %>
             <div class="card-title">
-              <h4> <strong> Case n°<%= c.position %></strong> </h4>
-              <div class="card-product-grey">
+              <h4> <strong> Case n°<%= c.position %></strong> <i class="fas fa-check-circle"></i> </h4>
+              <div class="card-product-grey blue-card">
                <%=  image_tag "megaphone.svg", width: 100 %>
                 <div class="card-product-infos">
+                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
                   <h4><%= link_to c.name, case_questions_path(c), class: "case-name" %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
-                  <p> Completed : <i class="fas fa-check-circle"></i></p>
+                  <!-- <p> Completed : <i class="fas fa-check-circle fa-check-circle-top"></i></p> -->
                 </div>
                   <div class="time-indication">
                     <% total_time = 0 %>
@@ -130,9 +154,10 @@
                 <div class="card-product-grey">
                 <%=  image_tag "screen.svg", width: 100 %>
                 <div class="card-product-infos">
+                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
                   <h4><%= c.name %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
-                  <p> <em> To be completed </em></i></p>
+                  <!-- <p> <em> To be completed </em></i></p> -->
                 </div>
                 <div class="time-indication">
                   <% total_time = 0 %>

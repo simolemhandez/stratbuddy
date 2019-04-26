@@ -45,8 +45,8 @@
 
 .container-dashboard {
   display: flex;
-  justify-content: space-around;
-  width: 1300px;
+  justify-content: space-between;
+  width: 1200px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
@@ -77,6 +77,47 @@
 }
 
 .dashboard-title {
-  text-align: center;
+  // text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #e69b03;
+}
+
+.dashboard-subtitle {
+  // text-align: center;
+  font-size: 15px;
+  color: grey;
   margin-bottom: 20px;
+}
+
+.set-your-obj {
+  color: #f7b633;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  font-size: 17px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.score-comment {
+  width: 1200px;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  background-color: rgb(5,8,52);
+  border-bottom: 2px solid rgb(5,8,52);
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.container-score-comment {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+
 }
