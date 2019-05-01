@@ -562,7 +562,7 @@ Question.create(
 a = Case.create(
   content: "Your client is a private equity firm that has recently purchased a plastic materials manufacturer that makes products such as plastic soda bottles.
   The client is looking to cash out of their investment within 5 years and wants you to help improve the profitability of the manufacturer.",
-  name: "Acquiring Soda Firm",
+  name: "Soda Firm",
   day: 1,
   industry: 'Manufacturing',
   position: 5,
@@ -902,18 +902,237 @@ Question.create(
   )
 
 # CASE 7 ---------------------------------------------------------
-c = Case.create(
-  content: "The client is the North American CEO of a global personal and home care products company. He has hired Capgemini Consulting to turn around the North American business from loss to profitability within two years. We’ve scheduled the final presentation with the board this afternoon, but the project team is stranded at an airport unable to make the presentation. You are asked to step in and make the presentation instead.",
-  name: "Metropolitan Symphony",
+
+xyz = Case.create(
+  content: "The client is the North American CEO of a global personal and home care products company. He has hired you to turn around the North American business from loss to profitability within two years.",
+  name: "Cosmetic company",
   day: 1,
-  industry: 'Public sector',
+  industry: 'Consumer goods',
   position: 7,
   difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
+Question.create(
+  content: 'Are there any additional information you would like to obtain? List here all clarifying questions you think about.',
+  timing: 6,
+  correction: 'We would like to obtain additional information overt three main areas
+  <strong>  1. Market </strong>
+  • Size: What is our market size? growth? market share?
+  • Competitors: Who are the main competitors? To what customer segments do they cater?
+  • Industry Rivalry: How intense is the rivalry in the cosmetics industry? Is any segment of the industry more competitive than other? Are there any specific trends in industry rivalry (consolidation, price wars, etc.)?<br>
 
+
+  <strong> 2. Product </strong>
+  • Product type: What types of products are we manufacturing? What are their characteristics, especially compared to competitors? <br>
+  • Distribution: Through what retail channels are the products sold? What is their relative power position?
+  • Trends: Are consumer tastes changing towards or away from the client’s products?
+
+  <strong> 3. Company </strong>
+  • Financials: Revenue streams (existing & new products), cost drivers (R&D, manufacturing, etc.) and financial health (debt, capacity to invest)
+  • Operations: Supply chain, channel strategy
+  • Organization: Team, core competencies, processes<br>
+
+  👉 Always use a structure (framework), even to ask your questions. ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['market', 'product', 'company', 'distribution', 'compet', 'supply', 'organization'],
+  case_id: xyz.id,
+  position: 1,
+  )
+
+
+Question.create(
+  content: 'What are your observations and analysis from this chart?',
+  timing: 3,
+  correction: '• Women represent the lion’s share of consumption growth in personal care products across all three regions
+• Male consumption will remain small although the 55+ age group will exhibit stronger growth than other male age groups
+• Female Baby Boomers (born between 1945 to 1965) represent the major source of growth, generating 8.63%, 5.31% and 5.98% in growth for Mexico, USA and Canada respectively
+• Male and female Baby Boomers drive growth by virtue of their sheer numbers and also by their high spending powers through wealth accumulation and inheritance
+• Generation Xers (those born between 1965-1985) have low spending growth, with the exception being Mexico - This is due to a large volume of births between 1965 and 1985 in Mexico, and more people aged 35 - 54 in this country now than 5 years ago. Demography mechanically drives consumption
+• Echo Boomers (those born between 1985-1995) will play a greater role beyond 2015 but in the short term they should be watched carefully as a consumption group <br>
+
+  👉 Try not to be only descriptive, but make figure "talk". Defer as much insights and hypothesis from the figures.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['growth', 'demography', 'Mexico'],
+  case_id: xyz.id,
+  position: 2,
+  )
+
+Question.create(
+  content: 'What are your observations and analysis from this chart?',
+  timing: 3,
+  correction: '• A direct co-relationship exists between share of wallet and consumer perception of need. Generally speaking, the more a spending category is perceived as a necessity, the larger the spending category represents in terms of share of wallet with the exception of Tobacco/Alcohol and Recreation.
+• Taxes, housing and food consume the largest share of wallet
+• From a marketing perspective, the ability to move a product category up the necessity axis is essential to capture larger shares of wallet
+• In our case, a pist of analysis would be to identify if there are ways to make personal care product perceived as essential for health to try to make their perception of need closer to that of Health Care category.
+
+  👉 Do not only analyse graphs, try to tie it with the current case you are solving.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['necessity', 'wallet', 'tobacco', 'alcohol', 'recreation', 'marketing', 'axis'],
+  case_id: xyz.id,
+  position: 3,
+  )
+
+Question.create(
+  content: 'What are your observations and analysis from this chart?',
+  timing: 4,
+  correction: '<strong>Industry: </strong>
+  • Companies that have dedicated channel strategies tend to focus primarily on Direct Selling. Often this is a result of the desire for maximum consumer interaction and control over customer journey
+• Competitors who have a dedicated channel strategy use a primary channel to convey their products to consumers. For example: The Body Shop’s main customer-facing channel is their network of over 2,000 stores worldwide (this data is not given), however they also have a web channel in North America and a direct selling force
+• There a today a wide variety of distribution channels. For example, I imagine a brand as Estee Lauder sells their products in prestigious retail store, company-run salons and brand websites
+• There is a trend for companies to diversify, both in terms of product categories and channel strategies. This diversification is the result of different products requiring distinct channels and placements, and evolving clients habits (incl. multi-channels) <br>
+
+<strong>Our client: </strong>
+• Our client has the higher number of product categories, yet with one of the less diverse channel strategies.
+• This can potentially explain our issue in term of profitability, as having one unique dedicated channel strategy for various product may not adapted to all product categories.
+• The next step will be to look at these different product categories to identify which one are performing well or not, and the impact of the distribution channel on their performance.
+  👉 This a good habit to give a next step after analyzing a graph. As a graph gives us hypothesis to solve our clients case, the next logical steps is to try to confirm them.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['growth', 'demography', 'Mexico'],
+  case_id: xyz.id,
+  position: 4,
+  )
+
+Question.create(
+  content: 'In addition to these charts, what other data / analysis would you like to bring to the CEO of this company?',
+  timing: 6,
+  correction: '<strong>  1. Market </strong>
+  • Is our growth and profit margin below or above market ?
+  • What are our competitors costs breakdown and profit margin ? Does it gives us some insights ?
+  • Is there any M&A opportunity we could take advantage on to improve our profitability ?<br>
+
+
+  <strong> 2. Product </strong>
+  • What is the profit margin by product type ? Are there some product we should not pursue ?
+  • Do our distribution network support our growth ?
+  • Are there new product categories we could take advantage on to generate growth / profitability ? <br>
+
+  <strong> 3. Company </strong>
+  • What supply chain strategy optimize cost and service ?
+  • Is the manufacturing made in house ? Are there options to outsource or manufacture in cheaper countries it and try to reduce our costs without decreasing product quality?
+  • Is our company scalable and ready to encounter significant growth ?
+  • Does client have the necessary information infrastructure to measure enterprise-wide operational indicators such as inventory levels, costs, services levels, etc) ?
+  • What is our current procurement strategy ? Are there option to decrease our procurement costs for the same products ? Are there some alternatives to the products we are using that will be cheaper ?<br
+
+  👉 We use again the same framework as in question 1 to show consistency in the way we are exploring the client case.
+  👉 The questions are all oriented over our overall goal to increase profitability and to find profitability improvement levers.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['market', 'product', 'company', 'profit margin', 'compet', 'M&A', 'acquisition', 'distribution', 'supply chain', 'scale', 'procurement'],
+  case_id: xyz.id,
+  position: 5,
+  )
+
+Question.create(
+  content: 'You do not have time to make these additional analysis and the CEO meeting is due today. What is your conclusion for the CEO?',
+  timing: 6,
+  correction: '<strong>1. Recommendation </strong>
+• The client should focus on women who comprise lion’s share of consumption growth but should not ignore growth in the 55+ male group. Particularly among women, there are geographic differences within the North America region that must be taken into consideration.
+• The client should develop deep knowledge of customer needs, perception and spending patterns in order to capture an increased share of the wallet (especially by increasing needs perception)
+• Client is misplaced in terms of its channel strategy. Given its large number of product categories, it should have a more diverse distribution channel
+
+  <strong>2. Risks </strong>
+  • Threat of substitute products and changing customer trends can make the client’s products less ‘necessary’
+  • Entrance of new actors "pure-players" with lower distribution costs
+  • Product portoflio too wide : little coherence for customer, R&D and marketing forces diluted, etc.
+
+  <strong>3. Next steps </strong>
+  • Ensure product strategy is geared towards appropriate customer segments
+  • Investigate options for diversifying distribution channels in an efficient manner with thorough cost-benefit analysis',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['recommendation', 'risks', 'next steps', 'focus', 'segment', 'wallet', 'perception', 'channel', 'distribution'],
+  case_id: xyz.id,
+  position: 6,
+  )
 
 # CASE 8 ---------------------------------------------------------
+ax = Case.create(
+  content: "Your client is a rich financier and a market maker. <br>
+
+  Market makers make % commissions off of transactions in capital markets, and are necessary to provide liquidity and orderly market action. <br>
+
+  He believes in future sustained growth and would like to invest part of his money. There are multiple opportunities in the financial market and you have been hired to advise him on how and where to invest his money. He is considering entry into one of four markets: Commodities, Options, Equities, and Fixed Income.",
+  name: "Investment considerations",
+  day: 1,
+  industry: 'Financial services',
+  position: 9,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
+)
+
+Question.create(
+  content: 'Are there any additional information you would like to obtain? List here all clarifying questions you think about.',
+  timing: 6,
+  correction: '👉 No classic framework here. You have to find something by yourself that will be logic and MECE.
+
+  You will find below some additional data:
+  <strong>  1. Client </strong>
+  • Background: Client has experience in finance, but not in trading
+
+
+  <strong> 2. Investment </strong>
+  • Amount to be invested: up to $2.5 billion.
+  • Geography: Investment to be focused inside of United States
+  • Objective: Goal is to have a positive NPV investment.
+  • Diversification: Limited to only one investment (he feels his attention can only be focused on one opportunity at a time) <br>
+
+  <strong> 3. Products </strong>
+  • Size and market shares of four markets
+  • Market makers make a fixed % commission on each transaction, so more volume and bigger $ value of transactions is usually better. These markets each intrinsically have different commission rates (which we don’t have).
+
+👉 Always use a structure (framework), even to ask your questions. ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['background', 'geography', 'amount', 'objective', 'diversification', 'NPV', 'market maker'],
+  case_id: ax.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'What can you conclude from these charts?',
+  timing: 4,
+  correction: 'From exhibit 1, we can defer total asset value and number of transactions suggest options and commodities are the most attractive markets to enter. However, none of these charts show actual profit earned in the four markets, so more information is necessary (what are the levels of commissions?).<br>
+
+  From exhibit 2, commodities and equities seem the most attractive for an entrant, since there are fewer major players in commodities and there is a major player exit in equities. Again, actual profit from entry is not apparent. <br>
+
+  Our analysts have done some research on the costs of entry and expected profits from entering these markets. Please look at their analysis in Exhibit 3 and tell me what you can extract from these findings.
+   ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['asset value', 'profit', 'commission', 'commodities', 'equities'],
+  case_id: ax.id,
+  position: 2,
+  )
+
+
+Question.create(
+  content: 'What can you conclude from these charts?',
+  timing: 4,
+  correction: 'Initial analysis should show commodities and options to be most attractive in terms of market size, with commodities as the most attractive due to the lack of major players to inhibit entry. Both Options and Fixed Income seem to be markets where a few players dominate, making potential entry very difficult. Equities is interesting because of potential for cheap entry due to the liquidation of a major player’s assets, so further analysis is necessary
+
+  For each market, to assess the attractiveness of the investment, I propose to calculate EBITDA and NPV.
+  For instance, for equities:
+  • EBITDA = Operating profit + Depreciation = 90 M€
+  • NPV = ????? = 300 M€ <br>
+
+  With the same approach, we obtain for commodities :
+  • EBITDA = 100 M€
+  • NPV = 0 <br>
+
+  For options:
+  • EBITDA = 100 M€
+  • NPV = -500 M€ <br>
+
+  For fixed income:
+  • EBITDA = 100 M€
+  • NPV = -100 M€ <br>
+
+  Based on NPV analysis, equities are the investment to make due to the cheap entry cost. This carries an added benefit of leaving $1 billion free for other uses. Candidate can include this excess sum in calculation, but that isn’t necessary. <br>
+
+  👉 Most of data is superfluous and important figures are Operating Profit and Depreciation numbers only',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['asset value', 'profit', 'commission', 'commodities', 'equities'],
+  case_id: ax.id,
+  position: 3,
+  )
+
+
+# CASE 9 ---------------------------------------------------------
 c = Case.create(
   content: "Our client is the Metropolitan Symphony Orchestra (“MSO”), a non-profit orchestra based in a major U.S. city. The MSO is a critically acclaimed performing arts organization and is regarded as one of the top twenty orchestras in North America.<br><br>
 
@@ -927,7 +1146,7 @@ c = Case.create(
   name: "Metropolitan Symphony",
   day: 1,
   industry: 'Public sector',
-  position: 7,
+  position: 9,
   difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
