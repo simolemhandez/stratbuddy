@@ -6,12 +6,7 @@
       </div>
     </div>
 
-<% number_last_casedone = @last_attempt_completed.case.position %>
-  <% number_questions = 0 %>
-  <% for i in 1..number_last_casedone  %>
-    <% current_case = Case.where(position: i) %>
-    <% number_questions += Question.where(case_id: current_case.ids[0]).length.to_i %>
-  <% end %>
+
 
     <div class="row">
       <div class="col col-md-6">
@@ -41,6 +36,12 @@
           </div>
           <p class="text-right"> <em> No questions taken so far </em></p>
         <% else %>
+          <% number_last_casedone = @last_attempt_completed.case.position %>
+          <% number_questions = 0 %>
+          <% for i in 1..number_last_casedone  %>
+            <% current_case = Case.where(position: i) %>
+            <% number_questions += Question.where(case_id: current_case.ids[0]).length.to_i %>
+          <% end %>
           <div class="progress md-progress" style="height: 20px">
               <div class="progress-bar progress-bar-bis" role="progressbar" style="width: <%= current_user.score.to_i.fdiv(number_questions * 3) * 100 %>%" aria-valuenow="<%= current_user.score.to_i.fdiv(number_questions * 3) * 100%>" aria-valuemin="0" aria-valuemax="100">
               </div>

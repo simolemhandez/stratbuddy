@@ -12,10 +12,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Dashboard", dashboard_path, class: "nav-linkk pushdown-first" %>
+          <%= link_to "Practice", cases_path, class: "nav-linkk pushdown-second" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Ace the case!", cases_path, class: "nav-linkk pushdown-second" %>
+          <%= link_to "Dashboard", dashboard_path, class: "nav-linkk pushdown-first" %>
         </li>
 <!--         <li class="nav-item">
           <%= link_to "Knowledge", knowledge_path, class: "nav-linkk pushdown-third" %>

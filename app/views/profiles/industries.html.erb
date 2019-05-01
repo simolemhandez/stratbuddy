@@ -57,7 +57,7 @@
         <% number_questions += Question.where(case_id: current_case.ids[0]).length.to_i %>
       <% end %>
       <% if current_user.score.to_i.fdiv(number_questions * 3) < 0.33 %>
-        <h4 class="dashboard-title"> Out of  <%= number_questions * 3 %> possible so far, you obtained <%= current_user.score %> / <%= number_questions * 3 %> </h4>
+        <h4 class="dashboard-title"> Out of  <%= number_questions * 3 %> points possible so far, you obtained <%= current_user.score %> / <%= number_questions * 3 %> </h4>
         <p class="dashboard-subtitle"> Keep practicing, practice makes perfect! </p>
       <% elsif current_user.score.to_i.fdiv(number_questions * 3) > 0.66 %>
         <h4 class="dashboard-title"> Your current score is <%= current_user.score %> / <%= number_questions * 3 %>. Excellent, keep up the good work!  </h4>

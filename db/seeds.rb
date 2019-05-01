@@ -32,7 +32,7 @@ Question.create(
   <strong> Concerning the advantages: <br></strong>
   • State backing
   • Lower cost of production
-  • Access to home markets which may be growing faster than developed markets <br><br>
+  • Access to home markets which may be growing faster than developed markets <br>
 
   <strong> Concerning the disadvantages: <br></strong>
   • Poorer reputation for safety
@@ -104,7 +104,7 @@ Question.create(
   What can you interpret from the current and future cost per plane of the Chinese and Russian competitors?',
   timing: 8,
   correction: '
-  • Currently, the new entrants cannot compete on a cost per plane basis due to a lock of demand necessary to sufficiently amortize fixed costs
+  • Currently, the new entrants cannot compete on a cost per plane basis due to a lack of demand necessary to sufficiently amortize fixed costs
   • It may be possible that their governments are providing subsidies and tax breaks that are not being taken into account
   • By 2017, their cost per plane is much more in line with the current market conditions
 ',
@@ -955,6 +955,7 @@ Question.create(
   keywords: ['growth', 'demography', 'Mexico'],
   case_id: xyz.id,
   position: 2,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702755/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.23.25.png"
   )
 
 Question.create(
@@ -970,6 +971,7 @@ Question.create(
   keywords: ['necessity', 'wallet', 'tobacco', 'alcohol', 'recreation', 'marketing', 'axis'],
   case_id: xyz.id,
   position: 3,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702755/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.23.31.png"
   )
 
 Question.create(
@@ -990,6 +992,7 @@ Question.create(
   keywords: ['growth', 'demography', 'Mexico'],
   case_id: xyz.id,
   position: 4,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702755/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.23.48.png"
   )
 
 Question.create(
@@ -1053,7 +1056,7 @@ ax = Case.create(
   name: "Investment considerations",
   day: 1,
   industry: 'Financial services',
-  position: 9,
+  position: 8,
   difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
@@ -1097,6 +1100,8 @@ Question.create(
   keywords: ['asset value', 'profit', 'commission', 'commodities', 'equities'],
   case_id: ax.id,
   position: 2,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702997/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.27.50.png"
+
   )
 
 
@@ -1129,6 +1134,8 @@ Question.create(
   keywords: ['asset value', 'profit', 'commission', 'commodities', 'equities'],
   case_id: ax.id,
   position: 3,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702997/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.27.50.png"
+
   )
 
 
