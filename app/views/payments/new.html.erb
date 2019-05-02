@@ -21,8 +21,9 @@
     <%= form_tag order_payments_path(@order) do %>
       <article>
         <label class="amount">
-          <span> Get your access for <%= humanized_money_with_symbol(@order.amount) %> ! </span>
+          <span> Special offer for <%= humanized_money_with_symbol(@order.amount) %> ! </span>
         </label>
+
       </article>
       <br>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -32,6 +33,7 @@
         data-description="Access"
         data-amount="<%= @order.amount_cents %>"
         data-currency="<%= @order.amount.currency %>"></script>
+
 
     <% end %>
   </div>
