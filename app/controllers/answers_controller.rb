@@ -31,7 +31,7 @@ class AnswersController < ApplicationController
     @user = current_user
     @attempt = Attempt.where(user_id: current_user.id, case_id: @question.case.id).last
     if correct == 0
-      @answer.correctness = "Bad result. You should keep working on this area 🤔"
+      @answer.correctness = "Keep working. Practice makes perfect 🤔"
     elsif correct == @question.keywords.length
       @answer.correctness = "Perfect. You are on the way for MBB 🎉"
       @user.score += 3

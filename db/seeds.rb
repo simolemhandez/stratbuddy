@@ -16,8 +16,8 @@ Company.destroy_all
 # CASE 1 ---------------------------------------------------------
 
 cccc = Case.create(
-  content: 'As the market for long-haul jet manufacturers is a duopoly between Boeing and Airbus, the market for regional jet manufacturers is also a duopoly between Bombardier of Canada and Embraer of Brazil. However, the market appears to be in for a period of transition due to at least two new entrants, Competitor “R” of Russia and Competitor “C” of China.',
-  name: 'Regional Jet',
+  content: 'As the market for long-haul jet manufacturers is a duopoly between Boeing and Airbus, the market for regional jet manufacturers is also a duopoly between Bombardier of Canada and Embraer of Brazil. However, the market appears to be in for a period of transition due to at least two new entrants, Competitor Russiair of Russia and Competitor Chinair of China.',
+  name: 'Competitive reaction in the Airline industry',
   day: 1,
   industry: 'Airline',
   position: 1,
@@ -84,8 +84,8 @@ Question.create(
   Then, after dividing by the number of planes, we have:
   Cost per plane for Bombardier : 0.05 $Bn = 50 $M
   Cost per plane for Embraer : 0.05 $Bn = 50 $M
-  Cost per plane for R : 0.06 $Bn = 60 $M
-  Cost per plane for C : 0.1 $Bn = 100 $M',
+  Cost per plane for Russiair : 0.06 $Bn = 60 $M
+  Cost per plane for Chinair : 0.1 $Bn = 100 $M',
   skills: 'Mathematics skills',
   keywords: ['50', '60', '100'],
   case_id: cccc.id,
@@ -98,8 +98,8 @@ Question.create(
   content: 'In 2017, we have:
   Cost per plane for Bombardier : 0.05 $Bn = 50 $M
   Cost per plane for Embraer : 0.045 $Bn = 45 $M
-  Cost per plane for R : 0.053 $Bn = 53 $M
-  Cost per plane for C : 0.0475 $Bn = 47.5 $M <br>
+  Cost per plane for Russiair : 0.053 $Bn = 53 $M
+  Cost per plane for Chinair : 0.0475 $Bn = 47.5 $M <br>
 
   What can you interpret from the current and future cost per plane of the Chinese and Russian competitors?',
   timing: 8,
@@ -118,7 +118,7 @@ Question.create(
 
 cc = Case.create(
   content: 'Your client is a France based energy company. They recruit you to consider the acquisition of a publicly traded wind turbine manufacturer, EnergyCo, with manufacturing locations in Asia. <br>',
-  name: 'EnergyCo',
+  name: 'Acquisition in the Oil & Gas Industry',
   day: 1,
   industry: 'Oil & gas',
   position: 2,
@@ -221,7 +221,7 @@ Using the same methodology, we find 27 250 fot the U.S. and 20 880 for Europe',
 
 ccc = Case.create(
   content: 'Our client is a pharmaceutical company that has developed a remedy for female balding. The drug has cleared a lengthy and delayed testing process. The drug will be off patent in five years. Before initiating drug production, the client wants us to determine whether the drug will be profitable and whether or not to go ahead with production.',
-  name: 'Drug Profitability',
+  name: 'Profitability analysis in the Pharmaceuticals industry',
   day: 1,
   industry: 'Pharmaceuticals',
   position: 3,
@@ -382,7 +382,7 @@ The client conducted market research among customers of different ages. Using th
 ccccc = Case.create(
   content: "Our client is an online dating startup named Wanna-Date, which specializes in matching graduate students with other graduate students. Grad-U-Date has finished building their website and are now looking for your assistance in deciding on a strategy to monetize their website.
   What is Wanna-Date’s best method of monetization? How profitable will the company be?",
-  name: "Wanna-Date",
+  name: "Business situation in the Tech industry",
   day: 1,
   industry: 'Technology, Media & Telecommunication',
   position: 4,
@@ -562,7 +562,7 @@ Question.create(
 a = Case.create(
   content: "Your client is a private equity firm that has recently purchased a plastic materials manufacturer that makes products such as plastic soda bottles.
   The client is looking to cash out of their investment within 5 years and wants you to help improve the profitability of the manufacturer.",
-  name: "Soda Firm",
+  name: "Profitability analysis in the Manufacturing industry",
   day: 1,
   industry: 'Manufacturing',
   position: 5,
@@ -763,7 +763,7 @@ abc = Case.create(
   As part of its growth strategy GB has analyzed some potential acquisition targets including Heavenly Donuts (HD), a growing doughnut producer with both a US and international store presence. HD operates under the franchising business model too, though a little bit differently than GB. While GB franchises restaurants, HD franchises areas or regions in which the franchisee is required to open a certain number of stores. <br>
 
   GB’s CEO has hired McKinsey to advise him on whether they should acquire HD or not.",
-  name: "Great Burger",
+  name: "Due diligence in the Food industry",
   day: 1,
   industry: 'Private Equity',
   position: 6,
@@ -905,7 +905,7 @@ Question.create(
 
 xyz = Case.create(
   content: "The client is the North American CEO of a global personal and home care products company. He has hired you to turn around the North American business from loss to profitability within two years.",
-  name: "Cosmetic company",
+  name: "Profitability in the Cosmetic industry",
   day: 1,
   industry: 'Consumer goods',
   position: 7,
@@ -1053,7 +1053,7 @@ ax = Case.create(
   Market makers make % commissions off of transactions in capital markets, and are necessary to provide liquidity and orderly market action. <br>
 
   He believes in future sustained growth and would like to invest part of his money. There are multiple opportunities in the financial market and you have been hired to advise him on how and where to invest his money. He is considering entry into one of four markets: Commodities, Options, Equities, and Fixed Income.",
-  name: "Investment considerations",
+  name: "Investment on Financial products",
   day: 1,
   industry: 'Financial services',
   position: 8,
@@ -1150,7 +1150,7 @@ c = Case.create(
 
   Six months ago, the MSO board welcomed a new President, Kevin Stevens, to lead the organization. Mr. Stevens has called on McKinsey to help his management team address the declining revenue problem. If revenues do not eventually improve, the MSO will likely exhaust its credit and have to drastically scale back in size – or cease performing altogether.<br><br>
   <strong> What strategies should the MSO pursue to improve its revenue growth over the next 5 years? </strong>",
-  name: "Metropolitan Symphony",
+  name: "Profitability analysis for a non-profit organization",
   day: 1,
   industry: 'Public sector',
   position: 9,

@@ -68,7 +68,7 @@
             <div class="card-product">
               <%=  image_tag "tablet.svg", width: 50 %>
                 <div class="card-product-infos">
-                    <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                    <h4 class="difficulty">Level: <%= c.difficulty.html_safe %></h4>
                     <h4><%= link_to c.name, case_path(c), class: "case-name" %> - <%= link_to "", case_path(c), class: "btn btn-next-small" %> </h4>
                     <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                 </div>
@@ -91,7 +91,7 @@
               <div class="card-product-grey">
                 <%=  image_tag "sofa.svg", width: 50 %>
                 <div class="card-product-infos">
-                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                  <h4 class="difficulty">Level: <%= c.difficulty.html_safe %></h4>
                   <h4><%= c.name %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                 </div>
@@ -116,7 +116,7 @@
             <div class="card-product">
               <%=  image_tag "computer.svg", width: 100 %>
               <div class="card-product-infos">
-                <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                <h4 class="difficulty">Level: <%= c.difficulty.html_safe %></h4>
                 <h4><%= link_to c.name, case_path(c), class: "case-name" %> <%= link_to "", case_path(c), class: "btn btn-next-small" %> </h4>
                 <p> <strong>Industry:</strong>  <%= c.industry  %></p>
               </div>
@@ -139,7 +139,7 @@
               <div class="card-product-grey blue-card">
                <%=  image_tag "megaphone.svg", width: 100 %>
                 <div class="card-product-infos">
-                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                  <h4 class="difficulty">Level: <%= c.difficulty.html_safe %></h4>
                   <h4><%= link_to c.name, case_questions_path(c), class: "case-name" %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                   <!-- <p> Completed : <i class="fas fa-check-circle fa-check-circle-top"></i></p> -->
@@ -163,7 +163,7 @@
                 <div class="card-product-grey">
                 <%=  image_tag "screen.svg", width: 100 %>
                 <div class="card-product-infos">
-                  <h4 class="difficulty"><%= c.difficulty.html_safe %></h4>
+                  <h4 class="difficulty">Level: <%= c.difficulty.html_safe %></h4>
                   <h4><%= c.name %> </h4>
                   <p> <strong>Industry:</strong>  <%= c.industry  %></p>
                   <!-- <p> <em> To be completed </em></i></p> -->
