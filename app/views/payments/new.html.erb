@@ -19,6 +19,7 @@
 
 
     <%= form_tag order_payments_path(@order) do %>
+    <div class="payment-button">
       <article>
         <label class="amount">
           <span> Special offer for <%= humanized_money_with_symbol(@order.amount) %> ! </span>
@@ -33,9 +34,59 @@
         data-description="Access"
         data-amount="<%= @order.amount_cents %>"
         data-currency="<%= @order.amount.currency %>"></script>
-
+      </div>
 
     <% end %>
+  </div>
+
+
+  <div class="methodology">
+
+        <div class="avis">
+          <div class="illustration-method">
+             <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556103301/Capture_d_e%CC%81cran_2019-04-24_a%CC%80_12.53.01.png", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1555307967/hec-paris-750x330_1.jpg") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> « With Casebreaker, I got access to cases that are actually used in top consulting firms. It is much better than just preparing on old case books ! »  </em></p>
+          </div>
+        </div>
+
+        <div class="avis">
+          <div class="illustration-method">
+              <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556700184/0.jpg", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556700700/102041_32_48138a1d502233896e9150b568c1a563_large.png") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> <strong> « With this interactive case-cracking tool, I was able to kick off my preparation without relying on other partners.  » </strong></em></p>
+          </div>
+        </div>
+
+        <div class="avis">
+          <div class="illustration-method">
+              <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556700856/0_1.jpg", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          </div>
+          <div class="avis-container">
+            <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920259/BCG_MONOGRAM_RGB_GREEN_tcm9-210235.png") %>)">
+              </div>
+               <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556700960/743px-ESCP_Europe_Campus_Berlin_Logo.svg.png") %>)">
+              </div>
+          </div>
+          <div class="description-method">
+             <p><em> « The corrections are full of insights. With the dashboard, I was able to track my progress, and identify the areas I should keep working on. This was very helpful. »  </em></p>
+          </div>
+        </div>
+
   </div>
 </div>
 

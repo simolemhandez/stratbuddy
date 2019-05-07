@@ -1,6 +1,6 @@
 .container-pay {
-  margin-top: 120px !important;
-  width: 600px !important;
+  margin-top: 20px !important;
+  width: 1000px !important;
 }
 
 .container-pay h3 {
@@ -9,4 +9,10 @@
 
 .amount  {
     text-align: center;
+}
+
+.payment-button {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
 }
