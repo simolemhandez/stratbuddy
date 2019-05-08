@@ -6,18 +6,35 @@ class AnswerPolicy < ApplicationPolicy
   end
 
   def new?
-    user.suscribed == true
+    if Case.find(Question.find(record.question_id).case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 
   def create?
-    user.suscribed == true
+    if Case.find(Question.find(record.question_id).case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 
   def show?
-    user.suscribed == true
+    if Case.find(Question.find(record.question_id).case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
+
   end
 
   def voting?
-    user.suscribed == true
+    if Case.find(Question.find(record.question_id).case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 end

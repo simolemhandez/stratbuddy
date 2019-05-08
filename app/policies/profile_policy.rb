@@ -18,6 +18,6 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def knowledge?
-    user.suscribed == true
+    record == user
   end
 end

@@ -15,12 +15,162 @@ Company.destroy_all
 
 # CASE 1 ---------------------------------------------------------
 
+abc = Case.create(
+  content: "Let’s assume our client is Great Burger (GB) a fast food chain that competes head–to-head with McDonald’s, Wendy’s, Burger King, KFC, etc. <br>
+
+  GB is the fourth largest fast food chain worldwide, measured by the number of stores in operation. As most of its competitors do,GB offers food and “combos” for the three largest meal occasions: breakfast, lunch and dinner. <br>
+
+    Even though GB owns some of its stores, it operates under the franchising business model with 85% of its stores owned by franchisees (individuals own & manage stores and pay a franchise fee to GB, but major business decisions e.g. menu, look of store, are controlled by GB). <br>
+
+  As part of its growth strategy GB has analyzed some potential acquisition targets including Heavenly Donuts (HD), a growing doughnut producer with both a US and international store presence. HD operates under the franchising business model too, though a little bit differently than GB. While GB franchises restaurants, HD franchises areas or regions in which the franchisee is required to open a certain number of stores. <br>
+
+  GB’s CEO has hired McKinsey to advise him on whether they should acquire HD or not.",
+  name: "Due diligence in the Food industry",
+  day: 1,
+  industry: 'Private Equity',
+  position: 1,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
+)
+
+Question.create(
+  content: 'What areas would you want to explore to determine whether GB should acquire HD?',
+  timing: 8,
+  correction: '👉 This is the moment to propose a framework. Use typical M&A framework below whenever you are exposed to M&A situation, but pay attention to adapt it!
+  👉 The framework is not meant only to have show you are structured. It reflects your reasoning, and the way you are testing hypothesis one after another.
+  👉 These hypothesis are meant to validate (or not) the acquisition. Basically, an acquisition make sense in an 1. an attractive market 2. of an attractive company 3. that makes a good fit with the mother company.  <br>
+
+  <strong> 1. Market </strong> :
+  👉 The hypothesis to test is : "The target is on an attractive market in term of size, growth and competition."
+  • Who are the clients of the target? Is there a segmentation? What are their consumption habits?
+  • What is the market size? market trends? market growth for doghnuts?
+  • What is the competition? How are they performing in term of number of stores? sales?
+  • How is the M&A landscape in this area? Are other players consolidating? Are there entry barriers? <br>
+
+  <strong> 2. Financials of the target </strong>
+    👉 The hypothesis to test is : "The target has a good financial health."
+  • HD’s past and projected future sales growth (break down into growth in number of stores, and growth in same store sales)
+  • What is the market share?
+  • Profitability/ profit margin
+  • Capital required to fund growth (capital investment to open new stores, working capital) <br>
+
+
+  <strong> 3. Due diligences & synergies </strong>
+  👉 The hypothesis to test is : "The target is a good fit for our organization."
+  • Is there a good cultural fit? Management team could work together?
+  • Brand quality similar? Would they enhance or detract from each other if marketed side by side?
+  • Are franchise structure different? How would these different structures affect the operations after the deal?
+  • Are there synergies of revenue? (in term of product, market, clients)
+  • Are there synergies of costs? (in term of procurement, distribution, logistics) <br>
+
+  <strong> 4. Decision </strong>
+  • What is the price required for the target? What is the valuation method?
+  • How would we finance this operation?
+  • How will this operation affect the mother company financial ratios (margin, debt, etc)
+  • How will this operation affect our shareholders (earning per share, leverage, rating, etc) <br>',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['market', 'segmentation', 'syngergie', 'M&A', 'store', 'fit', 'ratio', 'leverage', 'debt', 'franchise'],
+  case_id: abc.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'The team started thinking about potential synergies that could be achieved by acquiring HD. Here are some key facts on GB and HD. What potential synergies can you think of between GB and HD?',
+  timing: 8,
+  correction: '👉 This is also a typical question for M&A cases. Two main types of synergies : costs and revenue. Here also, show your creativity and adapt the framework to the specific case.
+
+  <strong> 1. Synergies of cost </strong> :
+  • Biggest opportunity likely in corporate SG&A by integrating corporate management
+  • Maybe some opportunity to lower food costs with larger purchasing volume on similar food items (e.g., beverages, deep frying oil), however overlaps may be low as ingredients are very different
+  • There is also good room for synergies in terms of logistics (stores should be located more or less in the same areas, and then delivering stores from GB and HD could be done by the same fleet of vehicle)
+  • Integrating their delivery service, and being eventually able to better negotiate with firms like Deliveroo, Uber Eats, etc.
+  • GB appears to have an advantage in property and equipment costs which might be leverage-able to HD (e.g., superior skills in lease negotiation) <br>
+
+  <strong> 2. Synergies of revenue </strong>
+  • Sell doughnuts in GB stores, or some selected GB products in HD stores
+  • GB has much greater international presence thus likely has knowledge/skills to enable HD to expand outside of North America
+  • GB may have superior skills inidentifying attractive locations for stores as its sales/store are higher than industry average, where as HD’s is lower than industry average – might be able to leverage this when opening new HD stores to increase HD average sales/store
+  • Expand HD faster then it could do on own – GB asa larger company with lower debt may have better access to capital<br>',
+  skills: 'Business sense & culture',
+  keywords: ['cost', 'revenue', 'SG&A', 'M&A'],
+  case_id: abc.id,
+  position: 2,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
+  )
+
+Question.create(
+  content: 'The team thinks that with synergies, it should be possible to double HD’s US market share in the next 5 years, and that GB’s access to capital will allow it to expand number HD of stores by 2.5 times. <br>
+
+  What sales/store will HD require in 5 years in order for GB to achieve these goals? <br>
+
+  You should assume:
+• Doughnut consumption/capita in the US is $10/year today, and is projected to grow to $20/year in 5years
+• For ease of calculation, assume US population is 300M',
+  timing: 5,
+  correction: 'HD sales today are $700M.
+  US market for doghnuts is = consumption per capita * population = 3 $Bn
+  The HD sales market share today is 23% <br>
+
+  Projected market size in 5Y = 6 $Bn
+  Then, if HD double its market share to 46% (rounded to 50% for simplicity), its sales should be = 3 $Bn <br>
+
+  In 5Y, HD number of stores will be = Current number of stores * 2.5 (as stated in the question) = 2500 (rounded for simplicity)
+
+  Then, the sales by store should be 1.2 $M in 5y to achieve the goal. This seems reasonable given it implies less than double same store sales growth and per capita consumption is predicted to double.',
+  skills: 'Mathematics skills',
+  keywords: ['1.2'],
+  case_id: abc.id,
+  position: 3,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
+  )
+
+Question.create(
+  content: 'One of the synergies that the team thinks might have a big potential is the idea of increasing the businesses’ overall profitability by selling doughnuts in GB stores.
+  How would you assess the profitability impact of this synergy?',
+  timing: 5,
+  correction: '4 main elements to explore to answer this question.
+  • Calculate incremental revenues by selling doughnuts in GB stores (calculate how many doughnuts sold per store, times price per doughnut, times number of GB stores)
+  • Calculate incremental costs by selling doughnuts in GB stores (costs of production, incremental number of employees, employee training, software changes, incremental marketing and advertising, incremental cost of distribution if we can not produce doughnuts in house, etc.)
+  • Calculate incremental investments. Do we need more space in each store if we think we are going to attract new customers? Do we need to invest in store layout to have in house doughnut production? Do we have to invest in machinery?
+  • Calculate cannibalization : what would be the rate of cannibalization with GB offerings? Doughnut cannibalization will be higher with breakfast products than lunch and dinner products, etc. <br>
+
+  NB : If asked, one way to calculate this cannibalization is to look at historic cannibalization rates with new product/offering launchings within GB stores
+  NB : Might also cannibalize other HD stores if they are nearby GB stores – could estimate this impact by seeing historical change in HD’s sales when competitor doughnut store opens near by <br>
+
+  The team has calculated that the incremental profit per GB store from selling HD doughnuts would be $15K.',
+  skills: 'Business sense & culture',
+  keywords: ['incremental', 'cannibalization', 'revenue', 'cost', 'investment'],
+  case_id: abc.id,
+  position: 4,
+  )
+
+Question.create(
+  content: 'You run into the CEO of GB in the hall. He asks you to summarize McKinsey’s perspective so far on whether GB should acquire HD.',
+  timing: 6,
+  correction: '<strong>1. Recommendation </strong>
+   • Early findings lead us to believe acquiring HD would create significant value for GB, and that GB should acquire HD </strong>
+  • We believe it is possible to add $15k in profit/GB store by selling HD in GB stores. This could mean $50 million in incremental profit for North American stores (where immediate synergies are most likely given HD has little brand presence in rest of world)
+  • We also believe there are other potential revenue and cost synergies that the team still needs to quantify
+
+  <strong>2. Risks </strong>
+  • We will also give you recommendations on what it will take to integrate the two companies in order to capture the potential revenue and cost savings, and also to manage the different franchise structures and potentially different cultures of GB and HD
+
+  <strong>3. Next steps </strong>
+  • Once the team has quantified the incremental revenues, cost savings, and investments, we will make a recommendation on the price you should be willing to pay',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['15', 'synergie', 'cannibalization', 'risk', 'next'],
+  case_id: abc.id,
+  position: 5,
+  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556266241/Capture_d_e%CC%81cran_2019-04-26_a%CC%80_10.09.03.png"
+  )
+
+# CASE 2 ---------------------------------------------------------
+
 cccc = Case.create(
   content: 'As the market for long-haul jet manufacturers is a duopoly between Boeing and Airbus, the market for regional jet manufacturers is also a duopoly between Bombardier of Canada and Embraer of Brazil. However, the market appears to be in for a period of transition due to at least two new entrants, Competitor Russiair of Russia and Competitor Chinair of China.',
   name: 'Competitive reaction in the Airline industry',
   day: 1,
   industry: 'Airline',
-  position: 1,
+  position: 2,
   difficulty: "<i class='fas fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>"
   )
 
@@ -114,14 +264,14 @@ Question.create(
   position: 4,
   )
 
-# CASE 2 ---------------------------------------------------------
+# CASE 3 ---------------------------------------------------------
 
 cc = Case.create(
   content: 'Your client is a France based energy company. They recruit you to consider the acquisition of a publicly traded wind turbine manufacturer, EnergyCo, with manufacturing locations in Asia. <br>',
   name: 'Acquisition in the Oil & Gas Industry',
   day: 1,
   industry: 'Oil & gas',
-  position: 2,
+  position: 3,
   difficulty: "<i class='fas fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>"
   )
 
@@ -217,14 +367,14 @@ Using the same methodology, we find 27 250 fot the U.S. and 20 880 for Europe',
   photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556186127/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_11.53.07.png",
   )
 
-# CASE 3 ---------------------------------------------------------
+# CASE 4 ---------------------------------------------------------
 
 ccc = Case.create(
   content: 'Our client is a pharmaceutical company that has developed a remedy for female balding. The drug has cleared a lengthy and delayed testing process. The drug will be off patent in five years. Before initiating drug production, the client wants us to determine whether the drug will be profitable and whether or not to go ahead with production.',
   name: 'Profitability analysis in the Pharmaceuticals industry',
   day: 1,
   industry: 'Pharmaceuticals',
-  position: 3,
+  position: 4,
   difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>"
   )
 
@@ -377,7 +527,7 @@ The client conducted market research among customers of different ages. Using th
   )
 
 
-# CASE 4 ---------------------------------------------------------
+# CASE 5 ---------------------------------------------------------
 
 ccccc = Case.create(
   content: "Our client is an online dating startup named Wanna-Date, which specializes in matching graduate students with other graduate students. Grad-U-Date has finished building their website and are now looking for your assistance in deciding on a strategy to monetize their website.
@@ -557,7 +707,7 @@ Question.create(
   )
 
 
-# CASE 5 ---------------------------------------------------------
+# CASE 6 ---------------------------------------------------------
 
 a = Case.create(
   content: "Your client is a private equity firm that has recently purchased a plastic materials manufacturer that makes products such as plastic soda bottles.
@@ -565,7 +715,7 @@ a = Case.create(
   name: "Profitability analysis in the Manufacturing industry",
   day: 1,
   industry: 'Manufacturing',
-  position: 5,
+  position: 6,
   difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
 )
 
@@ -751,155 +901,7 @@ an easier reversal of the strategy if market trends sour
   case_id: a.id,
   position: 6,
   )
-# CASE 6 ---------------------------------------------------------
 
-abc = Case.create(
-  content: "Let’s assume our client is Great Burger (GB) a fast food chain that competes head–to-head with McDonald’s, Wendy’s, Burger King, KFC, etc. <br>
-
-  GB is the fourth largest fast food chain worldwide, measured by the number of stores in operation. As most of its competitors do,GB offers food and “combos” for the three largest meal occasions: breakfast, lunch and dinner. <br>
-
-    Even though GB owns some of its stores, it operates under the franchising business model with 85% of its stores owned by franchisees (individuals own & manage stores and pay a franchise fee to GB, but major business decisions e.g. menu, look of store, are controlled by GB). <br>
-
-  As part of its growth strategy GB has analyzed some potential acquisition targets including Heavenly Donuts (HD), a growing doughnut producer with both a US and international store presence. HD operates under the franchising business model too, though a little bit differently than GB. While GB franchises restaurants, HD franchises areas or regions in which the franchisee is required to open a certain number of stores. <br>
-
-  GB’s CEO has hired McKinsey to advise him on whether they should acquire HD or not.",
-  name: "Due diligence in the Food industry",
-  day: 1,
-  industry: 'Private Equity',
-  position: 6,
-  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
-)
-
-Question.create(
-  content: 'What areas would you want to explore to determine whether GB should acquire HD?',
-  timing: 8,
-  correction: '👉 This is the moment to propose a framework. Use typical M&A framework below whenever you are exposed to M&A situation, but pay attention to adapt it!
-  👉 The framework is not meant only to have show you are structured. It reflects your reasoning, and the way you are testing hypothesis one after another.
-  👉 These hypothesis are meant to validate (or not) the acquisition. Basically, an acquisition make sense in an 1. an attractive market 2. of an attractive company 3. that makes a good fit with the mother company.  <br>
-
-  <strong> 1. Market </strong> :
-  👉 The hypothesis to test is : "The target is on an attractive market in term of size, growth and competition."
-  • Who are the clients of the target? Is there a segmentation? What are their consumption habits?
-  • What is the market size? market trends? market growth for doghnuts?
-  • What is the competition? How are they performing in term of number of stores? sales?
-  • How is the M&A landscape in this area? Are other players consolidating? Are there entry barriers? <br>
-
-  <strong> 2. Financials of the target </strong>
-    👉 The hypothesis to test is : "The target has a good financial health."
-  • HD’s past and projected future sales growth (break down into growth in number of stores, and growth in same store sales)
-  • What is the market share?
-  • Profitability/ profit margin
-  • Capital required to fund growth (capital investment to open new stores, working capital) <br>
-
-
-  <strong> 3. Due diligences & synergies </strong>
-  👉 The hypothesis to test is : "The target is a good fit for our organization."
-  • Is there a good cultural fit? Management team could work together?
-  • Brand quality similar? Would they enhance or detract from each other if marketed side by side?
-  • Are franchise structure different? How would these different structures affect the operations after the deal?
-  • Are there synergies of revenue? (in term of product, market, clients)
-  • Are there synergies of costs? (in term of procurement, distribution, logistics) <br>
-
-  <strong> 4. Decision </strong>
-  • What is the price required for the target? What is the valuation method?
-  • How would we finance this operation?
-  • How will this operation affect the mother company financial ratios (margin, debt, etc)
-  • How will this operation affect our shareholders (earning per share, leverage, rating, etc) <br>',
-  skills: 'Logic and rigorous thinking',
-  keywords: ['market', 'segmentation', 'syngergie', 'M&A', 'store', 'fit', 'ratio', 'leverage', 'debt', 'franchise'],
-  case_id: abc.id,
-  position: 1,
-  )
-
-Question.create(
-  content: 'The team started thinking about potential synergies that could be achieved by acquiring HD. Here are some key facts on GB and HD. What potential synergies can you think of between GB and HD?',
-  timing: 8,
-  correction: '👉 This is also a typical question for M&A cases. Two main types of synergies : costs and revenue. Here also, show your creativity and adapt the framework to the specific case.
-
-  <strong> 1. Synergies of cost </strong> :
-  • Biggest opportunity likely in corporate SG&A by integrating corporate management
-  • Maybe some opportunity to lower food costs with larger purchasing volume on similar food items (e.g., beverages, deep frying oil), however overlaps may be low as ingredients are very different
-  • There is also good room for synergies in terms of logistics (stores should be located more or less in the same areas, and then delivering stores from GB and HD could be done by the same fleet of vehicle)
-  • Integrating their delivery service, and being eventually able to better negotiate with firms like Deliveroo, Uber Eats, etc.
-  • GB appears to have an advantage in property and equipment costs which might be leverage-able to HD (e.g., superior skills in lease negotiation) <br>
-
-  <strong> 2. Synergies of revenue </strong>
-  • Sell doughnuts in GB stores, or some selected GB products in HD stores
-  • GB has much greater international presence thus likely has knowledge/skills to enable HD to expand outside of North America
-  • GB may have superior skills inidentifying attractive locations for stores as its sales/store are higher than industry average, where as HD’s is lower than industry average – might be able to leverage this when opening new HD stores to increase HD average sales/store
-  • Expand HD faster then it could do on own – GB asa larger company with lower debt may have better access to capital<br>',
-  skills: 'Business sense & culture',
-  keywords: ['cost', 'revenue', 'SG&A', 'M&A'],
-  case_id: abc.id,
-  position: 2,
-  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
-  )
-
-Question.create(
-  content: 'The team thinks that with synergies, it should be possible to double HD’s US market share in the next 5 years, and that GB’s access to capital will allow it to expand number HD of stores by 2.5 times. <br>
-
-  What sales/store will HD require in 5 years in order for GB to achieve these goals? <br>
-
-  You should assume:
-• Doughnut consumption/capita in the US is $10/year today, and is projected to grow to $20/year in 5years
-• For ease of calculation, assume US population is 300M',
-  timing: 5,
-  correction: 'HD sales today are $700M.
-  US market for doghnuts is = consumption per capita * population = 3 $Bn
-  The HD sales market share today is 23% <br>
-
-  Projected market size in 5Y = 6 $Bn
-  Then, if HD double its market share to 46% (rounded to 50% for simplicity), its sales should be = 3 $Bn <br>
-
-  In 5Y, HD number of stores will be = Current number of stores * 2.5 (as stated in the question) = 2500 (rounded for simplicity)
-
-  Then, the sales by store should be 1.2 $M in 5y to achieve the goal. This seems reasonable given it implies less than double same store sales growth and per capita consumption is predicted to double.',
-  skills: 'Mathematics skills',
-  keywords: ['1.2'],
-  case_id: abc.id,
-  position: 3,
-  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556196314/Capture_d_e%CC%81cran_2019-04-25_a%CC%80_14.43.08.png"
-  )
-
-Question.create(
-  content: 'One of the synergies that the team thinks might have a big potential is the idea of increasing the businesses’ overall profitability by selling doughnuts in GB stores.
-  How would you assess the profitability impact of this synergy?',
-  timing: 5,
-  correction: '4 main elements to explore to answer this question.
-  • Calculate incremental revenues by selling doughnuts in GB stores (calculate how many doughnuts sold per store, times price per doughnut, times number of GB stores)
-  • Calculate incremental costs by selling doughnuts in GB stores (costs of production, incremental number of employees, employee training, software changes, incremental marketing and advertising, incremental cost of distribution if we can not produce doughnuts in house, etc.)
-  • Calculate incremental investments. Do we need more space in each store if we think we are going to attract new customers? Do we need to invest in store layout to have in house doughnut production? Do we have to invest in machinery?
-  • Calculate cannibalization : what would be the rate of cannibalization with GB offerings? Doughnut cannibalization will be higher with breakfast products than lunch and dinner products, etc. <br>
-
-  NB : If asked, one way to calculate this cannibalization is to look at historic cannibalization rates with new product/offering launchings within GB stores
-  NB : Might also cannibalize other HD stores if they are nearby GB stores – could estimate this impact by seeing historical change in HD’s sales when competitor doughnut store opens near by <br>
-
-  The team has calculated that the incremental profit per GB store from selling HD doughnuts would be $15K.',
-  skills: 'Business sense & culture',
-  keywords: ['incremental', 'cannibalization', 'revenue', 'cost', 'investment'],
-  case_id: abc.id,
-  position: 4,
-  )
-
-Question.create(
-  content: 'You run into the CEO of GB in the hall. He asks you to summarize McKinsey’s perspective so far on whether GB should acquire HD.',
-  timing: 6,
-  correction: '<strong>1. Recommendation </strong>
-   • Early findings lead us to believe acquiring HD would create significant value for GB, and that GB should acquire HD </strong>
-  • We believe it is possible to add $15k in profit/GB store by selling HD in GB stores. This could mean $50 million in incremental profit for North American stores (where immediate synergies are most likely given HD has little brand presence in rest of world)
-  • We also believe there are other potential revenue and cost synergies that the team still needs to quantify
-
-  <strong>2. Risks </strong>
-  • We will also give you recommendations on what it will take to integrate the two companies in order to capture the potential revenue and cost savings, and also to manage the different franchise structures and potentially different cultures of GB and HD
-
-  <strong>3. Next steps </strong>
-  • Once the team has quantified the incremental revenues, cost savings, and investments, we will make a recommendation on the price you should be willing to pay',
-  skills: 'Logic and rigorous thinking',
-  keywords: ['15', 'synergie', 'cannibalization', 'risk', 'next'],
-  case_id: abc.id,
-  position: 5,
-  photo: "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556266241/Capture_d_e%CC%81cran_2019-04-26_a%CC%80_10.09.03.png"
-  )
 
 # CASE 7 ---------------------------------------------------------
 

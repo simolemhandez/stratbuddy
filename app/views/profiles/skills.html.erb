@@ -12,6 +12,7 @@
   <div class="profile-data">
     <h2>  <%=  @user.first_name %> <%=  @user.last_name.upcase %></h2>
     <p> <em> <%= @user.email %> </em></p>
+    <%= link_to "Practice", cases_path, class: "btn btn-flat" %>
   </div>
 
   <!-- <div class="row companies-container set-your-obj">

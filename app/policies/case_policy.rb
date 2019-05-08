@@ -10,6 +10,10 @@ class CasePolicy < ApplicationPolicy
   end
 
   def show?
-    user.suscribed == true
+    if record.position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 end

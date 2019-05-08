@@ -11,7 +11,7 @@
 
     <div class="payment">
       <% if current_user.nil? %>
-        <%= link_to "Login", new_user_session_path, class: "btn btn-flat" %>
+        <%= link_to "Sign up", new_user_session_path, class: "btn btn-flat" %>
       <% elsif current_user.suscribed == true %>
           <%= link_to "Ace the case!", cases_path, class: "btn btn-flat" %>
       <% else %>
@@ -43,6 +43,7 @@
     <p>
       <strong>To get hired in top firms, no surprise : get a top preparation to case-cracking! Casebreaker will help you improve the three core consulting skills.</strong>
     </p>
+    <%= link_to "Practice", cases_path, class: "btn btn-flat" %>
     <div class="fourth-picture">
       <%=  image_tag "sofa.svg", width: 380 %>
     </div>
@@ -101,7 +102,7 @@
 
   <div class="payment center-payment">
       <% if current_user.nil? %>
-        <%= link_to "Login", new_user_session_path, class: "btn btn-flat" %>
+        <%= link_to "Sign up", new_user_session_path, class: "btn btn-flat" %>
       <% elsif current_user.suscribed == true %>
           <%= link_to "Ace the case!", cases_path, class: "btn btn-flat" %>
       <% else %>
@@ -117,7 +118,7 @@
       <div class="card-method">
         <div class="card-trip-infos">
           <div>
-            <h2>YOU ACCESS 10+ TOP QUALITY CASES <i class="fas fa-star"></i></h2>
+            <h2  class="value-prop">YOU ACCESS 10+ TOP QUALITY CASES LIBRARY<i class="fas fa-star"></i></h2>
           </div>
         </div>
          <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702167/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.13.32.png", width: 400, height: 400, crop: :crop %>
@@ -127,7 +128,7 @@
       <div class="card-method">
         <div class="card-trip-infos">
           <div>
-            <h2>YOU CRACK THE CASES <i class="fas fa-pencil-alt"></i></h2>
+            <h2  class="value-prop">YOU TAKE YOUR ONLINE CASE-CRAKING LEARNING JOURNEY <i class="fas fa-pencil-alt"></i></h2>
           </div>
         </div>
          <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702168/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.13.13.png", width: 400, height: 400, crop: :crop %>
@@ -137,7 +138,7 @@
       <div class="card-method">
         <div class="card-trip-infos">
           <div>
-            <h2>YOU OBTAIN PERSONNALIZED CORRECTION <i class="fas fa-rocket"></i></h2>
+            <h2 class="value-prop">YOU OBTAIN PERSONNALIZED CORRECTION <i class="fas fa-rocket"></i></h2>
           </div>
         </div>
          <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1556702168/Capture_d_e%CC%81cran_2019-05-01_a%CC%80_11.12.56.png", width: 400, height: 400, crop: :fill %>

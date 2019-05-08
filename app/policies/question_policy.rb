@@ -6,11 +6,19 @@ class QuestionPolicy < ApplicationPolicy
   end
 
   def index?
-    user.suscribed == true
+    if Case.find(record.case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 
   def show?
-    user.suscribed == true
+    if Case.find(record.case_id).position == 1
+      return true
+    else
+      user.suscribed == true
+    end
   end
 
 end

@@ -9,8 +9,9 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   def user_not_authorized
+    order  = Order.create!(amount: current_user.price, state: 'pending', user: current_user)
     flash[:alert] = "You are not authorized to perform this action. Suscribe first!"
-    redirect_to(root_path)
+    redirect_to new_order_payment_path(order)
   end
 
   def default_url_options

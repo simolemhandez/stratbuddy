@@ -18,9 +18,9 @@
           <%= link_to "Dashboard", dashboard_path, class: "nav-linkk pushdown-first" %>
         </li>
  <!--  -->
-         <!-- <li class="nav-item">
-          <%= link_to "About us", knowledge_path, class: "nav-linkk pushdown-third" %>
-        </li> -->
+        <li class="nav-item">
+          <%= link_to "Blog", knowledge_path, class: "nav-linkk pushdown-third" %>
+        </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.url.nil? %>
             <%=  image_tag "avatar.png", width: 150, height: 150, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" } %>
@@ -35,7 +35,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-linkk" %>
+          <%= link_to "Sign up", new_user_session_path, class: "nav-linkk" %>
         </li>
       <% end %>
     </ul>
