@@ -1,6 +1,7 @@
 class PaymentsController < ApplicationController
 before_action :set_order
   def new
+    @promo = current_user.promo
     authorize :payment, :new?
   end
 
