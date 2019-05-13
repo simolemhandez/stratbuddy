@@ -1,4 +1,14 @@
 <br><br><br><br>
 <h1>About us</h1>
 
+<% @users.each do |user| %>
+<p> Email: <%= user.email %></p>
+<p> Created at: <%= user.created_at %></p>
+<p> Updated at: <%= user.updated_at %></p>
+<p> Progression level: <%= user.progression_level %></p>
+<p> Suscribed: <%= user.suscribed %></p>
+<p> Score: <%= user.score %></p>
+<p>______________</p>
+<% end %>
+
 

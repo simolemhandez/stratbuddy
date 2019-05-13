@@ -29,6 +29,7 @@ class ProfilesController < ApplicationController
 
   def knowledge
     @user = current_user
+    @users = User.all
     authorize @user
   end
 end
