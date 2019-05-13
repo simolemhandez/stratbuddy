@@ -18,6 +18,6 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def knowledge?
-    record == user
+    return true
   end
 end
