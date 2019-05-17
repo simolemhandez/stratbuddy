@@ -1,8 +1,19 @@
 <div class="trianglify-twisted">
   <div class="first-box">
-    <div class="row">
-      <div class="col col-md-12">
+    <div class="row cases-title">
+      <div class="col col-md-9">
         <h3> YOUR LEARNING JOURNEY </h3> <br>
+      </div>
+      <div class="col col-md-3">
+        <div class="payment">
+          <% if current_user.suscribed == true %>
+          <% else %>
+              <%= form_tag orders_path do %>
+                <%= hidden_field_tag 'user_id', current_user.id %>
+                <%= submit_tag 'Get my access', class: 'btn btn-flat' %>
+              <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
 

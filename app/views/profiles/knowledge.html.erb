@@ -1,12 +1,21 @@
 <br><br><br><br>
 <h1>About us</h1>
 
-<% @users.each do |user| %>
+<% @users.reverse.each do |user| %>
 <p> Email: <%= user.email %></p>
 <p> Created at: <%= user.created_at %></p>
 <p> Updated at: <%= user.updated_at %></p>
-<p> Progression level: <%= user.progression_level %></p>
 <p> Suscribed: <%= user.suscribed %></p>
+<% if user.attempts.last.nil?  %>
+  <p>Last case done: </p>
+<% else %>
+  <p> Last case done: <%= Case.find(user.attempts.last.case_id).position %></p>
+<% end %>
+<% if user.attempts.last.nil?  %>
+  <p>Completed: </p>
+<% else %>
+  <p> Completed: <%= user.attempts.last.completed %></p>
+<% end %>
 <p> Score: <%= user.score %></p>
 <p>______________</p>
 <% end %>
