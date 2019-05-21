@@ -1335,6 +1335,199 @@ new marketing efforts, management could become distracted and fail to focus on t
   position: 7
   )
 
+# CASE 9 ---------------------------------------------------------
+
+love = Case.create(
+  content: "Our client is Magna Health, a health care company in the Midwest.  It both insures patients and provides health care services.  Employers pay a fixed premium to Magna for each of their employees in return for which Magna covers all necessary health services of the employee (ranging from physician care, and medications to hospitalization). <br>
+Magna currently has 300,000 patients enrolled in its plan.  It has 300 salaried physician employees who provide a broad range of services to patients in 6 centers.  These physicians represent a wide range of specialty areas, but not all areas.  When a patient needs medical treatment in a specialty area not covered by a Magna physician, they are referred outside of the Magna network for care, and Magna pays all referral costs on a fee-for-service basis.  Magna doesn’t own any hospitals itself, instead contracting services from several local hospitals. <br>
+Over the past six months, Magna has been experiencing declining profitability.  Magna’s CEO has retained McKinsey to help determine what is causing the problem and how Magna might fix it.
+How can Magna Health improve its financial situation?
+",
+  name: "Financial analysis in the Healthcare industry",
+  day: 1,
+  industry: 'Pharmaceuticals',
+  position: 10,
+  difficulty: "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>"
+)
+
+Question.create(
+  content: 'What key areas would you want to explore in order to understand Magna’s decline in profitability?',
+  timing: 5,
+  correction: 'We would like to obtain additional information overt three main areas
+  <strong>  1. Market </strong>
+  • Size: What is our market size? growth? market share?
+  • Competitors: Who are the main competitors? To what customer segments do they cater?
+  • Clients: I would also want to understand how Magna’s patient base demographics/overall risk profile might affect medical costs.
+
+  <strong> 2. Company </strong>
+  • Financials: Revenue analysis and cost drivers and financial health (debt, capacity to invest). I would want to consider administrative (or non-medical) and medical costs (e.g. hospital, drugs, outpatient care). Outpatient costs could be further split into internal physician costs versus external referral costs.
+  • Organization: Team, core competencies, processes<br>
+
+  👉 Always use a structure (framework), even to ask your questions. ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['market', 'revenue'],
+  case_id: love.id,
+  position: 1,
+  )
+
+Question.create(
+  content: 'After reviewing the basics of Magna’s business, your team believes that one of the root causes of Magna’s financial problems is how it manages medical costs, particularly the cost of referrals to specialists outside its physician network.<br>
+
+  Your team has gathered the following information on Magna and its primary competitor, Sunshine HMO:
+  • Number of patients : 300k for Magna Health vs. 500k for Sunshine HMO
+  • Average cost of referral : 20$ for Magna Health vs. 15$ for Sunshine HMO<br>
+
+  What are the most likely reasons that the average cost of referral at Magna is higher than at Sunshine?
+  ',
+  timing: 5,
+  correction: 'Several hypothesis could be made to explain higher average cost of referral:
+  <strong>  1. Market </strong>
+
+  <strong> Referral Pricing: </strong> Magna might be paying more than Sunshine for specialist services (e.g., its outside contracts with oncologists might be at higher rates than Sunshine’s contracts).
+  <strong> Number of referrals: </strong>  Magna’s physicians might have different practice patterns than Sunshine physicians, i.e. they may be less comfortable treating heart disease patients or have different training/ protocols.
+  <strong> Mix of specialties: </strong>  Magna’s mix of specialties that require referrals (cardiology and neurosurgery) are probably more expensive specialties (than cardiology and psychiatry, Sunshine’s referral specialties).
+  <strong> Mix of patients: </strong>  Magna has sicker or older (>65) patients (individuals over 65 are more likely to need medical care in the specialty areas outside of Magna’s network, particularly cardiology).
+
+  👉 Using a hopthesis-driven reasoning is key in consulting. As explained, you will often have to identify the root causes of a problem your client face. Making hypothesis and then testing them is the method to follow. Adopt it also in your case-cracking exercises. ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['referral', 'specialt', 'patient', 'pric'],
+  case_id: love.id,
+  position: 2,
+  )
+
+
+Question.create(
+  content: 'Magna’s CEO has a hypothesis that Magna is paying too much in cardiology referral costs for its patient population.
+
+  <br>He asks the McKinsey team to look at Magna’s cardiac patient population more closely and tell him how many referrals he should expect on an annual basis.  Assume the following:
+  • Magna has 300,000 patients in any one year 
+  • 20% of its patients are age 65 or older 
+  • In the U.S. patients with serious heart disease visit specialists (cardiologists) on average 5 times per year
+
+  <br>At this point you should realize that you need to know the difference in prevalence rate (percentage of the population that has a disease at any one point in time) of serious heart disease in the 65 and over population and the less than 65 population.  When you find that you need additional information or clarification of the information you have received, you should not hesitate to ask the interviewer.  When asked, the interviewer would provide you with the following data:
+  • The prevalence rate of serious heart disease in the 65+ population is 30% 
+  • The prevalence rate of serious heart disease in the under age 65 population is 10%',
+  timing: 5,
+  correction: 'Magna should expect 210,000 cardiac referrals annually based on its patient population
+
+300,000 total patients
+20% x 300,000 = 60,000 patients age 65+ 
+60,000 x 30% = 18,000 patients age 65+ with serious heart disease
+18,000 x 5 = 90,000 referrals per year 
+240,000 Magna patients under the age of 65 
+240,000 patients x 10% = 24,000 patients under age 65 with serious heart disease and 24,000 x 5 visits per year = 120,000 visits per year total 90,000 + 120,000 visits per year = 210,000 total Magna patient external cardiology visits
+
+  👉 Be clear in your calculus. Method is more important than calculus.
+  👉 Identifying the key questions to ask (here prevalence rate) is key in strategy consulting. ',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['210'],
+  case_id: love.id,
+  position: 3,
+  )
+
+Question.create(
+  content: 'When the team tells Magna’s CEO that based on Magna’s patient population he should expect about 210,000 cardiology referrals a year he exclaims, “We currently pay for 300,000 annual cardiology referrals for our patient population!”
+
+Why might Magna’s annual cardiology referrals be significantly higher than U.S. averages?',
+  timing: 5,
+  correction: 'There are two options:
+  • The prevalence rate of heart disease in Magna’s patient population is higher than average.
+  • Physicians refer patients who do not have serious heart disease to specialists <br>
+
+  This last hypothesis could have several causes:
+  • Magna’s primary care physicians are referring too many patients, including some who do not have serious heart disease to specialists
+  • Primary care physicians are not comfortable (e.g., they are poorly trained or inexperienced) treating cardiac patients, even those with minor problems; they want to avoid malpractice suits
+  • Magna doesn’t have clear guidelines on when physicians should be referring patients to specialists (or if guidelines exist, physicians are not complying with them)
+  • There are no incentives or penalties to prevent physicians from referring patients with less serious problems to specialists<br>
+
+
+  👉 Identifying roots causes is acting like a detective. Step by step.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['prevalence rate', 'refer', 'guideline', 'icentive'],
+  case_id: love.id,
+  position: 4,
+  )
+
+Question.create(
+  content: 'After some additional investigation, your team thinks that changing the behavior of Magna’s primary care physicians has potential to reduce cardiac referral costs while maintaining high quality care.  The team believes that introducing some sort of incentive plan for physicians might help reduce the referral rate. <br>
+
+  The team’s idea for a pilot plan is to increase overall fees that Magna pays to primary care physicians to handle more of their patients’ basic cardiology needs.  Overall fee increases would total $1 million. <br>
+
+  In addition to the team’s proposal, Magna’s Medical Director wants to pilot the following idea:  Magna pays bonuses of $100,000 per year to each of the 10 primary care physicians with the lowest cardiac referral rates consistent with good patient outcomes. <br>
+
+  Although the team mentions to the Medical Director that there are other issues to consider relating to the pilot that are not financial, such as the ethical impact of incentivizing physicians not to refer patients to specialist treatment, he wants the team to do the first calculation including both ideas:
+
+  How many fewer cardiology referrals will Magna need to have in order to recoup the cost of the pilot incentive plan (including the team’s and the Medical Director’s ideas)?  For simplicity’s sake assume:
+  • The cost of a cardiology referral is $200
+  • Magna currently has 300,000 cardiology referrals per year',
+  timing: 5,
+  correction: 'If the incentive plan reduces cardiology referrals by 3.3% or 10,000 referrals, Magna will recoup the cost of the incentive plan.  One potential approach to the calculation is as follows:<br>
+
+  $1 million + (10 * $100,000) = $2 million for incentive plan
+   $2 million/$200 =10,000 referrals
+  10,000 referrals/300,000 total referrals = 3.3% reduction would pay for incentive program<br>
+
+  👉 Having a top-down communication is key when you will start sliding. Start by giving the big picture, the end-result, and only then explain your approach.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['3.3'],
+  case_id: love.id,
+  position: 5,
+  )
+
+Question.create(
+  content: 'Your team projects that the incentive plan has the potential to reduce referrals by 5% in its first year, and an additional 2% in its second year.  If these projections are correct, how much referral cost could Magna save in total over the first two years of the incentive plan?',
+  timing: 5,
+  correction: 'Referral costs would be $4.14 million lower in the second year. Over the two years Magna would save $7.14 million. One potential approach to the calculation:
+
+Year 1 Savings with Program
+300,000 total referrals 
+5% reduction in referrals =15,000 referrals
+15,000 x $200 = $3.0 million in savings in year 1
+ 
+Year 2 Savings with Program
+ 285,000 total referrals
+ 2% reduction in referrals = 5,700 referrals 
+5,700 x $200 = $1.14 million in savings 
+$3 + $1.14  = $4.14 million in savings
+
+Total cumulative savings over 2 years = Year 1 + Year 2 savings = $3M + $4.14M = $7.14M
+
+  👉 Keeping the info we gave you in the previous question is key. Your draft should be well structured.
+  👉 Having a top-down communication is key when you will start sliding. Start by giving the big picture, the end-result, and only then explain your approach.',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['7.1'],
+  case_id: love.id,
+  position: 6,
+  )
+
+Question.create(
+  content: 'Your team presents its physician incentive proposal to Magna’s CEO.  <br>
+
+  The CEO, in consultation with his Medical Director, agrees that this is feasible and says that they will definitely pilot the overall higher fees to  primary care physicians to handle more of the basic cardiology needs and they will think about the idea with the bonuses again due to the ethical concerns the team raised.  <br>
+
+  At the end of the meeting the CEO says, “I like the work you’ve done, but even if we did implement the bonus payment it’s not enough to address our current financial situation.  Physicians are professionals who care deeply about patient care and I think there’s a limit to how much cost we can expect to reduce utilizing financial incentives exclusively.  Besides cardiac financial incentive programs, what other ideas should we consider to reduce the cost of Magna’s specialist referrals?”<br>
+
+  Based on what we have discussed today, and any other ideas you might have, how would you respond to the CEO?',
+  timing: 8,
+  correction: 'I would pursue additional ways to change physician behavior.  For example:
+• Provide training on how to treat patients with minor or stable medical problems
+• Define and clarify medical guidelines for referrals (e.g., establish a medical committee to define the difference between “serious” and “minor” heart disease)
+• Institute peer review committee charged with approving a subset of referrals (e.g., those that are considered “high cost,”)<br>
+
+Other ideas outside of changing physician behavior might include:
+• Spend time investigating “outlier” physicians (i.e., those who seem to refer patients to specialists at much higher rates than others) to determine how widespread the referral problem is and whether simply focusing on a few physicians will dramatically reduce referral costs
+• Determine whether Magna can reduce referral costs in the other medical areas where it does not have specialists (i.e. neurosurgery)
+• Look at the contracts Magna has for specialist services to determine if it is paying too much relative to competitors
+• Consider whether bringing cardiology, neurosurgery, and oncology specialists in-house (i.e., within Magna) might reduce cost
+• Educate patients
+• Publicize physician referral rates
+
+  👉 This question can help you differentiate...You have to show both your analytic mind (being able to find new, innovative solutions) and synthetic mind (being able to structure well all the data you have been given so far).',
+  skills: 'Logic and rigorous thinking',
+  keywords: ['7.1'],
+  case_id: love.id,
+  position: 7,
+  )
 
 
 e = Company.create(

@@ -1,5 +1,85 @@
-<br><br><br><br>
-<h1>About us</h1>
+<div class="trianglify-twisted">
+  <div class="first-box">
+    <div class="row">
+      <div class="col col-md-12">
+        <h3> LEARN ABOUT CONSULTING FIRMS </h3> <br>
+      </div>
+    </div>
+
+      <div class="row companies-container">
+        <% @companies.each do |company| %>
+          <div class= "col-sm-3 col col-xs-12 text-center">
+
+              <div class="company-card company-active" style="background-image: url(<%=cl_image_path(company.logo) %>)">
+              </div>
+
+          </div>
+        <% end %>
+      </div>
+
+
+    <div class="row">
+      <div class="col col-md-12">
+        <h4 class="company-name-title">
+          BAIN CONSULTING
+        </h4>
+      </div>
+    </div>
+    <div class="row in-line">
+      <div class="col col-md-6">
+        <div class="container-knowledge">
+          <p class="title-knowledge">General information</p>
+          <p>o Cabinet majeur sur les missions de Private Equity avec possibilité de passage en fonds facilitée après une expérience de 2+ ans chez Bain
+          </p>
+        </div>
+      </div>
+      <div class="col col-md-6">
+        <div class="container-knowledge">
+          <p class="title-knowledge">Process</p>
+          <p>o 1er tour : <br>
+          • Test d’anglais écrit (lecture d’article à résumer sous forme de bullet points) et oral (test téléphonique de compréhension et d’expression orale)<br>
+          • 2 entretiens de 45min avec études de cas et discussions<br><br>
+          o 2ème tour : 2 entretiens de 45min avec études de cas et discussions<br><br>
+          o 3ème tour : 2 entretiens de 45min avec études de cas et discussions
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <h4 class="company-name-title">
+          MCKINSEY & CO
+        </h4>
+      </div>
+    </div>
+    <div class="row in-line">
+      <div class="col col-md-6">
+        <div class="container-knowledge">
+          <p class="title-knowledge">General information</p>
+          <p>o Premier cabinet de conseil à Paris
+          </p>
+        </div>
+      </div>
+      <div class="col col-md-6">
+        <div class="container-knowledge">
+          <p class="title-knowledge">Process</p>
+          <p>o 1er tour : <br>
+• Etude de cas en ligne en anglais dans les locaux du BCG : questionnaire à choix
+multiples de 23 questions à compléter en 45 minutes <br>
+• 1 entretien de 45 min avec étude de cas et discussion <br> <br>
+o 2ème tour : <br>
+• Etude de cas écrit : exercice écrit de deux heures où il faut répondre à trois questions grâce à l’étude de documents fournis et présenter ses conclusions sous formes de slides sur papier<br>
+• 1 entretien de 45 min avec étude de cas et discussion<br><br>
+o 3ème tour : <br>
+• 2 entretiens de 45 min avec étude de cas et discussion
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
 
 <% @users.reverse.each do |user| %>
 <p> Email: <%= user.email %></p>

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'skills', to: 'profiles#skills'
   get 'industries', to: 'profiles#industries'
   get 'knowledge', to: 'profiles#knowledge'
+  get 'tracking', to: 'profiles#tracking'
   get 'follow/:id', to: 'companies#follow', as: :follow
   get 'unfollow/:id', to: 'companies#unfollow', as: :unfollow
   get 'voting/:id', to: 'answers#voting', as: :voting

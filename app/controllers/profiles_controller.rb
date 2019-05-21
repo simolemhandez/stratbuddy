@@ -29,6 +29,14 @@ class ProfilesController < ApplicationController
 
   def knowledge
     @user = current_user
+    @companies = Company.all
+    @users = User.all
+    authorize @user
+  end
+
+  def tracking
+    @user = current_user
+    @companies = Company.all
     @users = User.all
     authorize @user
   end

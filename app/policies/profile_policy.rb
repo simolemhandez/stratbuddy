@@ -20,4 +20,8 @@ class ProfilePolicy < ApplicationPolicy
   def knowledge?
     return true
   end
+
+  def tracking?
+    record == user
+  end
 end

@@ -1,10 +1,7 @@
 .companies-container {
   display: flex;
   justify-content: space-around;
-  width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
 }
 
 .company-card {
@@ -35,5 +32,16 @@
 .company-active {
   opacity: 1.0;
   border: 2px solid   #f7b633;
+}
+
+.title-knowledge {
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  border-bottom: 1px solid black;
+}
+
+.company-name-title {
+  border-bottom: 3px solid black;
 }
 
