@@ -7,7 +7,7 @@
     </div>
 
       <div class="row companies-container">
-        <% @companies.each do |company| %>
+        <% @companies.first.each do |company| %>
           <div class= "col-sm-3 col col-xs-12 text-center">
 
               <div class="company-card company-active" style="background-image: url(<%=cl_image_path(company.logo) %>)">
