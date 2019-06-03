@@ -7,7 +7,7 @@
     </div>
 
       <div class="row companies-container">
-        <% @companies.first.each do |company| %>
+        <% @companies.each do |company| %>
           <div class= "col-sm-3 col col-xs-12 text-center">
 
               <div class="company-card company-active" style="background-image: url(<%=cl_image_path(company.logo) %>)">
@@ -15,6 +15,7 @@
 
           </div>
         <% end %>
+
       </div>
 
     <div class="row">
@@ -147,7 +148,7 @@
         </div>
       </div>
     </div>
-
+<!--
 <% @users.reverse.each do |user| %>
 <p> Email: <%= user.email %></p>
 <p> Created at: <%= user.created_at %></p>
@@ -166,5 +167,5 @@
 <p> Score: <%= user.score %></p>
 <p>______________</p>
 <% end %>
-
+ -->
 
