@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :questions, only: :show do
     resources :answers, only: [ :new, :create ]
   end
-  resources :answers, only: :show
+  resources :answers, only: [ :index, :show ]
   resources :orders, only: [:show, :create]
   resources :orders, only: [:show, :create] do
     resources :payments, only: [:new, :create]
@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'profiles#dashboard'
   get 'skills', to: 'profiles#skills'
   get 'industries', to: 'profiles#industries'
-  get 'knowledge', to: 'profiles#knowledge'
-  get 'tracking', to: 'profiles#tracking'
   get 'follow/:id', to: 'companies#follow', as: :follow
   get 'unfollow/:id', to: 'companies#unfollow', as: :unfollow
   get 'voting/:id', to: 'answers#voting', as: :voting
+  get 'knowledge', to: 'profiles#knowledge'
+  get 'myclients', to: 'profiles#myclients'
 end

@@ -1,4 +1,9 @@
 class AnswersController < ApplicationController
+  def index
+    @answers = policy_scope(Answer)
+    @users = User.all
+  end
+
   def new
     @question = Question.find(params[:question_id])
     @answer = Answer.new

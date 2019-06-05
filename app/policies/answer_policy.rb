@@ -5,6 +5,10 @@ class AnswerPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    return true
+  end
+
   def new?
     if Case.find(Question.find(record.question_id).case_id).position == 1
       return true

@@ -33,11 +33,4 @@ class ProfilesController < ApplicationController
     @users = User.all
     authorize @user
   end
-
-  def tracking
-    @user = current_user
-    @companies = Company.all
-    @users = User.all
-    authorize @user
-  end
 end

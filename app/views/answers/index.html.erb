@@ -1,0 +1,10 @@
+<br><br><br><br><br>
+<% @users.each do |a| %>
+  <p>Email : <%= a.email %></p>
+  <p>Created at : <%= a.created_at %></p>
+  <p>Updated at : <%= a.updated_at %></p>
+  <p>Score : <%= a.score %></p>
+  <p>Suscribed : <%= a.suscribed %></p>
+  <p>______</p>
+
+<% end %>
