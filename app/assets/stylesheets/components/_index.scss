@@ -82,6 +82,25 @@ body {
   height: 500px;
 }
 
+.container-knowledge-picture {
+  margin: auto;
+  margin: auto;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 0px rgba(23,43,115, 0.15);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  height: 500px;
+  background-size: contain ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .container-question-index {
   margin: auto;
   width: 100% !important;
