@@ -105,7 +105,7 @@
 <div class="product methodology-box">
 
       <div class="title">
-      <h1>Benefit from our limited offer for 60€ !</h1>
+      <h1>Benefit from our limited offer for 90€ !</h1>
     </div>
 
   <div class="payment center-payment">
@@ -153,6 +153,29 @@
       </div>
     </div>
   </div>
+  <br><br>
+  <div class="row">
+    <div class="col col-md-4 offset-md-2">
+      <div class="card-method">
+        <div class="card-trip-infos">
+          <div>
+            <h2  class="value-prop">LEARN ABOUT CONSULTING FIRMS FOR FIT INTERVIEWS <i class="far fa-star"></i></h2>
+          </div>
+        </div>
+         <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1560352588/Capture_d_e%CC%81cran_2019-06-12_a%CC%80_17.05.09.png", width: 400, height: 400, crop: :crop %>
+      </div>
+    </div>
+    <div class="col col-md-4">
+      <div class="card-method">
+        <div class="card-trip-infos">
+          <div>
+            <h2 class="value-prop">LEARN ABOUT FRAMEWORKS TO STRUCTURE YOUR ANSWERS <i class="fas fa-sitemap"></i></h2>
+          </div>
+        </div>
+         <%= cl_image_tag "https://res.cloudinary.com/dtzmk5eym/image/upload/v1560352573/Capture_d_e%CC%81cran_2019-06-12_a%CC%80_17.05.25.png", width: 400, height: 400, crop: :fill %>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -167,8 +190,7 @@
   <div class="methodology">
 
         <div class="avis">
-          <div class="illustration-method">
-             <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556103301/Capture_d_e%CC%81cran_2019-04-24_a%CC%80_12.53.01.png", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
+          <div class="illustration-method" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556103301/Capture_d_e%CC%81cran_2019-04-24_a%CC%80_12.53.01.png")%>)">
           </div>
           <div class="avis-container">
             <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
