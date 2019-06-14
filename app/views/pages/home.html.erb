@@ -190,7 +190,8 @@
   <div class="methodology">
 
         <div class="avis">
-          <div class="illustration-method" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556103301/Capture_d_e%CC%81cran_2019-04-24_a%CC%80_12.53.01.png")%>)">
+          <div class="illustration-method">
+              <%= cl_image_tag("https://res.cloudinary.com/dtzmk5eym/image/upload/v1556103301/Capture_d_e%CC%81cran_2019-04-24_a%CC%80_12.53.01.png", width: 400, height: 400, crop: :thumb, gravity: :face, class: "avatar-avis")  %>
           </div>
           <div class="avis-container">
             <div class="avis-card" style="background-image: url(<%=cl_image_path("https://res.cloudinary.com/dtzmk5eym/image/upload/v1552920209/Logo-McKinsey.png") %>)">
