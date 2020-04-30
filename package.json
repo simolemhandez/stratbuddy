@@ -5,7 +5,7 @@
     "@rails/webpacker": "^4.0.2",
     "bootstrap": "^4.3.1",
     "easytimer": "^1.1.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.7",
     "typed.js": "^2.0.10"
   },
